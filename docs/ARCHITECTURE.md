@@ -12,22 +12,9 @@ Second Brain is intentionally small at the storage layer and disciplined at the 
 
 ## Layers
 
-```mermaid
-flowchart TB
-  Sources["Raw sources\ncalendar, chats, Feishu docs, links"]
-  Capture["Capture\nbrain/inbox + source snapshots"]
-  Rules["Rules\nRESOLVER.md + schema.md + skills/"]
-  Pages["Markdown brain\npeople, concepts, projects, diary"]
-  Ops["Agent operations\nsearch, think, lint, enrich, draft"]
-  Future["Future optional layer\nFTS5, graph, jobs, MCP"]
-
-  Sources --> Capture
-  Capture --> Rules
-  Rules --> Pages
-  Pages --> Ops
-  Ops --> Pages
-  Pages -. evolve .-> Future
-```
+<p align="center">
+  <img src="../assets/product-flow.svg" alt="Second Brain product flow and core architecture" width="100%">
+</p>
 
 ## Page Model
 

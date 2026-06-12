@@ -2,6 +2,10 @@
 
 Second Brain is designed around a loop: capture, structure, use, improve.
 
+<p align="center">
+  <img src="../assets/user-journey.svg" alt="Second Brain user journey from capture to improvement" width="100%">
+</p>
+
 ## 1. Capture
 
 The user drops in a raw source:

@@ -116,79 +116,15 @@ Then help me capture, ingest, search, think, lint, or generate diary drafts with
 
 ## 用户旅程
 
-```mermaid
-journey
-  title 从散落上下文到可维护个人大脑
-  section 捕获
-    丢入群聊、飞书文档或日历: 4: User
-    保存原始资料快照: 5: Agent
-  section 结构化
-    用 RESOLVER.md 决定归档位置: 5: Agent
-    创建或更新实体页: 4: Agent
-    分离 Compiled Truth 和 Timeline: 5: Agent
-  section 使用
-    询问个人/项目/历史问题: 5: User
-    先搜索证据，再跨页面综合: 5: Agent
-    返回带引用答案和缺口: 5: Agent
-  section 迭代
-    检查断链、陈旧判断、重复实体: 4: Agent
-    把缺口变成追问: 5: User
-```
+<p align="center">
+  <img src="assets/user-journey.svg" alt="Second Brain 从捕获到迭代的用户旅程" width="100%">
+</p>
 
 ## 核心架构
 
-```mermaid
-flowchart LR
-  subgraph Sources["Raw sources: preserved evidence"]
-    Calendar["Feishu calendar"]
-    Chats["Chat exports"]
-    Docs["Feishu docs / wiki"]
-    Web["Links and web notes"]
-  end
-
-  subgraph Ingest["Capture and ingest"]
-    Inbox["brain/inbox"]
-    Resolver["brain/RESOLVER.md"]
-    Schema["brain/schema.md"]
-    Skills["skills/*.md"]
-  end
-
-  subgraph Brain["Markdown brain"]
-    People["people/"]
-    Concepts["concepts/"]
-    Projects["projects/"]
-    Diary["diary/"]
-    Timeline["Compiled Truth + Timeline"]
-  end
-
-  subgraph Ops["Agent operations"]
-    Search["search"]
-    Think["think"]
-    Lint["lint"]
-    Draft["daily diary draft"]
-  end
-
-  Calendar --> Inbox
-  Chats --> Inbox
-  Docs --> Inbox
-  Web --> Inbox
-  Inbox --> Resolver
-  Resolver --> Schema
-  Schema --> Skills
-  Skills --> People
-  Skills --> Concepts
-  Skills --> Projects
-  Skills --> Diary
-  People --> Timeline
-  Concepts --> Timeline
-  Projects --> Timeline
-  Diary --> Timeline
-  Brain --> Search
-  Search --> Think
-  Think --> Lint
-  Lint --> Resolver
-  Draft --> Diary
-```
+<p align="center">
+  <img src="assets/product-flow.svg" alt="Second Brain 产品流程与核心架构" width="100%">
+</p>
 
 ## 仓库结构
 

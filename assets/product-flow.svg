@@ -1,0 +1,106 @@
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Second Brain product flow</title>
+  <desc id="desc">System architecture showing raw sources, capture and ingest rules, the Markdown brain, agent operations, and outputs.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 8">
+      <path d="M0 0 L10 4 L0 8 z" fill="#0A0A0A"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="920" fill="#FFFFFF"/>
+  <text x="70" y="78" fill="#0A0A0A" font-size="52" font-weight="800">Second Brain Product Flow</text>
+  <text x="72" y="110" fill="#333333" font-size="22" font-weight="600">A local-first memory layer that turns preserved evidence into agent-callable context</text>
+
+  <rect x="76" y="156" width="300" height="562" fill="#0A0A0A"/>
+  <rect x="70" y="150" width="300" height="562" fill="#F5F5F5" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="96" y="200" fill="#0A0A0A" font-size="30" font-weight="800">Raw Sources</text>
+  <text x="96" y="230" fill="#333333" font-size="18">Preserved before interpretation</text>
+
+  <rect x="98" y="270" width="244" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="122" y="312" fill="#0A0A0A" font-size="22" font-weight="800">Feishu calendar</text>
+  <rect x="98" y="360" width="244" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="122" y="402" fill="#0A0A0A" font-size="22" font-weight="800">Chat exports</text>
+  <rect x="98" y="450" width="244" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="122" y="492" fill="#0A0A0A" font-size="22" font-weight="800">Feishu docs/wiki</text>
+  <rect x="98" y="540" width="244" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="122" y="582" fill="#0A0A0A" font-size="22" font-weight="800">Links and notes</text>
+
+  <rect x="436" y="156" width="318" height="562" fill="#0A0A0A"/>
+  <rect x="430" y="150" width="318" height="562" fill="#F2D4CF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="456" y="200" fill="#0A0A0A" font-size="30" font-weight="800">Capture + Ingest</text>
+  <text x="456" y="230" fill="#333333" font-size="18">Rules make memory writable</text>
+
+  <rect x="460" y="270" width="258" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="484" y="304" fill="#0A0A0A" font-size="22" font-weight="800">brain/inbox</text>
+  <text x="484" y="330" fill="#333333" font-size="17">temporary landing zone</text>
+  <rect x="460" y="370" width="258" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="484" y="404" fill="#0A0A0A" font-size="22" font-weight="800">source snapshots</text>
+  <text x="484" y="430" fill="#333333" font-size="17">calendar, chats, docs</text>
+  <rect x="460" y="470" width="258" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="484" y="504" fill="#0A0A0A" font-size="22" font-weight="800">RESOLVER.md</text>
+  <text x="484" y="530" fill="#333333" font-size="17">where each fact belongs</text>
+  <rect x="460" y="570" width="258" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="484" y="604" fill="#0A0A0A" font-size="22" font-weight="800">schema + skills</text>
+  <text x="484" y="630" fill="#333333" font-size="17">how agents write safely</text>
+
+  <rect x="816" y="156" width="356" height="562" fill="#0A0A0A"/>
+  <rect x="810" y="150" width="356" height="562" fill="#E5EDD6" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="836" y="200" fill="#0A0A0A" font-size="30" font-weight="800">Markdown Brain</text>
+  <text x="836" y="230" fill="#333333" font-size="18">Human-browsable, agent-maintained</text>
+
+  <rect x="840" y="270" width="296" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="864" y="304" fill="#0A0A0A" font-size="22" font-weight="800">people / concepts</text>
+  <text x="864" y="330" fill="#333333" font-size="17">canonical entity pages</text>
+  <rect x="840" y="370" width="296" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="864" y="404" fill="#0A0A0A" font-size="22" font-weight="800">projects / diary</text>
+  <text x="864" y="430" fill="#333333" font-size="17">work memory and daily drafts</text>
+  <rect x="840" y="470" width="296" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="864" y="504" fill="#0A0A0A" font-size="22" font-weight="800">Compiled Truth</text>
+  <text x="864" y="530" fill="#333333" font-size="17">current best understanding</text>
+  <rect x="840" y="570" width="296" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="864" y="604" fill="#0A0A0A" font-size="22" font-weight="800">Timeline</text>
+  <text x="864" y="630" fill="#333333" font-size="17">append-only evidence trail</text>
+
+  <rect x="1236" y="156" width="294" height="562" fill="#0A0A0A"/>
+  <rect x="1230" y="150" width="294" height="562" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="1256" y="200" fill="#0A0A0A" font-size="30" font-weight="800">Agent Ops</text>
+  <text x="1256" y="230" fill="#333333" font-size="18">Use memory on demand</text>
+
+  <rect x="1260" y="270" width="234" height="64" fill="#F2D4CF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="1284" y="310" fill="#0A0A0A" font-size="22" font-weight="800">capture</text>
+  <rect x="1260" y="352" width="234" height="64" fill="#E5EDD6" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="1284" y="392" fill="#0A0A0A" font-size="22" font-weight="800">search</text>
+  <rect x="1260" y="434" width="234" height="64" fill="#F5F5F5" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="1284" y="474" fill="#0A0A0A" font-size="22" font-weight="800">think</text>
+  <rect x="1260" y="516" width="234" height="64" fill="#F2D4CF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="1284" y="556" fill="#0A0A0A" font-size="22" font-weight="800">lint</text>
+  <rect x="1260" y="598" width="234" height="64" fill="#E5EDD6" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="1284" y="638" fill="#0A0A0A" font-size="22" font-weight="800">diary draft</text>
+
+  <line x1="370" y1="431" x2="430" y2="431" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="748" y1="431" x2="810" y2="431" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1166" y1="431" x2="1230" y2="431" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
+  <polyline points="1377,712 1377,744 988,744 988,712" fill="none" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="70" y="758" width="392" height="136" fill="#0A0A0A"/>
+  <text x="98" y="796" fill="#FFFFFF" font-size="25" font-weight="800">Core advantage</text>
+  <text x="98" y="828" fill="#FFFFFF" font-size="20">Not a pile of notes.</text>
+  <text x="98" y="854" fill="#FFFFFF" font-size="20">Governed context with</text>
+  <text x="98" y="880" fill="#FFFFFF" font-size="20">source-backed claims.</text>
+
+  <rect x="462" y="758" width="392" height="136" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="490" y="796" fill="#0A0A0A" font-size="25" font-weight="800">Search is retrieval</text>
+  <text x="490" y="828" fill="#333333" font-size="20">Find evidence first.</text>
+  <text x="490" y="854" fill="#333333" font-size="20">Do not invent context.</text>
+
+  <rect x="854" y="758" width="392" height="136" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="882" y="796" fill="#0A0A0A" font-size="25" font-weight="800">Think is synthesis</text>
+  <text x="882" y="828" fill="#333333" font-size="20">Connect pages, cite claims.</text>
+  <text x="882" y="854" fill="#333333" font-size="20">Name what is missing.</text>
+
+  <rect x="1246" y="758" width="278" height="136" fill="#F5F5F5" stroke="#0A0A0A" stroke-width="3"/>
+  <text x="1274" y="796" fill="#0A0A0A" font-size="25" font-weight="800">Outputs</text>
+  <text x="1274" y="828" fill="#333333" font-size="20">Cited answers</text>
+  <text x="1274" y="854" fill="#333333" font-size="20">Diary drafts</text>
+  <text x="1274" y="880" fill="#333333" font-size="20">Open questions</text>
+</svg>

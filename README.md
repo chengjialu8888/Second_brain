@@ -116,79 +116,15 @@ Then help me capture, ingest, search, think, lint, or generate diary drafts with
 
 ## User Journey
 
-```mermaid
-journey
-  title From scattered context to a maintained personal brain
-  section Capture
-    Drop chat export, Feishu doc, or daily calendar: 4: User
-    Preserve raw source snapshot: 5: Agent
-  section Structure
-    Resolve primary home with RESOLVER.md: 5: Agent
-    Create or update entity pages: 4: Agent
-    Keep Compiled Truth and Timeline separate: 5: Agent
-  section Use
-    Ask a personal/project/history question: 5: User
-    Search evidence, then think across pages: 5: Agent
-    Return cited answer and what is missing: 5: Agent
-  section Improve
-    Lint broken links, stale claims, duplicate entities: 4: Agent
-    Turn gaps into useful follow-up questions: 5: User
-```
+<p align="center">
+  <img src="assets/user-journey.svg" alt="Second Brain user journey from capture to improvement" width="100%">
+</p>
 
 ## Core Architecture
 
-```mermaid
-flowchart LR
-  subgraph Sources["Raw sources: preserved evidence"]
-    Calendar["Feishu calendar"]
-    Chats["Chat exports"]
-    Docs["Feishu docs / wiki"]
-    Web["Links and web notes"]
-  end
-
-  subgraph Ingest["Capture and ingest"]
-    Inbox["brain/inbox"]
-    Resolver["brain/RESOLVER.md"]
-    Schema["brain/schema.md"]
-    Skills["skills/*.md"]
-  end
-
-  subgraph Brain["Markdown brain"]
-    People["people/"]
-    Concepts["concepts/"]
-    Projects["projects/"]
-    Diary["diary/"]
-    Timeline["Compiled Truth + Timeline"]
-  end
-
-  subgraph Ops["Agent operations"]
-    Search["search"]
-    Think["think"]
-    Lint["lint"]
-    Draft["daily diary draft"]
-  end
-
-  Calendar --> Inbox
-  Chats --> Inbox
-  Docs --> Inbox
-  Web --> Inbox
-  Inbox --> Resolver
-  Resolver --> Schema
-  Schema --> Skills
-  Skills --> People
-  Skills --> Concepts
-  Skills --> Projects
-  Skills --> Diary
-  People --> Timeline
-  Concepts --> Timeline
-  Projects --> Timeline
-  Diary --> Timeline
-  Brain --> Search
-  Search --> Think
-  Think --> Lint
-  Lint --> Resolver
-  Draft --> Diary
-```
+<p align="center">
+  <img src="assets/product-flow.svg" alt="Second Brain product flow and core architecture" width="100%">
+</p>
 
 ## Repository Map
 
