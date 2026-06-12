@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/github-header.svg" alt="Second Brain: 面向人类和 Agent 的本地优先个人记忆层" width="100%" />
+  <img src="assets/github-header2.png" alt="Second Brain: 面向人类和 Agent 的本地优先个人记忆层" width="100%" />
 </p>
 
 <p align="center">

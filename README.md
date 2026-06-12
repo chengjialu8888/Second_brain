@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/github-header.svg" alt="Second Brain: local-first personal memory for humans and agents" width="100%" />
+  <img src="assets/github-header2.png" alt="Second Brain: local-first personal memory for humans and agents" width="100%" />
 </p>
 
 <p align="center">

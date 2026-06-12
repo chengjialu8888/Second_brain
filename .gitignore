@@ -4,6 +4,7 @@ __pycache__/
 
 # Local image generation drafts.
 assets/github-header*.png
+!assets/github-header2.png
 
 # Local/private generated source snapshots can be sensitive.
 brain/sources/calendar/*.json
