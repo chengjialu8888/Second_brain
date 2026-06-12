@@ -1,0 +1,5 @@
+{"intent":"把这份群聊记录做成 Second Brain 初始记忆","expected_skill":"chat-ingestion"}
+{"intent":"读取这个飞书 wiki 并沉淀方法论","expected_skill":"feishu-doc-ingestion"}
+{"intent":"今天的日程帮我生成日记草稿","expected_skill":"calendar-diary-draft"}
+{"intent":"Second Brain 和知识库有什么差别","expected_skill":"brain-query"}
+{"intent":"检查有没有断链和孤儿节点","expected_skill":"brain-lint"}

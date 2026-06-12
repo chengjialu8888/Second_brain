@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local/private generated source snapshots can be sensitive.
+brain/sources/calendar/*.json
+brain/sources/calendar/*.txt
+brain/sources/chats/*
+brain/sources/feishu-docs/*
+brain/sources/web/*
+!brain/sources/chats/.gitkeep
+!brain/sources/feishu-docs/.gitkeep
+!brain/sources/web/.gitkeep
+!brain/sources/calendar/.gitkeep

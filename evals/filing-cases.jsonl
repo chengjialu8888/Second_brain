@@ -1,0 +1,5 @@
+{"input":"Aisha 是我一起看电影的朋友","expected_directory":"brain/people/"}
+{"input":"LLM Wiki 是一种可持续维护 Markdown 知识库的方法","expected_directory":"brain/concepts/"}
+{"input":"Second Brain MVP 已经开始实现","expected_directory":"brain/projects/"}
+{"input":"https://github.com/garrytan/gbrain","expected_directory":"brain/resources/"}
+{"input":"今天 10:30 有健康 AI 安全周会","expected_directory":"brain/diary/"}

@@ -1,0 +1,4 @@
+{"case":"wikilink target missing","expected":"broken_link"}
+{"case":"page without frontmatter","expected":"missing_frontmatter"}
+{"case":"entity page without Timeline","expected":"missing_timeline"}
+{"case":"same title appears twice","expected":"duplicate_title"}
