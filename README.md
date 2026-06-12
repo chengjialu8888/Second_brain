@@ -1,63 +1,250 @@
+<p align="center">
+  <img src="assets/github-header.svg" alt="Second Brain: local-first personal memory for humans and agents" width="100%" />
+</p>
+
+<p align="center">
+  <a href="SKILL.md"><img alt="Agent Skill" src="https://img.shields.io/badge/agent-skill--ready-0f766e?style=flat-square"></a>
+  <a href="AGENTS.md"><img alt="Agent Docs" src="https://img.shields.io/badge/agents-AGENTS.md-2563eb?style=flat-square"></a>
+  <a href="llms.txt"><img alt="LLM Index" src="https://img.shields.io/badge/llms.txt-ready-7c3aed?style=flat-square"></a>
+  <img alt="Status" src="https://img.shields.io/badge/status-MVP-f59e0b?style=flat-square">
+</p>
+
 # Second Brain
 
-Local-first personal memory for humans and agents.
+**Second Brain is a local-first personal memory layer for humans and agents.**
 
-Second Brain stores memory as plain Markdown files, keeps raw sources immutable, and gives agents a disciplined way to capture, ingest, search, think, lint, and draft daily notes. Obsidian can open `brain/` as a vault, but the filesystem is the source of truth.
+It turns chats, Feishu docs, calendar events, diary drafts, links, and notes into a Markdown-native brain that agents can search, synthesize, lint, and maintain over time.
 
-## What Is Included
+The goal is not another knowledge base. The goal is a durable context layer that remembers what happened, what it means, what is still open, and what the agent should ask next.
 
-- `SKILL.md`: agent-facing workflow entrypoint.
-- `AGENTS.md`: operating rules for Codex, Claude Code, and other coding agents.
-- `brain/`: local Markdown brain with resolver, schema, index, logs, entities, sources, and diary drafts.
-- `skills/`: task-specific workflow docs for ingestion, query, enrichment, lint, and calendar diary drafting.
-- `scripts/`: small deterministic tools for link extraction, Feishu doc snapshots, calendar diary drafts, search, and lint.
-- `evals/`: seed examples for routing, filing, query, and lint checks.
-- `second-brain-product-plan.md`: v0.2 product plan.
+## Why It Exists
+
+Most personal knowledge systems stop at storage or retrieval:
+
+- note apps store pages
+- RAG systems retrieve chunks
+- generic assistants answer from the current chat
+
+Second Brain adds the missing maintenance layer:
+
+- raw sources stay preserved as evidence
+- entities get canonical pages
+- current understanding is separated from evidence history
+- agents search first, then synthesize
+- lint turns missing context into useful follow-up questions
+
+## How It Is Different
+
+| Dimension | Pure Knowledge Base | RAG over notes | Second Brain |
+|-|-|-|-|
+| Primary job | Store information | Retrieve chunks | Maintain personal context |
+| Human-readable middle layer | Yes | Usually no | Yes, Markdown pages |
+| Agent-readable structure | Weak | Retrieval-only | Resolver, schema, skills, evals |
+| Evidence model | Informal | Chunk provenance | Raw sources + Timeline |
+| Current understanding | Mixed into notes | Recomputed per query | Compiled Truth |
+| Proactive maintenance | Manual | Rare | `wiki_lint` + open questions |
+| Best use | Archiving | Search | Remembering yourself over time |
+
+## Core Idea
+
+Each canonical entity page has two layers:
+
+```text
+Compiled Truth       current synthesis, rewritten as understanding improves
+---
+Timeline             append-only evidence with dates and sources
+```
+
+This lets the brain answer two different questions cleanly:
+
+- "What do we currently think about this person/project/concept?"
+- "What happened, when, and where did that claim come from?"
 
 ## Quick Start
 
 ```bash
+git clone https://github.com/chengjialu8888/Second_brain.git
+cd Second_brain
+
 # Search local memory
 python3 scripts/brain_search.py "llm-wiki"
 
 # Lint the brain structure
 python3 scripts/wiki_lint.py
 
-# Extract links from a source file
-scripts/extract_links.sh /path/to/chat.md
-
-# Fetch a Feishu doc or wiki snapshot
-scripts/fetch_feishu_doc.sh "https://example.feishu.cn/docx/..." 
-
-# Generate today's diary draft from Feishu calendar
+# Generate a diary draft from Feishu calendar
 scripts/calendar_diary_draft.sh 2026-06-12
 ```
 
-For the calendar flow, the minimal Feishu scope is:
+For the calendar flow, authorize the minimal Feishu scope:
 
 ```bash
 lark-cli auth login --scope "calendar:calendar.event:read"
 ```
 
-## Daily Diary Flow
+Then run:
 
-```text
-Feishu calendar
-  -> brain/sources/calendar/YYYY-MM-DD.json
-  -> brain/sources/calendar/YYYY-MM-DD.txt
-  -> brain/diary/YYYY-MM-DD.md
-  -> user adds subjective notes
-  -> brain lint/enrichment updates people, projects, places, and open threads
+```bash
+scripts/calendar_diary_draft.sh $(date +%F)
 ```
 
-The generated diary remains `status: draft` until the user adds personal context. Calendar knows what happened; the user supplies what it meant.
+The generated diary remains `status: draft` until you add subjective context. Calendar knows what happened; only you know what it meant.
 
-## Storage Principle
+## User Journey
 
-Use a local folder as the source of truth:
-
-```text
-File-system first, Obsidian-friendly, Agent-maintained.
+```mermaid
+journey
+  title From scattered context to a maintained personal brain
+  section Capture
+    Drop chat export, Feishu doc, or daily calendar: 4: User
+    Preserve raw source snapshot: 5: Agent
+  section Structure
+    Resolve primary home with RESOLVER.md: 5: Agent
+    Create or update entity pages: 4: Agent
+    Keep Compiled Truth and Timeline separate: 5: Agent
+  section Use
+    Ask a personal/project/history question: 5: User
+    Search evidence, then think across pages: 5: Agent
+    Return cited answer and what is missing: 5: Agent
+  section Improve
+    Lint broken links, stale claims, duplicate entities: 4: Agent
+    Turn gaps into useful follow-up questions: 5: User
 ```
 
-Obsidian is a human interface for backlinks, graph view, and review. Agents should read and write the Markdown files directly through the resolver and schema rules.
+## Core Architecture
+
+```mermaid
+flowchart LR
+  subgraph Sources["Raw sources: preserved evidence"]
+    Calendar["Feishu calendar"]
+    Chats["Chat exports"]
+    Docs["Feishu docs / wiki"]
+    Web["Links and web notes"]
+  end
+
+  subgraph Ingest["Capture and ingest"]
+    Inbox["brain/inbox"]
+    Resolver["brain/RESOLVER.md"]
+    Schema["brain/schema.md"]
+    Skills["skills/*.md"]
+  end
+
+  subgraph Brain["Markdown brain"]
+    People["people/"]
+    Concepts["concepts/"]
+    Projects["projects/"]
+    Diary["diary/"]
+    Timeline["Compiled Truth + Timeline"]
+  end
+
+  subgraph Ops["Agent operations"]
+    Search["search"]
+    Think["think"]
+    Lint["lint"]
+    Draft["daily diary draft"]
+  end
+
+  Calendar --> Inbox
+  Chats --> Inbox
+  Docs --> Inbox
+  Web --> Inbox
+  Inbox --> Resolver
+  Resolver --> Schema
+  Schema --> Skills
+  Skills --> People
+  Skills --> Concepts
+  Skills --> Projects
+  Skills --> Diary
+  People --> Timeline
+  Concepts --> Timeline
+  Projects --> Timeline
+  Diary --> Timeline
+  Brain --> Search
+  Search --> Think
+  Think --> Lint
+  Lint --> Resolver
+  Draft --> Diary
+```
+
+## Repository Map
+
+```text
+.
+├── SKILL.md                     # Agent-facing workflow entrypoint
+├── AGENTS.md                    # Operating rules for Codex, Claude Code, Cursor, etc.
+├── llms.txt                     # Compact map for LLM crawlers and agent fetchers
+├── brain/
+│   ├── RESOLVER.md              # Filing and ownership rules
+│   ├── schema.md                # Page templates and evidence discipline
+│   ├── index.md                 # Default human/agent entrypoint
+│   ├── people/ concepts/ projects/ diary/
+│   └── sources/                 # Immutable source snapshots
+├── skills/                      # Workflow docs: ingest, query, enrich, lint, diary
+├── scripts/                     # Deterministic local utilities
+├── evals/                       # Seed eval cases for routing, filing, query, lint
+└── docs/                        # Human and agent-facing docs
+```
+
+## What Works Today
+
+- Local Markdown brain skeleton
+- Resolver and schema discipline
+- Seed concept/project pages
+- Feishu calendar to diary draft
+- Feishu doc snapshot helper
+- Link extraction
+- Local search
+- Structural lint
+- Seed eval cases
+- Agent crawler map via `llms.txt`
+
+## What Is Next
+
+- Better chat and Feishu doc ingestion
+- Entity alias and duplicate detection
+- Richer `think` synthesis over search results
+- Weekly lint report
+- Optional SQLite FTS5 index
+- Optional Obsidian vault polish
+- Optional MCP layer for remote agents
+
+## For Humans
+
+Open `brain/` as an Obsidian vault if you want backlinks, graph view, and manual review.
+
+Recommended first places:
+
+- `brain/index.md`
+- `brain/RESOLVER.md`
+- `brain/schema.md`
+- `brain/projects/second-brain.md`
+
+## For Agents
+
+Start here:
+
+1. `llms.txt`
+2. `AGENTS.md`
+3. `SKILL.md`
+4. `brain/RESOLVER.md`
+5. `brain/schema.md`
+6. `skills/RESOLVER.md`
+
+Rule of thumb: **search first, then think; preserve evidence, then synthesize.**
+
+## Contributing
+
+This is an early MVP. Useful contributions include:
+
+- better source ingestion workflows
+- stricter lint checks
+- safer diary and calendar handling
+- Obsidian-friendly templates
+- agent eval cases
+- docs and examples
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Project Status
+
+MVP. The current version is intentionally local-first and small. It is designed to validate the memory workflow before adding heavier infrastructure like vector search, graph storage, background jobs, or MCP.

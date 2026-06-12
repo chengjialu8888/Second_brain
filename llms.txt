@@ -1,0 +1,41 @@
+# Second Brain
+
+Second Brain is a local-first personal memory layer for humans and agents. It stores memory as Markdown, preserves raw sources as evidence, and gives agents workflows to capture, ingest, search, think, lint, enrich entities, and generate diary drafts from Feishu calendar.
+
+Repository: https://github.com/chengjialu8888/Second_brain
+
+## Core entry points
+
+- [README.md](README.md): Human-facing overview, value proposition, quick start, journey, architecture, roadmap.
+- [AGENTS.md](AGENTS.md): Operating protocol for Codex, Claude Code, Cursor, and other coding agents.
+- [SKILL.md](SKILL.md): Skill contract and workflow overview.
+- [brain/RESOLVER.md](brain/RESOLVER.md): Required filing and ownership rules before creating or moving pages.
+- [brain/schema.md](brain/schema.md): Entity page schema, Compiled Truth / Timeline convention, frontmatter rules.
+- [brain/index.md](brain/index.md): Default brain entrypoint.
+- [skills/RESOLVER.md](skills/RESOLVER.md): Skill routing table.
+
+## Workflows
+
+- [skills/brain-query.md](skills/brain-query.md): Search first, then synthesize with sources and gaps.
+- [skills/chat-ingestion.md](skills/chat-ingestion.md): Preserve chat exports and extract durable entities.
+- [skills/feishu-doc-ingestion.md](skills/feishu-doc-ingestion.md): Fetch Feishu docs/wiki and extract durable concepts.
+- [skills/entity-enrichment.md](skills/entity-enrichment.md): Create or update canonical entity pages.
+- [skills/brain-lint.md](skills/brain-lint.md): Structural and evidence-quality checks.
+- [skills/calendar-diary-draft.md](skills/calendar-diary-draft.md): Generate diary drafts from Feishu calendar.
+
+## Scripts
+
+- `python3 scripts/brain_search.py "query"`: local Markdown search.
+- `python3 scripts/wiki_lint.py`: structural lint.
+- `scripts/calendar_diary_draft.sh YYYY-MM-DD`: Feishu calendar to diary draft.
+- `scripts/extract_links.sh FILE`: extract URLs.
+- `scripts/fetch_feishu_doc.sh URL`: snapshot Feishu doc/wiki.
+
+## Invariants
+
+- Filesystem Markdown is the source of truth.
+- Obsidian is optional UI, not the database.
+- Raw sources live under `brain/sources/` and should be treated as evidence.
+- Canonical entity pages use Compiled Truth above `---` and Timeline below it.
+- Agents must read `brain/RESOLVER.md` before creating or moving pages.
+- Calendar-generated diary pages remain `status: draft` until the user adds subjective context.

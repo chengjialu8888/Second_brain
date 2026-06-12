@@ -1,0 +1,81 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Second Brain repository header</title>
+  <desc id="desc">A local-first personal memory layer where raw sources become a structured brain that humans and agents can query.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.42" stop-color="#11293a"/>
+      <stop offset="1" stop-color="#16251d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="250" y1="80" x2="1030" y2="570" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="0.52" stop-color="#a7f3d0"/>
+      <stop offset="1" stop-color="#facc15"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#020617" flood-opacity="0.42"/>
+    </filter>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <path d="M80 520C210 418 261 466 388 365C510 268 573 255 720 300C886 351 950 243 1180 126" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.55"/>
+  <path d="M150 160C274 230 390 96 525 172C659 248 720 459 884 420C1004 391 1055 278 1160 304" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.16"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="86" y="86" width="1108" height="468" rx="32" fill="#07111f" fill-opacity="0.72" stroke="#ffffff" stroke-opacity="0.14"/>
+  </g>
+
+  <g transform="translate(128 128)">
+    <rect width="108" height="108" rx="24" fill="url(#accent)" opacity="0.95"/>
+    <path d="M32 73V35C32 29.477 36.477 25 42 25H76" stroke="#07111f" stroke-width="8" stroke-linecap="round"/>
+    <path d="M76 35V73C76 78.523 71.523 83 66 83H32" stroke="#07111f" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="54" cy="54" r="10" fill="#07111f"/>
+  </g>
+
+  <text x="260" y="156" fill="#e5f7ff" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="72" font-weight="800" letter-spacing="0">Second Brain</text>
+  <text x="264" y="204" fill="#b8d8d0" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="500">Local-first personal memory for humans and agents</text>
+
+  <g transform="translate(128 270)">
+    <g>
+      <rect width="230" height="132" rx="22" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="24" y="42" fill="#f8fafc" font-family="Inter, ui-sans-serif, system-ui" font-size="22" font-weight="750">Raw sources</text>
+      <text x="24" y="76" fill="#bdd7d2" font-family="Inter, ui-sans-serif, system-ui" font-size="16">Calendar, chats, docs</text>
+      <text x="24" y="102" fill="#8fb5b3" font-family="Inter, ui-sans-serif, system-ui" font-size="14">Preserved as evidence</text>
+    </g>
+    <path d="M250 66H326" stroke="#a7f3d0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M315 54L329 66L315 78" stroke="#a7f3d0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(350 0)">
+      <rect width="250" height="132" rx="22" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="24" y="42" fill="#f8fafc" font-family="Inter, ui-sans-serif, system-ui" font-size="22" font-weight="750">Brain layer</text>
+      <text x="24" y="76" fill="#bdd7d2" font-family="Inter, ui-sans-serif, system-ui" font-size="16">Resolver + schema + pages</text>
+      <text x="24" y="102" fill="#8fb5b3" font-family="Inter, ui-sans-serif, system-ui" font-size="14">Compiled Truth + Timeline</text>
+    </g>
+    <path d="M620 66H696" stroke="#a7f3d0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M685 54L699 66L685 78" stroke="#a7f3d0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(720 0)">
+      <rect width="260" height="132" rx="22" fill="url(#card)" stroke="#ffffff" stroke-opacity="0.16"/>
+      <text x="24" y="42" fill="#f8fafc" font-family="Inter, ui-sans-serif, system-ui" font-size="22" font-weight="750">Agent operations</text>
+      <text x="24" y="76" fill="#bdd7d2" font-family="Inter, ui-sans-serif, system-ui" font-size="16">Capture, search, think, lint</text>
+      <text x="24" y="102" fill="#8fb5b3" font-family="Inter, ui-sans-serif, system-ui" font-size="14">Answers with gaps, not chunks</text>
+    </g>
+  </g>
+
+  <g transform="translate(128 455)">
+    <rect width="166" height="44" rx="22" fill="#0f766e" fill-opacity="0.36" stroke="#5eead4" stroke-opacity="0.45"/>
+    <text x="25" y="28" fill="#dffcf6" font-family="Inter, ui-sans-serif, system-ui" font-size="15" font-weight="700">Markdown-native</text>
+    <rect x="188" width="146" height="44" rx="22" fill="#1d4ed8" fill-opacity="0.28" stroke="#93c5fd" stroke-opacity="0.45"/>
+    <text x="214" y="28" fill="#dbeafe" font-family="Inter, ui-sans-serif, system-ui" font-size="15" font-weight="700">Agent-ready</text>
+    <rect x="356" width="180" height="44" rx="22" fill="#854d0e" fill-opacity="0.30" stroke="#fde68a" stroke-opacity="0.45"/>
+    <text x="383" y="28" fill="#fef3c7" font-family="Inter, ui-sans-serif, system-ui" font-size="15" font-weight="700">Evidence-first</text>
+    <rect x="558" width="166" height="44" rx="22" fill="#581c87" fill-opacity="0.28" stroke="#d8b4fe" stroke-opacity="0.45"/>
+    <text x="585" y="28" fill="#f3e8ff" font-family="Inter, ui-sans-serif, system-ui" font-size="15" font-weight="700">Obsidian-friendly</text>
+  </g>
+</svg>

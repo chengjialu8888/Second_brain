@@ -2,6 +2,14 @@
 
 Use this file when working on this repository.
 
+## Startup Order
+
+1. Read `llms.txt` for the compact repository map.
+2. Read `SKILL.md` for the workflow contract.
+3. Read `brain/RESOLVER.md` before creating or moving any brain page.
+4. Read `brain/schema.md` before changing page shape.
+5. Read `skills/RESOLVER.md` before choosing a task workflow.
+
 ## Brain-first Rules
 
 1. Before creating or moving any brain page, read `brain/RESOLVER.md`.
@@ -34,5 +42,12 @@ If scripts change, also run shell syntax checks:
 
 ```bash
 bash -n scripts/*.sh
-python3 -m py_compile scripts/*.py
+python3 -c "import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path('scripts').glob('*.py')]; print('python ast ok')"
 ```
+
+## More Detail
+
+- Human overview: `README.md`
+- Architecture: `docs/ARCHITECTURE.md`
+- User journey: `docs/USER_JOURNEY.md`
+- Agent guide: `docs/AGENT_GUIDE.md`
