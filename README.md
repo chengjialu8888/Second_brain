@@ -9,6 +9,10 @@
   <img alt="Status" src="https://img.shields.io/badge/status-MVP-f59e0b?style=flat-square">
 </p>
 
+<p align="center">
+  <a href="README.zh-CN.md">中文版 README</a>
+</p>
+
 # Second Brain
 
 **Second Brain is a local-first personal memory layer for humans and agents.**
@@ -60,23 +64,33 @@ This lets the brain answer two different questions cleanly:
 - "What do we currently think about this person/project/concept?"
 - "What happened, when, and where did that claim come from?"
 
-## Quick Start
+## Quick Start: Skill-style Entry
 
 ```bash
 git clone https://github.com/chengjialu8888/Second_brain.git
 cd Second_brain
 
-# Search local memory
-python3 scripts/brain_search.py "llm-wiki"
-
-# Lint the brain structure
-python3 scripts/wiki_lint.py
-
-# Generate a diary draft from Feishu calendar
-scripts/calendar_diary_draft.sh 2026-06-12
+# See the skill-style command surface
+scripts/second_brain.sh help
 ```
 
-For the calendar flow, authorize the minimal Feishu scope:
+Use it like an agent skill from the terminal:
+
+```bash
+# Search local memory
+scripts/second_brain.sh search "llm-wiki"
+
+# Lint the brain structure
+scripts/second_brain.sh lint
+
+# Generate a diary draft from Feishu calendar
+scripts/second_brain.sh diary 2026-06-12
+
+# Show the agent startup prompt
+scripts/second_brain.sh prompt
+```
+
+For the calendar diary workflow, authorize the minimal Feishu scope first:
 
 ```bash
 lark-cli auth login --scope "calendar:calendar.event:read"
@@ -85,10 +99,20 @@ lark-cli auth login --scope "calendar:calendar.event:read"
 Then run:
 
 ```bash
-scripts/calendar_diary_draft.sh $(date +%F)
+scripts/second_brain.sh diary today
 ```
 
 The generated diary remains `status: draft` until you add subjective context. Calendar knows what happened; only you know what it meant.
+
+### Agent Prompt Entry
+
+If you are using Codex, Claude Code, Cursor, or another coding agent, start with:
+
+```text
+Use this repository as the $second-brain skill.
+Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
+Then help me capture, ingest, search, think, lint, or generate diary drafts without committing private source data.
+```
 
 ## User Journey
 
@@ -188,6 +212,7 @@ flowchart LR
 ## What Works Today
 
 - Local Markdown brain skeleton
+- Skill-style CLI wrapper: `scripts/second_brain.sh`
 - Resolver and schema discipline
 - Seed concept/project pages
 - Feishu calendar to diary draft

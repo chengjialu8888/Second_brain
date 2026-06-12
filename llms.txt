@@ -7,6 +7,7 @@ Repository: https://github.com/chengjialu8888/Second_brain
 ## Core entry points
 
 - [README.md](README.md): Human-facing overview, value proposition, quick start, journey, architecture, roadmap.
+- [README.zh-CN.md](README.zh-CN.md): Chinese overview with the same quick start, journey, architecture, and positioning.
 - [AGENTS.md](AGENTS.md): Operating protocol for Codex, Claude Code, Cursor, and other coding agents.
 - [SKILL.md](SKILL.md): Skill contract and workflow overview.
 - [brain/RESOLVER.md](brain/RESOLVER.md): Required filing and ownership rules before creating or moving pages.
@@ -25,6 +26,11 @@ Repository: https://github.com/chengjialu8888/Second_brain
 
 ## Scripts
 
+- `scripts/second_brain.sh help`: skill-style command surface.
+- `scripts/second_brain.sh prompt`: agent startup prompt.
+- `scripts/second_brain.sh search "query"`: local Markdown search through the skill-style wrapper.
+- `scripts/second_brain.sh lint`: structural lint through the skill-style wrapper.
+- `scripts/second_brain.sh diary YYYY-MM-DD`: Feishu calendar to diary draft through the skill-style wrapper.
 - `python3 scripts/brain_search.py "query"`: local Markdown search.
 - `python3 scripts/wiki_lint.py`: structural lint.
 - `scripts/calendar_diary_draft.sh YYYY-MM-DD`: Feishu calendar to diary draft.

@@ -1,0 +1,275 @@
+<p align="center">
+  <img src="assets/github-header.svg" alt="Second Brain: 面向人类和 Agent 的本地优先个人记忆层" width="100%" />
+</p>
+
+<p align="center">
+  <a href="SKILL.md"><img alt="Agent Skill" src="https://img.shields.io/badge/agent-skill--ready-0f766e?style=flat-square"></a>
+  <a href="AGENTS.md"><img alt="Agent Docs" src="https://img.shields.io/badge/agents-AGENTS.md-2563eb?style=flat-square"></a>
+  <a href="llms.txt"><img alt="LLM Index" src="https://img.shields.io/badge/llms.txt-ready-7c3aed?style=flat-square"></a>
+  <img alt="Status" src="https://img.shields.io/badge/status-MVP-f59e0b?style=flat-square">
+</p>
+
+<p align="center">
+  <a href="README.md">English README</a>
+</p>
+
+# Second Brain
+
+**Second Brain 是一个面向人类和 Agent 的本地优先个人记忆层。**
+
+它把群聊、飞书文档、日历日程、日记草稿、链接和普通笔记，沉淀成一个 Markdown-native 的个人大脑。Agent 可以围绕它完成 capture、ingest、search、think、lint 和日记草稿生成。
+
+它的目标不是再做一个知识库，而是做一个可长期维护的上下文层：记住发生了什么、这件事意味着什么、还有什么没搞清楚，以及 Agent 下一步应该问什么。
+
+## 为什么需要它
+
+大多数个人知识系统停在“存储”或“检索”：
+
+- 笔记软件负责存页面
+- RAG 系统负责召回 chunk
+- 通用助手只理解当前对话
+
+Second Brain 补上的是“维护层”：
+
+- 原始资料作为证据保留
+- 人物、项目、概念有 canonical 页面
+- 当前认知和证据时间线分开
+- Agent 先 search，再 think
+- lint 把缺失上下文变成可回答的问题
+
+## 和纯知识库有什么不同
+
+| 维度 | 纯知识库 | 笔记上的 RAG | Second Brain |
+|-|-|-|-|
+| 核心任务 | 存信息 | 召回片段 | 维护个人上下文 |
+| 人类可读中间层 | 有 | 通常没有 | 有，Markdown 页面 |
+| Agent 可读结构 | 弱 | 只偏检索 | Resolver、schema、skills、evals |
+| 证据模型 | 松散 | chunk provenance | raw sources + Timeline |
+| 当前认知 | 混在笔记里 | 每次查询重算 | Compiled Truth |
+| 主动维护 | 手动 | 很少 | `wiki_lint` + open questions |
+| 最适合 | 归档 | 搜索 | 长期记住“你” |
+
+## 核心设计
+
+每个 canonical 实体页分两层：
+
+```text
+Compiled Truth       当前综合认知，可随理解更新
+---
+Timeline             追加式证据时间线，带日期和来源
+```
+
+这样可以干净地区分两个问题：
+
+- “我们现在怎么看这个人/项目/概念？”
+- “这个判断来自哪一天、哪条证据？”
+
+## 快速开始：像 Skill 一样使用
+
+```bash
+git clone https://github.com/chengjialu8888/Second_brain.git
+cd Second_brain
+
+# 查看 skill-style 命令入口
+scripts/second_brain.sh help
+```
+
+常用命令：
+
+```bash
+# 搜索本地记忆
+scripts/second_brain.sh search "llm-wiki"
+
+# 检查 brain 结构
+scripts/second_brain.sh lint
+
+# 从飞书日历生成日记草稿
+scripts/second_brain.sh diary 2026-06-12
+
+# 输出 Agent 启动提示词
+scripts/second_brain.sh prompt
+```
+
+如果要使用飞书日历生成日记草稿，先授权最小 scope：
+
+```bash
+lark-cli auth login --scope "calendar:calendar.event:read"
+```
+
+然后运行：
+
+```bash
+scripts/second_brain.sh diary today
+```
+
+生成的日记会保持 `status: draft`，直到你补充主观感受。日历知道“发生了什么”，但只有你知道“这意味着什么”。
+
+### Agent 入口提示词
+
+如果你在 Codex、Claude Code、Cursor 或其他 coding agent 里使用，可以直接说：
+
+```text
+Use this repository as the $second-brain skill.
+Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
+Then help me capture, ingest, search, think, lint, or generate diary drafts without committing private source data.
+```
+
+## 用户旅程
+
+```mermaid
+journey
+  title 从散落上下文到可维护个人大脑
+  section 捕获
+    丢入群聊、飞书文档或日历: 4: User
+    保存原始资料快照: 5: Agent
+  section 结构化
+    用 RESOLVER.md 决定归档位置: 5: Agent
+    创建或更新实体页: 4: Agent
+    分离 Compiled Truth 和 Timeline: 5: Agent
+  section 使用
+    询问个人/项目/历史问题: 5: User
+    先搜索证据，再跨页面综合: 5: Agent
+    返回带引用答案和缺口: 5: Agent
+  section 迭代
+    检查断链、陈旧判断、重复实体: 4: Agent
+    把缺口变成追问: 5: User
+```
+
+## 核心架构
+
+```mermaid
+flowchart LR
+  subgraph Sources["Raw sources: preserved evidence"]
+    Calendar["Feishu calendar"]
+    Chats["Chat exports"]
+    Docs["Feishu docs / wiki"]
+    Web["Links and web notes"]
+  end
+
+  subgraph Ingest["Capture and ingest"]
+    Inbox["brain/inbox"]
+    Resolver["brain/RESOLVER.md"]
+    Schema["brain/schema.md"]
+    Skills["skills/*.md"]
+  end
+
+  subgraph Brain["Markdown brain"]
+    People["people/"]
+    Concepts["concepts/"]
+    Projects["projects/"]
+    Diary["diary/"]
+    Timeline["Compiled Truth + Timeline"]
+  end
+
+  subgraph Ops["Agent operations"]
+    Search["search"]
+    Think["think"]
+    Lint["lint"]
+    Draft["daily diary draft"]
+  end
+
+  Calendar --> Inbox
+  Chats --> Inbox
+  Docs --> Inbox
+  Web --> Inbox
+  Inbox --> Resolver
+  Resolver --> Schema
+  Schema --> Skills
+  Skills --> People
+  Skills --> Concepts
+  Skills --> Projects
+  Skills --> Diary
+  People --> Timeline
+  Concepts --> Timeline
+  Projects --> Timeline
+  Diary --> Timeline
+  Brain --> Search
+  Search --> Think
+  Think --> Lint
+  Lint --> Resolver
+  Draft --> Diary
+```
+
+## 仓库结构
+
+```text
+.
+├── SKILL.md                     # Agent-facing workflow entrypoint
+├── AGENTS.md                    # Codex / Claude Code / Cursor 等 Agent 的操作规则
+├── llms.txt                     # 给 LLM crawler 和 agent fetcher 的紧凑索引
+├── brain/
+│   ├── RESOLVER.md              # 归档和 ownership 规则
+│   ├── schema.md                # 页面模板和证据规范
+│   ├── index.md                 # 人类和 Agent 的默认入口
+│   ├── people/ concepts/ projects/ diary/
+│   └── sources/                 # 原始资料快照
+├── skills/                      # ingest、query、enrich、lint、diary 等工作流
+├── scripts/                     # 可执行的小工具
+├── evals/                       # routing / filing / query / lint 种子评测
+└── docs/                        # 面向人类和 Agent 的文档
+```
+
+## 当前可用
+
+- 本地 Markdown brain 骨架
+- Skill-style CLI 入口：`scripts/second_brain.sh`
+- Resolver 和 schema 规范
+- 种子概念页和项目页
+- 飞书日历生成日记草稿
+- 飞书文档快照脚本
+- 链接抽取
+- 本地搜索
+- 结构 lint
+- 种子 eval case
+- `llms.txt` Agent 抓取入口
+
+## 下一步
+
+- 更好的群聊和飞书文档 ingest
+- 实体别名和重复实体检测
+- 更强的 `think` 综合
+- weekly lint report
+- 可选 SQLite FTS5 索引
+- Obsidian vault 体验优化
+- 可选 MCP 层，让远程 Agent 调用
+
+## 给人类用户
+
+可以把 `brain/` 当作 Obsidian vault 打开，用来查看 backlinks、图谱和手动补充上下文。
+
+建议先看：
+
+- `brain/index.md`
+- `brain/RESOLVER.md`
+- `brain/schema.md`
+- `brain/projects/second-brain.md`
+
+## 给 Agent
+
+启动顺序：
+
+1. `llms.txt`
+2. `AGENTS.md`
+3. `SKILL.md`
+4. `brain/RESOLVER.md`
+5. `brain/schema.md`
+6. `skills/RESOLVER.md`
+
+一句话规则：**先 search，再 think；先保留证据，再综合认知。**
+
+## 贡献
+
+这是一个早期 MVP。欢迎贡献：
+
+- 更好的 source ingestion 工作流
+- 更严格的 lint 检查
+- 更安全的日历/日记处理
+- Obsidian-friendly 模板
+- Agent eval cases
+- 文档和示例
+
+见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
+## 项目状态
+
+MVP。当前版本刻意保持 local-first 和小而清楚，先验证记忆工作流，再引入向量检索、图存储、后台任务或 MCP 这类更重的基础设施。

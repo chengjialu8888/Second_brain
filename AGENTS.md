@@ -22,6 +22,11 @@ Use this file when working on this repository.
 ## Common Commands
 
 ```bash
+scripts/second_brain.sh help
+scripts/second_brain.sh prompt
+scripts/second_brain.sh search "query"
+scripts/second_brain.sh lint
+scripts/second_brain.sh diary 2026-06-12
 python3 scripts/brain_search.py "query"
 python3 scripts/wiki_lint.py
 scripts/calendar_diary_draft.sh 2026-06-12
@@ -48,6 +53,7 @@ python3 -c "import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path
 ## More Detail
 
 - Human overview: `README.md`
+- Chinese overview: `README.zh-CN.md`
 - Architecture: `docs/ARCHITECTURE.md`
 - User journey: `docs/USER_JOURNEY.md`
 - Agent guide: `docs/AGENT_GUIDE.md`

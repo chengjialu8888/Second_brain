@@ -27,6 +27,8 @@ Run:
 ```bash
 bash -n scripts/*.sh
 python3 -c "import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path('scripts').glob('*.py')]; print('python ast ok')"
+scripts/second_brain.sh lint
+scripts/second_brain.sh search "second brain"
 python3 scripts/wiki_lint.py
 python3 scripts/brain_search.py "second brain"
 ```
