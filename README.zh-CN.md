@@ -126,6 +126,8 @@ Then help me capture, ingest, search, think, lint, or generate diary drafts with
   <img src="assets/product-flow.svg" alt="Second Brain 产品流程与核心架构" width="100%">
 </p>
 
+这套架构也可以理解成一张“运行解剖图”：`brain/` 是身体，`brain/sources/` 是证据层，Compiled Truth 和 Timeline 组成记忆模型，`skills/` 是可重复工作流，`wiki_lint` 是免疫系统。每个部分都应该说明它的 filter 和 fissure：它如何过滤世界，以及它无法弥合什么。详见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
+
 ## 仓库结构
 
 ```text

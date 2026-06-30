@@ -126,6 +126,8 @@ Then help me capture, ingest, search, think, lint, or generate diary drafts with
   <img src="assets/product-flow.svg" alt="Second Brain product flow and core architecture" width="100%">
 </p>
 
+The architecture can also be read as an operational anatomy: `brain/` is the body, `brain/sources/` is the evidence layer, Compiled Truth and Timeline form the memory model, `skills/` are repeatable workflows, and `wiki_lint` is the immune system. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the filter/fissure model behind each part.
+
 ## Repository Map
 
 ```text
