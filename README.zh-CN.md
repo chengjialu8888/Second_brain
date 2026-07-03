@@ -111,7 +111,8 @@ scripts/second_brain.sh diary today
 ```text
 Use this repository as the $second-brain skill.
 Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
-Then help me capture, ingest, search, think, lint, or generate diary drafts without committing private source data.
+When output needs a specialist lens, also read skills/agency-agent-routing.md and use agents/agency-agents/ after searching Second Brain evidence.
+Then help me capture, ingest, search, think, lint, route specialist agents, or generate diary drafts without committing private source data.
 ```
 
 ## 用户旅程
@@ -128,6 +129,20 @@ Then help me capture, ingest, search, think, lint, or generate diary drafts with
 
 这套架构也可以理解成一张“运行解剖图”：`brain/` 是身体，`brain/sources/` 是证据层，Compiled Truth 和 Timeline 组成记忆模型，`skills/` 是可重复工作流，`wiki_lint` 是免疫系统。每个部分都应该说明它的 filter 和 fissure：它如何过滤世界，以及它无法弥合什么。详见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
 
+## 专家 Agent 层
+
+Second Brain 现在内置一个可选的 [Agency Agents](agents/agency-agents/README.md) 专家层：来自 [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents/tree/main) 的 233 个专家 prompt，已作为本地 source 文件和可搜索 roster 安装进仓库。
+
+规则很简单：**先 memory，后专家视角**。当输出需要产品规划、架构评审、设计 critique、增长策略、安全 review、测试计划等专业判断时，Agent 应先 search/read Second Brain 证据，再选择合适专家：
+
+```bash
+scripts/second_brain.sh agents "product strategy"
+scripts/second_brain.sh agents "Feishu integration"
+scripts/second_brain.sh agents "security review"
+```
+
+调用协议见 [skills/agency-agent-routing.md](skills/agency-agent-routing.md)。
+
 ## 仓库结构
 
 ```text
@@ -142,6 +157,7 @@ Then help me capture, ingest, search, think, lint, or generate diary drafts with
 │   ├── people/ concepts/ projects/ diary/
 │   └── sources/                 # 原始资料快照
 ├── skills/                      # ingest、query、enrich、lint、diary 等工作流
+├── agents/agency-agents/        # 可选专家 Agent 层和 roster
 ├── scripts/                     # 可执行的小工具
 ├── evals/                       # routing / filing / query / lint 种子评测
 └── docs/                        # 面向人类和 Agent 的文档
@@ -159,6 +175,7 @@ Then help me capture, ingest, search, think, lint, or generate diary drafts with
 - 本地搜索
 - 结构 lint
 - 种子 eval case
+- Agency Agents 专家路由
 - `llms.txt` Agent 抓取入口
 
 ## 下一步
@@ -192,6 +209,7 @@ Then help me capture, ingest, search, think, lint, or generate diary drafts with
 4. `brain/RESOLVER.md`
 5. `brain/schema.md`
 6. `skills/RESOLVER.md`
+7. 需要专家输出视角时读 `skills/agency-agent-routing.md`
 
 一句话规则：**先 search，再 think；先保留证据，再综合认知。**
 

@@ -15,6 +15,7 @@ Usage:
   scripts/second_brain.sh help
   scripts/second_brain.sh prompt
   scripts/second_brain.sh search "query"
+  scripts/second_brain.sh agents ["query"]
   scripts/second_brain.sh lint
   scripts/second_brain.sh diary [YYYY-MM-DD|today]
   scripts/second_brain.sh links <file>
@@ -37,7 +38,8 @@ case "$cmd" in
     cat <<'EOF'
 Use this repository as the $second-brain skill.
 Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
-Then help me capture, ingest, search, think, lint, or generate diary drafts without committing private source data.
+When output needs a specialist lens, also read skills/agency-agent-routing.md and use agents/agency-agents/ after searching Second Brain evidence.
+Then help me capture, ingest, search, think, lint, route specialist agents, or generate diary drafts without committing private source data.
 EOF
     ;;
   search)
@@ -46,6 +48,9 @@ EOF
       exit 2
     fi
     python3 scripts/brain_search.py "$*"
+    ;;
+  agents)
+    python3 scripts/agency_agent_search.py "$@"
     ;;
   lint)
     python3 scripts/wiki_lint.py

@@ -18,6 +18,7 @@ Repository: https://github.com/chengjialu8888/Second_brain
 ## Workflows
 
 - [skills/brain-query.md](skills/brain-query.md): Search first, then synthesize with sources and gaps.
+- [skills/agency-agent-routing.md](skills/agency-agent-routing.md): Select installed Agency Agents as specialist lenses after Second Brain evidence is read.
 - [skills/chat-ingestion.md](skills/chat-ingestion.md): Preserve chat exports and extract durable entities.
 - [skills/feishu-doc-ingestion.md](skills/feishu-doc-ingestion.md): Fetch Feishu docs/wiki and extract durable concepts.
 - [skills/entity-enrichment.md](skills/entity-enrichment.md): Create or update canonical entity pages.
@@ -29,6 +30,7 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - `scripts/second_brain.sh help`: skill-style command surface.
 - `scripts/second_brain.sh prompt`: agent startup prompt.
 - `scripts/second_brain.sh search "query"`: local Markdown search through the skill-style wrapper.
+- `scripts/second_brain.sh agents "query"`: search the installed Agency Agents roster for a specialist lens.
 - `scripts/second_brain.sh lint`: structural lint through the skill-style wrapper.
 - `scripts/second_brain.sh diary YYYY-MM-DD`: Feishu calendar to diary draft through the skill-style wrapper.
 - `python3 scripts/brain_search.py "query"`: local Markdown search.
@@ -36,6 +38,14 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - `scripts/calendar_diary_draft.sh YYYY-MM-DD`: Feishu calendar to diary draft.
 - `scripts/extract_links.sh FILE`: extract URLs.
 - `scripts/fetch_feishu_doc.sh URL`: snapshot Feishu doc/wiki.
+
+## Specialist Agent Layer
+
+- [agents/agency-agents/README.md](agents/agency-agents/README.md): Installed Agency Agents overview and boundaries.
+- [agents/agency-agents/ROUTER.md](agents/agency-agents/ROUTER.md): Routing heuristics by deliverable type.
+- [agents/agency-agents/roster.json](agents/agency-agents/roster.json): Machine-readable roster of 233 installed agents.
+- [agents/agency-agents/source/](agents/agency-agents/source/): Upstream agent prompts grouped by division.
+- [agents/agency-agents/strategy/](agents/agency-agents/strategy/): NEXUS multi-agent playbooks and handoffs.
 
 ## Invariants
 
@@ -45,3 +55,4 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - Canonical entity pages use Compiled Truth above `---` and Timeline below it.
 - Agents must read `brain/RESOLVER.md` before creating or moving pages.
 - Calendar-generated diary pages remain `status: draft` until the user adds subjective context.
+- Agency Agents may shape deliverables only after local Second Brain evidence has been searched/read.

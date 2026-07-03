@@ -111,7 +111,8 @@ If you are using Codex, Claude Code, Cursor, or another coding agent, start with
 ```text
 Use this repository as the $second-brain skill.
 Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
-Then help me capture, ingest, search, think, lint, or generate diary drafts without committing private source data.
+When output needs a specialist lens, also read skills/agency-agent-routing.md and use agents/agency-agents/ after searching Second Brain evidence.
+Then help me capture, ingest, search, think, lint, route specialist agents, or generate diary drafts without committing private source data.
 ```
 
 ## User Journey
@@ -128,6 +129,20 @@ Then help me capture, ingest, search, think, lint, or generate diary drafts with
 
 The architecture can also be read as an operational anatomy: `brain/` is the body, `brain/sources/` is the evidence layer, Compiled Truth and Timeline form the memory model, `skills/` are repeatable workflows, and `wiki_lint` is the immune system. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the filter/fissure model behind each part.
 
+## Specialist Agent Layer
+
+Second Brain now includes an optional [Agency Agents](agents/agency-agents/README.md) layer: 233 specialist prompts from [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents/tree/main), installed as local source files plus a searchable roster.
+
+The rule is simple: **memory first, specialist lens second**. For source-backed product plans, architecture reviews, design critique, growth strategy, security review, testing plans, and similar deliverables, agents should search/read Second Brain first, then choose a relevant specialist:
+
+```bash
+scripts/second_brain.sh agents "product strategy"
+scripts/second_brain.sh agents "Feishu integration"
+scripts/second_brain.sh agents "security review"
+```
+
+See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the workflow contract.
+
 ## Repository Map
 
 ```text
@@ -142,6 +157,7 @@ The architecture can also be read as an operational anatomy: `brain/` is the bod
 │   ├── people/ concepts/ projects/ diary/
 │   └── sources/                 # Immutable source snapshots
 ├── skills/                      # Workflow docs: ingest, query, enrich, lint, diary
+├── agents/agency-agents/        # Optional specialist agent layer and roster
 ├── scripts/                     # Deterministic local utilities
 ├── evals/                       # Seed eval cases for routing, filing, query, lint
 └── docs/                        # Human and agent-facing docs
@@ -159,6 +175,7 @@ The architecture can also be read as an operational anatomy: `brain/` is the bod
 - Local search
 - Structural lint
 - Seed eval cases
+- Agency Agents specialist routing
 - Agent crawler map via `llms.txt`
 
 ## What Is Next
@@ -192,6 +209,7 @@ Start here:
 4. `brain/RESOLVER.md`
 5. `brain/schema.md`
 6. `skills/RESOLVER.md`
+7. `skills/agency-agent-routing.md` when a specialist output lens is useful
 
 Rule of thumb: **search first, then think; preserve evidence, then synthesize.**
 

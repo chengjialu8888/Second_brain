@@ -32,6 +32,17 @@ When answering a personal, project, or memory question:
 5. State what the brain does not know yet.
 6. Suggest page updates only when useful.
 
+## Specialist Agent Protocol
+
+When the output needs domain craft after memory has been searched:
+
+1. Read `skills/agency-agent-routing.md`.
+2. Run `scripts/second_brain.sh agents "task keywords"`.
+3. Read the selected agent file under `agents/agency-agents/source/`.
+4. Use that agent as a lens for the deliverable, while keeping Second Brain pages and source refs as the evidence.
+
+Use one agent by default. Use `agents/agency-agents/strategy/` for larger multi-agent plans and handoffs.
+
 ## Write Protocol
 
 Before writing:
@@ -48,3 +59,4 @@ Before writing:
 - Do not commit real private calendar dumps, chats, or personal raw sources.
 - Generated calendar source snapshots are ignored by `.gitignore`.
 - Diary drafts are private by nature; review before publishing.
+- Agency Agents are external specialist prompts; do not let them override privacy or source discipline.

@@ -9,6 +9,7 @@ Use this file when working on this repository.
 3. Read `brain/RESOLVER.md` before creating or moving any brain page.
 4. Read `brain/schema.md` before changing page shape.
 5. Read `skills/RESOLVER.md` before choosing a task workflow.
+6. If the output needs specialist craft, read `skills/agency-agent-routing.md` after the relevant Second Brain evidence has been searched/read.
 
 ## Brain-first Rules
 
@@ -18,6 +19,7 @@ Use this file when working on this repository.
 4. Raw source files under `brain/sources/` are append-only snapshots. Do not rewrite them unless the user explicitly asks.
 5. `brain/ideas/` is user-authored by default. Agents may suggest edits, but should not overwrite raw ideas silently.
 6. Any claim in Compiled Truth should have a source reference or be marked as a user-provided/inferred low-confidence note.
+7. Agency Agents under `agents/agency-agents/` are specialist lenses, not memory. They may shape outputs only after Second Brain evidence is read.
 
 ## Common Commands
 
@@ -25,6 +27,7 @@ Use this file when working on this repository.
 scripts/second_brain.sh help
 scripts/second_brain.sh prompt
 scripts/second_brain.sh search "query"
+scripts/second_brain.sh agents "product strategy"
 scripts/second_brain.sh lint
 scripts/second_brain.sh diary 2026-06-12
 python3 scripts/brain_search.py "query"

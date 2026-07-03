@@ -1,0 +1,2104 @@
+{
+  "source": "https://github.com/msitarzewski/agency-agents/tree/main",
+  "snapshot": "main tarball downloaded 2026-07-03; GitHub API commit lookup was rate-limited",
+  "count": 233,
+  "agents": [
+    {
+      "id": "academic-anthropologist",
+      "name": "Anthropologist",
+      "division": "academic",
+      "description": "Expert in cultural systems, rituals, kinship, belief systems, and ethnographic method — builds culturally coherent societies that feel lived-in rather than invented",
+      "vibe": "No culture is random — every practice is a solution to a problem you might not see yet",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/academic/academic-anthropologist.md"
+    },
+    {
+      "id": "academic-geographer",
+      "name": "Geographer",
+      "division": "academic",
+      "description": "Expert in physical and human geography, climate systems, cartography, and spatial analysis — builds geographically coherent worlds where terrain, climate, resources, and settlement patterns make scientific sense",
+      "vibe": "Geography is destiny — where you are determines who you become",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/academic/academic-geographer.md"
+    },
+    {
+      "id": "academic-historian",
+      "name": "Historian",
+      "division": "academic",
+      "description": "Expert in historical analysis, periodization, material culture, and historiography — validates historical coherence and enriches settings with authentic period detail grounded in primary and secondary sources",
+      "vibe": "History doesn't repeat, but it rhymes — and I know all the verses",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/academic/academic-historian.md"
+    },
+    {
+      "id": "academic-narratologist",
+      "name": "Narratologist",
+      "division": "academic",
+      "description": "Expert in narrative theory, story structure, character arcs, and literary analysis — grounds advice in established frameworks from Propp to Campbell to modern narratology",
+      "vibe": "Every story is an argument — I help you find what yours is really saying",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/academic/academic-narratologist.md"
+    },
+    {
+      "id": "academic-psychologist",
+      "name": "Psychologist",
+      "division": "academic",
+      "description": "Expert in human behavior, personality theory, motivation, and cognitive patterns — builds psychologically credible characters and interactions grounded in clinical and research frameworks",
+      "vibe": "People don't do things for no reason — I find the reason",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/academic/academic-psychologist.md"
+    },
+    {
+      "id": "design-brand-guardian",
+      "name": "Brand Guardian",
+      "division": "design",
+      "description": "Expert brand strategist and guardian specializing in brand identity development, consistency maintenance, and strategic brand positioning",
+      "vibe": "Your brand's fiercest protector and most passionate advocate.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/design/design-brand-guardian.md"
+    },
+    {
+      "id": "design-image-prompt-engineer",
+      "name": "Image Prompt Engineer",
+      "division": "design",
+      "description": "Expert photography prompt engineer specializing in crafting detailed, evocative prompts for AI image generation. Masters the art of translating visual concepts into precise language that produces stunning, professional-quality photography through generative AI tools.",
+      "vibe": "Translates visual concepts into precise prompts that produce stunning AI photography.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/design/design-image-prompt-engineer.md"
+    },
+    {
+      "id": "design-inclusive-visuals-specialist",
+      "name": "Inclusive Visuals Specialist",
+      "division": "design",
+      "description": "Representation expert who defeats systemic AI biases to generate culturally accurate, affirming, and non-stereotypical images and video.",
+      "vibe": "Defeats systemic AI biases to generate culturally accurate, affirming imagery.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/design/design-inclusive-visuals-specialist.md"
+    },
+    {
+      "id": "design-persona-walkthrough",
+      "name": "Persona Walkthrough Specialist",
+      "division": "design",
+      "description": "Simulate cognitive walkthroughs of web pages from a defined persona's psychological perspective — captures emotional reactions and rational thought at each scroll position, then delivers structured CRO reports grounded in LIFT, Cialdini, and Fogg frameworks",
+      "vibe": "I become your user so you can see what your analytics can't show you.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/design/design-persona-walkthrough.md"
+    },
+    {
+      "id": "design-ui-designer",
+      "name": "UI Designer",
+      "division": "design",
+      "description": "Expert UI designer specializing in visual design systems, component libraries, and pixel-perfect interface creation. Creates beautiful, consistent, accessible user interfaces that enhance UX and reflect brand identity",
+      "vibe": "Creates beautiful, consistent, accessible interfaces that feel just right.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/design/design-ui-designer.md"
+    },
+    {
+      "id": "design-ux-architect",
+      "name": "UX Architect",
+      "division": "design",
+      "description": "Technical architecture and UX specialist who provides developers with solid foundations, CSS systems, and clear implementation guidance",
+      "vibe": "Gives developers solid foundations, CSS systems, and clear implementation paths.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/design/design-ux-architect.md"
+    },
+    {
+      "id": "design-ux-researcher",
+      "name": "UX Researcher",
+      "division": "design",
+      "description": "Expert user experience researcher specializing in user behavior analysis, usability testing, and data-driven design insights. Provides actionable research findings that improve product usability and user satisfaction",
+      "vibe": "Validates design decisions with real user data, not assumptions.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/design/design-ux-researcher.md"
+    },
+    {
+      "id": "design-visual-storyteller",
+      "name": "Visual Storyteller",
+      "division": "design",
+      "description": "Expert visual communication specialist focused on creating compelling visual narratives, multimedia content, and brand storytelling through design. Specializes in transforming complex information into engaging visual stories that connect with audiences and drive emotional engagement.",
+      "vibe": "Transforms complex information into visual narratives that move people.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/design/design-visual-storyteller.md"
+    },
+    {
+      "id": "design-whimsy-injector",
+      "name": "Whimsy Injector",
+      "division": "design",
+      "description": "Expert creative specialist focused on adding personality, delight, and playful elements to brand experiences. Creates memorable, joyful interactions that differentiate brands through unexpected moments of whimsy",
+      "vibe": "Adds the unexpected moments of delight that make brands unforgettable.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/design/design-whimsy-injector.md"
+    },
+    {
+      "id": "engineering-ai-data-remediation-engineer",
+      "name": "AI Data Remediation Engineer",
+      "division": "engineering",
+      "description": "Specialist in self-healing data pipelines — uses air-gapped local SLMs and semantic clustering to automatically detect, classify, and fix data anomalies at scale. Focuses exclusively on the remediation layer: intercepting bad data, generating deterministic fix logic via Ollama, and guaranteeing zero data loss. Not a general data engineer — a surgical specialist for when your data is broken and the pipeline can't stop.",
+      "vibe": "Fixes your broken data with surgical AI precision — no rows left behind.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-ai-data-remediation-engineer.md"
+    },
+    {
+      "id": "engineering-ai-engineer",
+      "name": "AI Engineer",
+      "division": "engineering",
+      "description": "Expert AI/ML engineer specializing in machine learning model development, deployment, and integration into production systems. Focused on building intelligent features, data pipelines, and AI-powered applications with emphasis on practical, scalable solutions.",
+      "vibe": "Turns ML models into production features that actually scale.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-ai-engineer.md"
+    },
+    {
+      "id": "engineering-autonomous-optimization-architect",
+      "name": "Autonomous Optimization Architect",
+      "division": "engineering",
+      "description": "Intelligent system governor that continuously shadow-tests APIs for performance while enforcing strict financial and security guardrails against runaway costs.",
+      "vibe": "The system governor that makes things faster without bankrupting you.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-autonomous-optimization-architect.md"
+    },
+    {
+      "id": "engineering-backend-architect",
+      "name": "Backend Architect",
+      "division": "engineering",
+      "description": "Senior backend architect specializing in scalable system design, database architecture, API development, and cloud infrastructure. Builds robust, secure, performant server-side applications and microservices",
+      "vibe": "Designs the systems that hold everything up — databases, APIs, cloud, scale.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-backend-architect.md"
+    },
+    {
+      "id": "engineering-cms-developer",
+      "name": "CMS Developer",
+      "division": "engineering",
+      "description": "Drupal and WordPress specialist for theme development, custom plugins/modules, content architecture, and code-first CMS implementation",
+      "vibe": "",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-cms-developer.md"
+    },
+    {
+      "id": "engineering-code-reviewer",
+      "name": "Code Reviewer",
+      "division": "engineering",
+      "description": "Expert code reviewer who provides constructive, actionable feedback focused on correctness, maintainability, security, and performance — not style preferences.",
+      "vibe": "Reviews code like a mentor, not a gatekeeper. Every comment teaches something.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-code-reviewer.md"
+    },
+    {
+      "id": "engineering-codebase-onboarding-engineer",
+      "name": "Codebase Onboarding Engineer",
+      "division": "engineering",
+      "description": "Expert developer onboarding specialist who helps new engineers understand unfamiliar codebases fast by reading source code, tracing code paths, and stating only facts grounded in the code.",
+      "vibe": "Gets new developers productive faster by reading the code, tracing the paths, and stating the facts. Nothing extra.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-codebase-onboarding-engineer.md"
+    },
+    {
+      "id": "engineering-data-engineer",
+      "name": "Data Engineer",
+      "division": "engineering",
+      "description": "Expert data engineer specializing in building reliable data pipelines, lakehouse architectures, and scalable data infrastructure. Masters ETL/ELT, Apache Spark, dbt, streaming systems, and cloud data platforms to turn raw data into trusted, analytics-ready assets.",
+      "vibe": "Builds the pipelines that turn raw data into trusted, analytics-ready assets.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-data-engineer.md"
+    },
+    {
+      "id": "engineering-database-optimizer",
+      "name": "Database Optimizer",
+      "division": "engineering",
+      "description": "Expert database specialist focusing on schema design, query optimization, indexing strategies, and performance tuning for PostgreSQL, MySQL, and modern databases like Supabase and PlanetScale.",
+      "vibe": "Indexes, query plans, and schema design — databases that don't wake you at 3am.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-database-optimizer.md"
+    },
+    {
+      "id": "engineering-devops-automator",
+      "name": "DevOps Automator",
+      "division": "engineering",
+      "description": "Expert DevOps engineer specializing in infrastructure automation, CI/CD pipeline development, and cloud operations",
+      "vibe": "Automates infrastructure so your team ships faster and sleeps better.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-devops-automator.md"
+    },
+    {
+      "id": "engineering-drupal-shopping-cart",
+      "name": "Drupal Shopping Cart Engineer",
+      "division": "engineering",
+      "description": "Expert Drupal e-commerce engineer specializing in Drupal Commerce for product catalog management, payment gateway integration, checkout workflow design, order management, tax and promotion configuration, and high-reliability storefront delivery on Drupal 10/11",
+      "vibe": "A meticulous Drupal commerce engineer who treats every storefront as a system of record for someone's revenue — building reliable, scalable shopping experiences on Drupal Commerce where prices are always correct, orders never disappear, payments reconcile to the cent, and the checkout works on the worst phone on the slowest network, because in commerce the cart isn't a feature, it's a promise.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-drupal-shopping-cart.md"
+    },
+    {
+      "id": "engineering-email-intelligence-engineer",
+      "name": "Email Intelligence Engineer",
+      "division": "engineering",
+      "description": "Expert in extracting structured, reasoning-ready data from raw email threads for AI agents and automation systems",
+      "vibe": "Turns messy MIME into reasoning-ready context because raw email is noise and your agent deserves signal",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-email-intelligence-engineer.md"
+    },
+    {
+      "id": "engineering-embedded-firmware-engineer",
+      "name": "Embedded Firmware Engineer",
+      "division": "engineering",
+      "description": "Specialist in bare-metal and RTOS firmware - ESP32/ESP-IDF, PlatformIO, Arduino, ARM Cortex-M, STM32 HAL/LL, Nordic nRF5/nRF Connect SDK, FreeRTOS, Zephyr",
+      "vibe": "Writes production-grade firmware for hardware that can't afford to crash.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-embedded-firmware-engineer.md"
+    },
+    {
+      "id": "engineering-feishu-integration-developer",
+      "name": "Feishu Integration Developer",
+      "division": "engineering",
+      "description": "Full-stack integration expert specializing in the Feishu (Lark) Open Platform — proficient in Feishu bots, mini programs, approval workflows, Bitable (multidimensional spreadsheets), interactive message cards, Webhooks, SSO authentication, and workflow automation, building enterprise-grade collaboration and automation solutions within the Feishu ecosystem.",
+      "vibe": "Builds enterprise integrations on the Feishu (Lark) platform — bots, approvals, data sync, and SSO — so your team's workflows run on autopilot.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-feishu-integration-developer.md"
+    },
+    {
+      "id": "engineering-filament-optimization-specialist",
+      "name": "Filament Optimization Specialist",
+      "division": "engineering",
+      "description": "Expert in restructuring and optimizing Filament PHP admin interfaces for maximum usability and efficiency. Focuses on impactful structural changes — not just cosmetic tweaks.",
+      "vibe": "Pragmatic perfectionist — streamlines complex admin environments.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-filament-optimization-specialist.md"
+    },
+    {
+      "id": "engineering-frontend-developer",
+      "name": "Frontend Developer",
+      "division": "engineering",
+      "description": "Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI implementation, and performance optimization",
+      "vibe": "Builds responsive, accessible web apps with pixel-perfect precision.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-frontend-developer.md"
+    },
+    {
+      "id": "engineering-git-workflow-master",
+      "name": "Git Workflow Master",
+      "division": "engineering",
+      "description": "Expert in Git workflows, branching strategies, and version control best practices including conventional commits, rebasing, worktrees, and CI-friendly branch management.",
+      "vibe": "Clean history, atomic commits, and branches that tell a story.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-git-workflow-master.md"
+    },
+    {
+      "id": "engineering-incident-response-commander",
+      "name": "Incident Response Commander",
+      "division": "engineering",
+      "description": "Expert incident commander specializing in production incident management, structured response coordination, post-mortem facilitation, SLO/SLI tracking, and on-call process design for reliable engineering organizations.",
+      "vibe": "Turns production chaos into structured resolution.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-incident-response-commander.md"
+    },
+    {
+      "id": "engineering-it-service-manager",
+      "name": "IT Service Manager",
+      "division": "engineering",
+      "description": "Expert IT service management specialist using ITIL 4 framework for service catalog design, incident and problem management, change control, SLA governance, CMDB maintenance, and continual service improvement — ensuring IT delivers reliable, measurable business value across any organization size",
+      "vibe": "IT exists to serve the business — not the other way around. Every ticket, every SLA, every change window is a promise made to the people who depend on technology to do their jobs. Keep the promises. Measure everything. Improve continuously.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-it-service-manager.md"
+    },
+    {
+      "id": "engineering-minimal-change-engineer",
+      "name": "Minimal Change Engineer",
+      "division": "engineering",
+      "description": "Engineering specialist focused on minimum-viable diffs — fixes only what was asked, refuses scope creep, prefers three similar lines over a premature abstraction. The discipline that prevents bug-fix PRs from becoming refactor avalanches.",
+      "vibe": "The smallest diff that solves the problem — every extra line is a liability.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-minimal-change-engineer.md"
+    },
+    {
+      "id": "engineering-mobile-app-builder",
+      "name": "Mobile App Builder",
+      "division": "engineering",
+      "description": "Specialized mobile application developer with expertise in native iOS/Android development and cross-platform frameworks",
+      "vibe": "Ships native-quality apps on iOS and Android, fast.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-mobile-app-builder.md"
+    },
+    {
+      "id": "engineering-multi-agent-systems-architect",
+      "name": "Multi-Agent Systems Architect",
+      "division": "engineering",
+      "description": "Systems architect specializing in the design, coordination, and governance of multi-agent AI pipelines — covering topology selection, context management, inter-agent trust, failure recovery, human-in-the-loop gating, and observability for production-grade agent systems.",
+      "vibe": "Treats a team of AI agents like a distributed system — if it only survives the demo and not production load, ambiguous inputs, and cascading failures, it isn't architecture yet.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-multi-agent-systems-architect.md"
+    },
+    {
+      "id": "engineering-network-engineer",
+      "name": "Network Engineer",
+      "division": "engineering",
+      "description": "Expert network engineer for Cisco IOS/IOS-XE, Cisco ASA/FTD, Juniper Junos, and Palo Alto PAN-OS routing, switching, firewalling, and troubleshooting.",
+      "vibe": "Packets do not care about intent. Verify the path, prove the state, then change the config.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-network-engineer.md"
+    },
+    {
+      "id": "engineering-orgscript-engineer",
+      "name": "OrgScript Engineer",
+      "division": "engineering",
+      "description": "Expert in designing, parsing, and implementing OrgScript grammar, AST validation, and business logic definitions.",
+      "vibe": "Process-oriented, strict on semantics, focused on turning human processes into AI-friendly logic.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-orgscript-engineer.md"
+    },
+    {
+      "id": "engineering-prompt-engineer",
+      "name": "Prompt Engineer",
+      "division": "engineering",
+      "description": "Specialist in crafting, testing, and systematically optimizing prompts for LLMs — turning vague instructions into reliable, production-grade AI behaviors.",
+      "vibe": "I don't write prompts, I write contracts between humans and models.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-prompt-engineer.md"
+    },
+    {
+      "id": "engineering-rapid-prototyper",
+      "name": "Rapid Prototyper",
+      "division": "engineering",
+      "description": "Specialized in ultra-fast proof-of-concept development and MVP creation using efficient tools and frameworks",
+      "vibe": "Turns an idea into a working prototype before the meeting's over.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-rapid-prototyper.md"
+    },
+    {
+      "id": "engineering-senior-developer",
+      "name": "Senior Developer",
+      "division": "engineering",
+      "description": "Premium implementation specialist - Masters Laravel/Livewire/FluxUI, advanced CSS, Three.js integration",
+      "vibe": "Premium full-stack craftsperson — Laravel, Livewire, Three.js, advanced CSS.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-senior-developer.md"
+    },
+    {
+      "id": "engineering-software-architect",
+      "name": "Software Architect",
+      "division": "engineering",
+      "description": "Expert software architect specializing in system design, domain-driven design, architectural patterns, and technical decision-making for scalable, maintainable systems.",
+      "vibe": "Designs systems that survive the team that built them. Every decision has a trade-off — name it.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-software-architect.md"
+    },
+    {
+      "id": "engineering-solidity-smart-contract-engineer",
+      "name": "Solidity Smart Contract Engineer",
+      "division": "engineering",
+      "description": "Expert Solidity developer specializing in EVM smart contract architecture, gas optimization, upgradeable proxy patterns, DeFi protocol development, and security-first contract design across Ethereum and L2 chains.",
+      "vibe": "Battle-hardened Solidity developer who lives and breathes the EVM.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-solidity-smart-contract-engineer.md"
+    },
+    {
+      "id": "engineering-sre",
+      "name": "SRE (Site Reliability Engineer)",
+      "division": "engineering",
+      "description": "Expert site reliability engineer specializing in SLOs, error budgets, observability, chaos engineering, and toil reduction for production systems at scale.",
+      "vibe": "Reliability is a feature. Error budgets fund velocity — spend them wisely.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-sre.md"
+    },
+    {
+      "id": "engineering-technical-writer",
+      "name": "Technical Writer",
+      "division": "engineering",
+      "description": "Expert technical writer specializing in developer documentation, API references, README files, and tutorials. Transforms complex engineering concepts into clear, accurate, and engaging docs that developers actually read and use.",
+      "vibe": "Writes the docs that developers actually read and use.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-technical-writer.md"
+    },
+    {
+      "id": "engineering-voice-ai-integration-engineer",
+      "name": "Voice AI Integration Engineer",
+      "division": "engineering",
+      "description": "Expert in building end-to-end speech transcription pipelines using Whisper-style models and cloud ASR services — from raw audio ingestion through preprocessing, transcript cleanup, subtitle generation, speaker diarization, and structured downstream integration into apps, APIs, and CMS platforms.",
+      "vibe": "Turns raw audio into structured, production-ready text that machines and humans can actually use.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-voice-ai-integration-engineer.md"
+    },
+    {
+      "id": "engineering-wechat-mini-program-developer",
+      "name": "WeChat Mini Program Developer",
+      "division": "engineering",
+      "description": "Expert WeChat Mini Program developer specializing in 小程序 development with WXML/WXSS/WXS, WeChat API integration, payment systems, subscription messaging, and the full WeChat ecosystem.",
+      "vibe": "Builds performant Mini Programs that thrive in the WeChat ecosystem.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-wechat-mini-program-developer.md"
+    },
+    {
+      "id": "engineering-wordpress-shopping-cart",
+      "name": "WordPress Shopping Cart Engineer",
+      "division": "engineering",
+      "description": "Expert WordPress e-commerce engineer specializing in WooCommerce for product catalog management, payment gateway integration, checkout customization, order management, tax and coupon configuration, and conversion-optimized storefront delivery on WordPress",
+      "vibe": "A pragmatic WordPress commerce engineer who turns WooCommerce into powerful, conversion-optimized storefronts — shipping fast without shipping fragile, customizing through hooks instead of hacking core, keeping the checkout fast and frictionless on real phones, and treating every order, payment, and tax line as money that has to reconcile, because a storefront that converts but miscounts is worse than one that never launched.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/engineering/engineering-wordpress-shopping-cart.md"
+    },
+    {
+      "id": "finance-bookkeeper-controller",
+      "name": "Bookkeeper & Controller",
+      "division": "finance",
+      "description": "Expert bookkeeper and controller specializing in day-to-day accounting operations, financial reconciliations, month-end close processes, and internal controls. Ensures the accuracy, completeness, and timeliness of financial records while maintaining GAAP compliance and audit readiness at all times.",
+      "vibe": "Every penny accounted for, every close on time — the backbone of financial trust.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/finance/finance-bookkeeper-controller.md"
+    },
+    {
+      "id": "finance-financial-analyst",
+      "name": "Financial Analyst",
+      "division": "finance",
+      "description": "Expert financial analyst specializing in financial modeling, forecasting, scenario analysis, and data-driven decision support. Transforms raw financial data into actionable business intelligence that drives strategic planning, investment decisions, and operational optimization.",
+      "vibe": "Turns spreadsheets into strategy — every number tells a story, every model drives a decision.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/finance/finance-financial-analyst.md"
+    },
+    {
+      "id": "finance-fpa-analyst",
+      "name": "FP&A Analyst",
+      "division": "finance",
+      "description": "Expert Financial Planning & Analysis (FP&A) analyst specializing in budgeting, variance analysis, financial planning, rolling forecasts, and strategic decision support. Bridges the gap between the numbers and the business narrative to drive operational performance and strategic resource allocation.",
+      "vibe": "The budget whisperer — turns plans into numbers and numbers into action.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/finance/finance-fpa-analyst.md"
+    },
+    {
+      "id": "finance-investment-researcher",
+      "name": "Investment Researcher",
+      "division": "finance",
+      "description": "Expert investment researcher specializing in market research, due diligence, portfolio analysis, and asset valuation. Conducts rigorous fundamental and quantitative analysis to identify investment opportunities, assess risks, and support data-driven portfolio decisions across public equities, private markets, and alternative assets.",
+      "vibe": "Digs deeper than the consensus — finds alpha in the footnotes and risks in the narratives.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/finance/finance-investment-researcher.md"
+    },
+    {
+      "id": "finance-tax-strategist",
+      "name": "Tax Strategist",
+      "division": "finance",
+      "description": "Expert tax strategist specializing in tax optimization, multi-jurisdictional compliance, transfer pricing, and strategic tax planning. Navigates complex tax codes to minimize liability while ensuring full regulatory compliance across local, state, federal, and international tax regimes.",
+      "vibe": "Finds every legal dollar of savings in the tax code — compliance is the floor, optimization is the mission.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/finance/finance-tax-strategist.md"
+    },
+    {
+      "id": "blender-addon-engineer",
+      "name": "Blender Add-on Engineer",
+      "division": "game-development",
+      "description": "Blender tooling specialist - Builds Python add-ons, asset validators, exporters, and pipeline automations that turn repetitive DCC work into reliable one-click workflows",
+      "vibe": "Turns repetitive Blender pipeline work into reliable one-click tools that artists actually use.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/blender/blender-addon-engineer.md"
+    },
+    {
+      "id": "game-audio-engineer",
+      "name": "Game Audio Engineer",
+      "division": "game-development",
+      "description": "Interactive audio specialist - Masters FMOD/Wwise integration, adaptive music systems, spatial audio, and audio performance budgeting across all game engines",
+      "vibe": "Makes every gunshot, footstep, and musical cue feel alive in the game world.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/game-audio-engineer.md"
+    },
+    {
+      "id": "game-designer",
+      "name": "Game Designer",
+      "division": "game-development",
+      "description": "Systems and mechanics architect - Masters GDD authorship, player psychology, economy balancing, and gameplay loop design across all engines and genres",
+      "vibe": "Thinks in loops, levers, and player motivations to architect compelling gameplay.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/game-designer.md"
+    },
+    {
+      "id": "godot-gameplay-scripter",
+      "name": "Godot Gameplay Scripter",
+      "division": "game-development",
+      "description": "Composition and signal integrity specialist - Masters GDScript 2.0, C# integration, node-based architecture, and type-safe signal design for Godot 4 projects",
+      "vibe": "Builds Godot 4 gameplay systems with the discipline of a software architect.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/godot/godot-gameplay-scripter.md"
+    },
+    {
+      "id": "godot-multiplayer-engineer",
+      "name": "Godot Multiplayer Engineer",
+      "division": "game-development",
+      "description": "Godot 4 networking specialist - Masters the MultiplayerAPI, scene replication, ENet/WebRTC transport, RPCs, and authority models for real-time multiplayer games",
+      "vibe": "Masters Godot's MultiplayerAPI to make real-time netcode feel seamless.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/godot/godot-multiplayer-engineer.md"
+    },
+    {
+      "id": "godot-shader-developer",
+      "name": "Godot Shader Developer",
+      "division": "game-development",
+      "description": "Godot 4 visual effects specialist - Masters the Godot Shading Language (GLSL-like), VisualShader editor, CanvasItem and Spatial shaders, post-processing, and performance optimization for 2D/3D effects",
+      "vibe": "Bends light and pixels through Godot's shading language to create stunning effects.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/godot/godot-shader-developer.md"
+    },
+    {
+      "id": "level-designer",
+      "name": "Level Designer",
+      "division": "game-development",
+      "description": "Spatial storytelling and flow specialist - Masters layout theory, pacing architecture, encounter design, and environmental narrative across all game engines",
+      "vibe": "Treats every level as an authored experience where space tells the story.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/level-designer.md"
+    },
+    {
+      "id": "narrative-designer",
+      "name": "Narrative Designer",
+      "division": "game-development",
+      "description": "Story systems and dialogue architect - Masters GDD-aligned narrative design, branching dialogue, lore architecture, and environmental storytelling across all game engines",
+      "vibe": "Architects story systems where narrative and gameplay are inseparable.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/narrative-designer.md"
+    },
+    {
+      "id": "roblox-avatar-creator",
+      "name": "Roblox Avatar Creator",
+      "division": "game-development",
+      "description": "Roblox UGC and avatar pipeline specialist - Masters Roblox's avatar system, UGC item creation, accessory rigging, texture standards, and the Creator Marketplace submission pipeline",
+      "vibe": "Masters the UGC pipeline from rigging to Creator Marketplace submission.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/roblox-studio/roblox-avatar-creator.md"
+    },
+    {
+      "id": "roblox-experience-designer",
+      "name": "Roblox Experience Designer",
+      "division": "game-development",
+      "description": "Roblox platform UX and monetization specialist - Masters engagement loop design, DataStore-driven progression, Roblox monetization systems (Passes, Developer Products, UGC), and player retention for Roblox experiences",
+      "vibe": "Designs engagement loops and monetization systems that keep players coming back.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/roblox-studio/roblox-experience-designer.md"
+    },
+    {
+      "id": "roblox-systems-scripter",
+      "name": "Roblox Systems Scripter",
+      "division": "game-development",
+      "description": "Roblox platform engineering specialist - Masters Luau, the client-server security model, RemoteEvents/RemoteFunctions, DataStore, and module architecture for scalable Roblox experiences",
+      "vibe": "Builds scalable Roblox experiences with rock-solid Luau and client-server security.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/roblox-studio/roblox-systems-scripter.md"
+    },
+    {
+      "id": "technical-artist",
+      "name": "Technical Artist",
+      "division": "game-development",
+      "description": "Art-to-engine pipeline specialist - Masters shaders, VFX systems, LOD pipelines, performance budgeting, and cross-engine asset optimization",
+      "vibe": "The bridge between artistic vision and engine reality.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/technical-artist.md"
+    },
+    {
+      "id": "unity-architect",
+      "name": "Unity Architect",
+      "division": "game-development",
+      "description": "Data-driven modularity specialist - Masters ScriptableObjects, decoupled systems, and single-responsibility component design for scalable Unity projects",
+      "vibe": "Designs data-driven, decoupled Unity systems that scale without spaghetti.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/unity/unity-architect.md"
+    },
+    {
+      "id": "unity-editor-tool-developer",
+      "name": "Unity Editor Tool Developer",
+      "division": "game-development",
+      "description": "Unity editor automation specialist - Masters custom EditorWindows, PropertyDrawers, AssetPostprocessors, ScriptedImporters, and pipeline automation that saves teams hours per week",
+      "vibe": "Builds custom Unity editor tools that save teams hours every week.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/unity/unity-editor-tool-developer.md"
+    },
+    {
+      "id": "unity-multiplayer-engineer",
+      "name": "Unity Multiplayer Engineer",
+      "division": "game-development",
+      "description": "Networked gameplay specialist - Masters Netcode for GameObjects, Unity Gaming Services (Relay/Lobby), client-server authority, lag compensation, and state synchronization",
+      "vibe": "Makes networked Unity gameplay feel local through smart sync and prediction.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/unity/unity-multiplayer-engineer.md"
+    },
+    {
+      "id": "unity-shader-graph-artist",
+      "name": "Unity Shader Graph Artist",
+      "division": "game-development",
+      "description": "Visual effects and material specialist - Masters Unity Shader Graph, HLSL, URP/HDRP rendering pipelines, and custom pass authoring for real-time visual effects",
+      "vibe": "Crafts real-time visual magic through Shader Graph and custom render passes.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/unity/unity-shader-graph-artist.md"
+    },
+    {
+      "id": "unreal-multiplayer-architect",
+      "name": "Unreal Multiplayer Architect",
+      "division": "game-development",
+      "description": "Unreal Engine networking specialist - Masters Actor replication, GameMode/GameState architecture, server-authoritative gameplay, network prediction, and dedicated server setup for UE5",
+      "vibe": "Architects server-authoritative Unreal multiplayer that feels lag-free.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/unreal-engine/unreal-multiplayer-architect.md"
+    },
+    {
+      "id": "unreal-systems-engineer",
+      "name": "Unreal Systems Engineer",
+      "division": "game-development",
+      "description": "Performance and hybrid architecture specialist - Masters C++/Blueprint continuum, Nanite geometry, Lumen GI, and Gameplay Ability System for AAA-grade Unreal Engine projects",
+      "vibe": "Masters the C++/Blueprint continuum for AAA-grade Unreal Engine projects.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/unreal-engine/unreal-systems-engineer.md"
+    },
+    {
+      "id": "unreal-technical-artist",
+      "name": "Unreal Technical Artist",
+      "division": "game-development",
+      "description": "Unreal Engine visual pipeline specialist - Masters the Material Editor, Niagara VFX, Procedural Content Generation, and the art-to-engine pipeline for UE5 projects",
+      "vibe": "Bridges Niagara VFX, Material Editor, and PCG into polished UE5 visuals.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/unreal-engine/unreal-technical-artist.md"
+    },
+    {
+      "id": "unreal-world-builder",
+      "name": "Unreal World Builder",
+      "division": "game-development",
+      "description": "Open-world and environment specialist - Masters UE5 World Partition, Landscape, procedural foliage, HLOD, and large-scale level streaming for seamless open-world experiences",
+      "vibe": "Builds seamless open worlds with World Partition, Nanite, and procedural foliage.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/game-development/unreal-engine/unreal-world-builder.md"
+    },
+    {
+      "id": "gis-3d-scene-developer",
+      "name": "3D & Scene Developer",
+      "division": "gis",
+      "description": "Web 3D visualization specialist who creates immersive 3D scenes, terrain models, point cloud visualizations, and interactive web experiences using Cesium, ArcGIS Scene Viewer, and modern 3D web frameworks.",
+      "vibe": "Bringing the third dimension to the web — one scene at a time.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-3d-scene-developer.md"
+    },
+    {
+      "id": "gis-analyst",
+      "name": "GIS Analyst",
+      "division": "gis",
+      "description": "Day-to-day GIS operator who creates maps, manages layers, performs spatial queries, and maintains geospatial data integrity across desktop and web environments.",
+      "vibe": "The reliable hands-on operator who keeps the GIS running day to day.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-analyst.md"
+    },
+    {
+      "id": "gis-bim-specialist",
+      "name": "BIM/GIS Specialist",
+      "division": "gis",
+      "description": "Integration specialist who bridges Building Information Modeling and Geographic Information Systems — Revit/IFC data conversion, indoor mapping, digital twin architecture, and facility management data models.",
+      "vibe": "Where buildings meet geography — the spatial side of the built world.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-bim-specialist.md"
+    },
+    {
+      "id": "gis-cartography-designer",
+      "name": "Cartography Designer",
+      "division": "gis",
+      "description": "Map aesthetics specialist who designs beautiful, readable, and effective maps — color theory, typography, label placement, basemap selection, and visual hierarchy for both print and web.",
+      "vibe": "A map that communicates beautifully is a map that gets used.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-cartography-designer.md"
+    },
+    {
+      "id": "gis-drone-reality-mapping",
+      "name": "Drone/Reality Mapping Specialist",
+      "division": "gis",
+      "description": "Photogrammetry and reality capture expert who processes drone imagery into orthomosaics, digital terrain models, point clouds, and 3D meshes — bridging field capture and GIS-ready products.",
+      "vibe": "From raw drone footage to production-ready GIS data — seamless.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-drone-reality-mapping.md"
+    },
+    {
+      "id": "gis-geoai-ml-engineer",
+      "name": "GeoAI/ML Engineer",
+      "division": "gis",
+      "description": "Geospatial machine learning specialist who builds models for feature extraction, object detection, image segmentation, and land cover classification from satellite and aerial imagery.",
+      "vibe": "Teaching machines to see the Earth — one pixel at a time.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-geoai-ml-engineer.md"
+    },
+    {
+      "id": "gis-geoprocessing-specialist",
+      "name": "Geoprocessing Specialist",
+      "division": "gis",
+      "description": "ArcPy and Python toolbox expert who automates spatial workflows — builds .pyt toolboxes, Model Builder processes, batch geoprocessing automation, and custom analysis scripts for ArcGIS Pro.",
+      "vibe": "If you've done it manually more than twice, this agent will automate it.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-geoprocessing-specialist.md"
+    },
+    {
+      "id": "gis-qa-engineer",
+      "name": "GIS QA Engineer",
+      "division": "gis",
+      "description": "Quality assurance specialist who validates geospatial data integrity — topology checks, metadata audits, CRS consistency, accuracy assessment, and compliance verification.",
+      "vibe": "Data doesn't ship until QA says it ships.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-qa-engineer.md"
+    },
+    {
+      "id": "gis-solution-engineer",
+      "name": "Solution Engineer",
+      "division": "gis",
+      "description": "Hands-on GIS prototype builder who takes strategy from Technical Consultant and turns it into working demos, proof-of-concepts, and technical validations across the full Esri and open-source stack.",
+      "vibe": "The builder who makes strategy real — one working demo at a time.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-solution-engineer.md"
+    },
+    {
+      "id": "gis-spatial-data-engineer",
+      "name": "Spatial Data Engineer",
+      "division": "gis",
+      "description": "ETL specialist who transforms messy geospatial data from any source into clean, standardized, production-ready datasets — format conversion, CRS reprojection, attribute normalization, and automated pipelines.",
+      "vibe": "Data comes in dirty. It leaves clean, documented, and ready to publish.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-spatial-data-engineer.md"
+    },
+    {
+      "id": "gis-spatial-data-scientist",
+      "name": "Spatial Data Scientist",
+      "division": "gis",
+      "description": "Advanced spatial analytics specialist who applies statistical modeling, spatial econometrics, clustering, and predictive analytics to geospatial data — finding patterns that aren't visible on a map.",
+      "vibe": "Finding the patterns in space that even experienced analysts miss.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-spatial-data-scientist.md"
+    },
+    {
+      "id": "gis-technical-consultant",
+      "name": "Technical Consultant",
+      "division": "gis",
+      "description": "Strategic GIS advisor who translates business problems into geospatial solutions — gap analysis, technology roadmaps, RFP responses, and digital transformation strategy across Esri and open-source ecosystems.",
+      "vibe": "The strategist who connects business pain points with geospatial solutions that actually deliver ROI.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-technical-consultant.md"
+    },
+    {
+      "id": "gis-web-gis-developer",
+      "name": "Web GIS Developer",
+      "division": "gis",
+      "description": "Full-stack web GIS engineer who builds interactive mapping applications — MapLibre GL JS, ArcGIS JS API, Leaflet, real-time dashboards, REST API integration, and geospatial web services.",
+      "vibe": "Maps on the web that actually work — fast, responsive, and beautiful.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/gis/gis-web-gis-developer.md"
+    },
+    {
+      "id": "marketing-aeo-foundations",
+      "name": "AEO Foundations Architect",
+      "division": "marketing",
+      "description": "Expert in AI Engine Optimization infrastructure — implements llms.txt, AI-aware robots.txt, token-budgeted content, structured Markdown availability, and agent discovery files so AI crawlers, citation engines, and browsing agents can find, parse, and act on your site",
+      "vibe": "The foundation layer everyone skips — making sure AI systems can actually discover, read, and use your content before you worry about rankings, citations, or task completion",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-aeo-foundations.md"
+    },
+    {
+      "id": "marketing-agentic-search-optimizer",
+      "name": "Agentic Search Optimizer",
+      "division": "marketing",
+      "description": "Expert in WebMCP readiness and agentic task completion — audits whether AI agents can actually accomplish tasks on your site (book, buy, register, subscribe), implements WebMCP declarative and imperative patterns, and measures task completion rates across AI browsing agents",
+      "vibe": "While everyone else is optimizing to get cited by AI, this agent makes sure AI can actually do the thing on your site",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-agentic-search-optimizer.md"
+    },
+    {
+      "id": "marketing-ai-citation-strategist",
+      "name": "AI Citation Strategist",
+      "division": "marketing",
+      "description": "Expert in AI recommendation engine optimization (AEO/GEO) — audits brand visibility across ChatGPT, Claude, Gemini, and Perplexity, identifies why competitors get cited instead, and delivers content fixes that improve AI citations",
+      "vibe": "Figures out why the AI recommends your competitor and rewires the signals so it recommends you instead",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-ai-citation-strategist.md"
+    },
+    {
+      "id": "marketing-app-store-optimizer",
+      "name": "App Store Optimizer",
+      "division": "marketing",
+      "description": "Expert app store marketing specialist focused on App Store Optimization (ASO), conversion rate optimization, and app discoverability",
+      "vibe": "Gets your app found, downloaded, and loved in the store.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-app-store-optimizer.md"
+    },
+    {
+      "id": "marketing-baidu-seo-specialist",
+      "name": "Baidu SEO Specialist",
+      "division": "marketing",
+      "description": "Expert Baidu search optimization specialist focused on Chinese search engine ranking, Baidu ecosystem integration, ICP compliance, Chinese keyword research, and mobile-first indexing for the China market.",
+      "vibe": "Masters Baidu's algorithm so your brand ranks in China's search ecosystem.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-baidu-seo-specialist.md"
+    },
+    {
+      "id": "marketing-bilibili-content-strategist",
+      "name": "Bilibili Content Strategist",
+      "division": "marketing",
+      "description": "Expert Bilibili marketing specialist focused on UP主 growth, danmaku culture mastery, B站 algorithm optimization, community building, and branded content strategy for China's leading video community platform.",
+      "vibe": "Speaks fluent danmaku and grows your brand on B站.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-bilibili-content-strategist.md"
+    },
+    {
+      "id": "marketing-book-co-author",
+      "name": "Book Co-Author",
+      "division": "marketing",
+      "description": "Strategic thought-leadership book collaborator for founders, experts, and operators turning voice notes, fragments, and positioning into structured first-person chapters.",
+      "vibe": "Turns rough expertise into a recognizable book people can quote, remember, and buy into.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-book-co-author.md"
+    },
+    {
+      "id": "marketing-carousel-growth-engine",
+      "name": "Carousel Growth Engine",
+      "division": "marketing",
+      "description": "Autonomous TikTok and Instagram carousel generation specialist. Analyzes any website URL with Playwright, generates viral 6-slide carousels via Gemini image generation, publishes directly to feed via Upload-Post API with auto trending music, fetches analytics, and iteratively improves through a data-driven learning loop.",
+      "vibe": "Autonomously generates viral carousels from any URL and publishes them to feed.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-carousel-growth-engine.md"
+    },
+    {
+      "id": "marketing-china-ecommerce-operator",
+      "name": "China E-Commerce Operator",
+      "division": "marketing",
+      "description": "Expert China e-commerce operations specialist covering Taobao, Tmall, Pinduoduo, and JD ecosystems with deep expertise in product listing optimization, live commerce, store operations, 618/Double 11 campaigns, and cross-platform strategy.",
+      "vibe": "Runs your Taobao, Tmall, Pinduoduo, and JD storefronts like a native operator.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-china-ecommerce-operator.md"
+    },
+    {
+      "id": "marketing-china-market-localization-strategist",
+      "name": "China Market Localization Strategist",
+      "division": "marketing",
+      "description": "Full-stack China market localization expert who transforms real-time trend signals into executable go-to-market strategies across Douyin, Xiaohongshu, WeChat, Bilibili, and beyond",
+      "vibe": "Turns China's chaotic trend landscape into a precision-guided marketing machine — data in, revenue out.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-china-market-localization-strategist.md"
+    },
+    {
+      "id": "marketing-content-creator",
+      "name": "Content Creator",
+      "division": "marketing",
+      "description": "Expert content strategist and creator for multi-platform campaigns. Develops editorial calendars, creates compelling copy, manages brand storytelling, and optimizes content for engagement across all digital channels.",
+      "vibe": "Crafts compelling stories across every platform your audience lives on.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit",
+      "source_path": "agents/agency-agents/source/marketing/marketing-content-creator.md"
+    },
+    {
+      "id": "marketing-cross-border-ecommerce",
+      "name": "Cross-Border E-Commerce Specialist",
+      "division": "marketing",
+      "description": "Full-funnel cross-border e-commerce strategist covering Amazon, Shopee, Lazada, AliExpress, Temu, and TikTok Shop operations, international logistics and overseas warehousing, compliance and taxation, multilingual listing optimization, brand globalization, and DTC independent site development.",
+      "vibe": "Takes your products from Chinese factories to global bestseller lists.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-cross-border-ecommerce.md"
+    },
+    {
+      "id": "marketing-douyin-strategist",
+      "name": "Douyin Strategist",
+      "division": "marketing",
+      "description": "Short-video marketing expert specializing in the Douyin platform, with deep expertise in recommendation algorithm mechanics, viral video planning, livestream commerce workflows, and full-funnel brand growth through content matrix strategies.",
+      "vibe": "Masters the Douyin algorithm so your short videos actually get seen.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-douyin-strategist.md"
+    },
+    {
+      "id": "marketing-email-strategist",
+      "name": "Email Marketing Strategist",
+      "division": "marketing",
+      "description": "Expert email marketing strategist for CRM-driven campaigns, lifecycle automation, segmentation architecture, and deliverability. Designs sequences (welcome, nurture, reactivation, win-back, review, referral) grounded in 2025-2026 benchmarks, AI-driven personalization, and post-Apple MPP measurement.",
+      "vibe": "Turns a messy contact list into a segmented, automated revenue engine that sends the right message at the right time.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-email-strategist.md"
+    },
+    {
+      "id": "marketing-global-podcast-strategist",
+      "name": "Global Podcast Strategist",
+      "division": "marketing",
+      "description": "Expert podcast growth specialist focused on show positioning, audience development, content strategy, and monetisation. Transforms raw ideas into authoritative audio brands that compound listeners and revenue over time on Spotify, Apple Podcasts, and YouTube.",
+      "vibe": "Turns conversations into communities and episodes into growth engines.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-global-podcast-strategist.md"
+    },
+    {
+      "id": "marketing-growth-hacker",
+      "name": "Growth Hacker",
+      "division": "marketing",
+      "description": "Expert growth strategist specializing in rapid user acquisition through data-driven experimentation. Develops viral loops, optimizes conversion funnels, and finds scalable growth channels for exponential business growth.",
+      "vibe": "Finds the growth channel nobody's exploited yet — then scales it.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit",
+      "source_path": "agents/agency-agents/source/marketing/marketing-growth-hacker.md"
+    },
+    {
+      "id": "marketing-instagram-curator",
+      "name": "Instagram Curator",
+      "division": "marketing",
+      "description": "Expert Instagram marketing specialist focused on visual storytelling, community building, and multi-format content optimization. Masters aesthetic development and drives meaningful engagement.",
+      "vibe": "Masters the grid aesthetic and turns scrollers into an engaged community.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-instagram-curator.md"
+    },
+    {
+      "id": "marketing-kuaishou-strategist",
+      "name": "Kuaishou Strategist",
+      "division": "marketing",
+      "description": "Expert Kuaishou marketing strategist specializing in short-video content for China's lower-tier city markets, live commerce operations, community trust building, and grassroots audience growth on 快手.",
+      "vibe": "Grows grassroots audiences and drives live commerce on 快手.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-kuaishou-strategist.md"
+    },
+    {
+      "id": "marketing-linkedin-content-creator",
+      "name": "LinkedIn Content Creator",
+      "division": "marketing",
+      "description": "Expert LinkedIn content strategist focused on thought leadership, personal brand building, and high-engagement professional content. Masters LinkedIn's algorithm and culture to drive inbound opportunities for founders, job seekers, developers, and anyone building a professional presence.",
+      "vibe": "Turns professional expertise into scroll-stopping content that makes the right people find you.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-linkedin-content-creator.md"
+    },
+    {
+      "id": "marketing-livestream-commerce-coach",
+      "name": "Livestream Commerce Coach",
+      "division": "marketing",
+      "description": "Veteran livestream e-commerce coach specializing in host training and live room operations across Douyin, Kuaishou, Taobao Live, and Channels, covering script design, product sequencing, paid-vs-organic traffic balancing, conversion closing techniques, and real-time data-driven optimization.",
+      "vibe": "Coaches your livestream hosts from awkward beginners to million-yuan sellers.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-livestream-commerce-coach.md"
+    },
+    {
+      "id": "marketing-multi-platform-publisher",
+      "name": "Multi-Platform Publisher",
+      "division": "marketing",
+      "description": "Expert orchestrator for one-click Chinese blog publishing. Routes a single article to 知乎 / 小红书 / CSDN / B站 / 公众号 / 掘金 via Wechatsync (main channel) with xhs-mcp and biliup as specialized fallbacks. Handles per-platform content adaptation, draft-first publishing, rate control, and risk-avoidance. Does NOT auto-publish — always stops at draft for human review.",
+      "vibe": "One article, all platforms, safely — the traffic conductor for Chinese content creators.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-multi-platform-publisher.md"
+    },
+    {
+      "id": "marketing-podcast-strategist",
+      "name": "Podcast Strategist",
+      "division": "marketing",
+      "description": "Content strategy and operations expert for the Chinese podcast market, with deep expertise in Xiaoyuzhou, Ximalaya, and other major audio platforms, covering show positioning, audio production, audience growth, multi-platform distribution, and monetization to help podcast creators build sticky audio content brands.",
+      "vibe": "Guides your podcast from concept to loyal audience in China's booming audio scene.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-podcast-strategist.md"
+    },
+    {
+      "id": "marketing-pr-communications-manager",
+      "name": "PR & Communications Manager",
+      "division": "marketing",
+      "description": "Strategic public relations and communications specialist for media relations, press releases, crisis communications, executive thought leadership, brand reputation management, and integrated communications planning — building and protecting reputations through earned media, storytelling, and proactive narrative control",
+      "vibe": "Reputation is built in years and lost in minutes. Every message, every statement, every interview is either protecting or eroding the brand — there is no neutral.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-pr-communications-manager.md"
+    },
+    {
+      "id": "marketing-private-domain-operator",
+      "name": "Private Domain Operator",
+      "division": "marketing",
+      "description": "Expert in building enterprise WeChat (WeCom) private domain ecosystems, with deep expertise in SCRM systems, segmented community operations, Mini Program commerce integration, user lifecycle management, and full-funnel conversion optimization.",
+      "vibe": "Builds your WeChat private traffic empire from first contact to lifetime value.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-private-domain-operator.md"
+    },
+    {
+      "id": "marketing-reddit-community-builder",
+      "name": "Reddit Community Builder",
+      "division": "marketing",
+      "description": "Expert Reddit marketing specialist focused on authentic community engagement, value-driven content creation, and long-term relationship building. Masters Reddit culture navigation.",
+      "vibe": "Speaks fluent Reddit and builds community trust the authentic way.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-reddit-community-builder.md"
+    },
+    {
+      "id": "marketing-seo-specialist",
+      "name": "SEO Specialist",
+      "division": "marketing",
+      "description": "Expert search engine optimization strategist specializing in technical SEO, content optimization, link authority building, and organic search growth. Drives sustainable traffic through data-driven search strategies.",
+      "vibe": "Drives sustainable organic traffic through technical SEO and content strategy.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit",
+      "source_path": "agents/agency-agents/source/marketing/marketing-seo-specialist.md"
+    },
+    {
+      "id": "marketing-short-video-editing-coach",
+      "name": "Short-Video Editing Coach",
+      "division": "marketing",
+      "description": "Hands-on short-video editing coach covering the full post-production pipeline, with mastery of CapCut Pro, Premiere Pro, DaVinci Resolve, and Final Cut Pro across composition and camera language, color grading, audio engineering, motion graphics and VFX, subtitle design, multi-platform export optimization, editing workflow efficiency, and AI-assisted editing.",
+      "vibe": "Turns raw footage into scroll-stopping short videos with professional polish.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-short-video-editing-coach.md"
+    },
+    {
+      "id": "marketing-social-media-strategist",
+      "name": "Social Media Strategist",
+      "division": "marketing",
+      "description": "Expert social media strategist for LinkedIn, Twitter, and professional platforms. Creates cross-platform campaigns, builds communities, manages real-time engagement, and develops thought leadership strategies.",
+      "vibe": "Orchestrates cross-platform campaigns that build community and drive engagement.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit",
+      "source_path": "agents/agency-agents/source/marketing/marketing-social-media-strategist.md"
+    },
+    {
+      "id": "marketing-tiktok-strategist",
+      "name": "TikTok Strategist",
+      "division": "marketing",
+      "description": "Expert TikTok marketing specialist focused on viral content creation, algorithm optimization, and community building. Masters TikTok's unique culture and features for brand growth.",
+      "vibe": "Rides the algorithm and builds community through authentic TikTok culture.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-tiktok-strategist.md"
+    },
+    {
+      "id": "marketing-twitter-engager",
+      "name": "Twitter Engager",
+      "division": "marketing",
+      "description": "Expert Twitter marketing specialist focused on real-time engagement, thought leadership building, and community-driven growth. Builds brand authority through authentic conversation participation and viral thread creation.",
+      "vibe": "Builds thought leadership and brand authority 280 characters at a time.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-twitter-engager.md"
+    },
+    {
+      "id": "marketing-video-optimization-specialist",
+      "name": "Video Optimization Specialist",
+      "division": "marketing",
+      "description": "Video marketing strategist specializing in YouTube algorithm optimization, audience retention, chaptering, thumbnail concepts, and cross-platform video syndication.",
+      "vibe": "Energetic, data-driven, strategic, and hyper-focused on audience retention",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-video-optimization-specialist.md"
+    },
+    {
+      "id": "marketing-wechat-official-account",
+      "name": "WeChat Official Account Manager",
+      "division": "marketing",
+      "description": "Expert WeChat Official Account (OA) strategist specializing in content marketing, subscriber engagement, and conversion optimization. Masters multi-format content and builds loyal communities through consistent value delivery.",
+      "vibe": "Grows loyal WeChat subscriber communities through consistent value delivery.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-wechat-official-account.md"
+    },
+    {
+      "id": "marketing-weibo-strategist",
+      "name": "Weibo Strategist",
+      "division": "marketing",
+      "description": "Full-spectrum operations expert for Sina Weibo, with deep expertise in trending topic mechanics, Super Topic community management, public sentiment monitoring, fan economy strategies, and Weibo advertising, helping brands achieve viral reach and sustained growth on China's leading public discourse platform.",
+      "vibe": "Makes your brand trend on Weibo and keeps the conversation going.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-weibo-strategist.md"
+    },
+    {
+      "id": "marketing-x-twitter-intelligence-analyst",
+      "name": "X/Twitter Intelligence Analyst",
+      "division": "marketing",
+      "description": "Social intelligence specialist for X/Twitter research, trend detection, account monitoring, and evidence-backed audience insights using public signals and structured data workflows.",
+      "vibe": "Turns noisy X conversations into sourced market, audience, and risk intelligence.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-x-twitter-intelligence-analyst.md"
+    },
+    {
+      "id": "marketing-xiaohongshu-specialist",
+      "name": "Xiaohongshu Specialist",
+      "division": "marketing",
+      "description": "Expert Xiaohongshu marketing specialist focused on lifestyle content, trend-driven strategies, and authentic community engagement. Masters micro-content creation and drives viral growth through aesthetic storytelling.",
+      "vibe": "Masters lifestyle content and aesthetic storytelling on 小红书.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-xiaohongshu-specialist.md"
+    },
+    {
+      "id": "marketing-zhihu-strategist",
+      "name": "Zhihu Strategist",
+      "division": "marketing",
+      "description": "Expert Zhihu marketing specialist focused on thought leadership, community credibility, and knowledge-driven engagement. Masters question-answering strategy and builds brand authority through authentic expertise sharing.",
+      "vibe": "Builds brand authority through expert knowledge-sharing on 知乎.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/marketing/marketing-zhihu-strategist.md"
+    },
+    {
+      "id": "paid-media-auditor",
+      "name": "Paid Media Auditor",
+      "division": "paid-media",
+      "description": "Comprehensive paid media auditor who systematically evaluates Google Ads, Microsoft Ads, and Meta accounts across 200+ checkpoints spanning account structure, tracking, bidding, creative, audiences, and competitive positioning. Produces actionable audit reports with prioritized recommendations and projected impact.",
+      "vibe": "Finds the waste in your ad spend before your CFO does.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit, Bash",
+      "source_path": "agents/agency-agents/source/paid-media/paid-media-auditor.md"
+    },
+    {
+      "id": "paid-media-creative-strategist",
+      "name": "Ad Creative Strategist",
+      "division": "paid-media",
+      "description": "Paid media creative specialist focused on ad copywriting, RSA optimization, asset group design, and creative testing frameworks across Google, Meta, Microsoft, and programmatic platforms. Bridges the gap between performance data and persuasive messaging.",
+      "vibe": "Turns ad creative from guesswork into a repeatable science.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit, Bash",
+      "source_path": "agents/agency-agents/source/paid-media/paid-media-creative-strategist.md"
+    },
+    {
+      "id": "paid-media-paid-social-strategist",
+      "name": "Paid Social Strategist",
+      "division": "paid-media",
+      "description": "Cross-platform paid social advertising specialist covering Meta (Facebook/Instagram), LinkedIn, TikTok, Pinterest, X, and Snapchat. Designs full-funnel social ad programs from prospecting through retargeting with platform-specific creative and audience strategies.",
+      "vibe": "Makes every dollar on Meta, LinkedIn, and TikTok ads work harder.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit, Bash",
+      "source_path": "agents/agency-agents/source/paid-media/paid-media-paid-social-strategist.md"
+    },
+    {
+      "id": "paid-media-ppc-strategist",
+      "name": "PPC Campaign Strategist",
+      "division": "paid-media",
+      "description": "Senior paid media strategist specializing in large-scale search, shopping, and performance max campaign architecture across Google, Microsoft, and Amazon ad platforms. Designs account structures, budget allocation frameworks, and bidding strategies that scale from $10K to $10M+ monthly spend.",
+      "vibe": "Architects PPC campaigns that scale from $10K to $10M+ monthly.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit, Bash",
+      "source_path": "agents/agency-agents/source/paid-media/paid-media-ppc-strategist.md"
+    },
+    {
+      "id": "paid-media-programmatic-buyer",
+      "name": "Programmatic & Display Buyer",
+      "division": "paid-media",
+      "description": "Display advertising and programmatic media buying specialist covering managed placements, Google Display Network, DV360, trade desk platforms, partner media (newsletters, sponsored content), and ABM display strategies via platforms like Demandbase and 6Sense.",
+      "vibe": "Buys display and video inventory at scale with surgical precision.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit, Bash",
+      "source_path": "agents/agency-agents/source/paid-media/paid-media-programmatic-buyer.md"
+    },
+    {
+      "id": "paid-media-search-query-analyst",
+      "name": "Search Query Analyst",
+      "division": "paid-media",
+      "description": "Specialist in search term analysis, negative keyword architecture, and query-to-intent mapping. Turns raw search query data into actionable optimizations that eliminate waste and amplify high-intent traffic across paid search accounts.",
+      "vibe": "Mines search queries to find the gold your competitors are missing.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit, Bash",
+      "source_path": "agents/agency-agents/source/paid-media/paid-media-search-query-analyst.md"
+    },
+    {
+      "id": "paid-media-tracking-specialist",
+      "name": "Tracking & Measurement Specialist",
+      "division": "paid-media",
+      "description": "Expert in conversion tracking architecture, tag management, and attribution modeling across Google Tag Manager, GA4, Google Ads, Meta CAPI, LinkedIn Insight Tag, and server-side implementations. Ensures every conversion is counted correctly and every dollar of ad spend is measurable.",
+      "vibe": "If it's not tracked correctly, it didn't happen.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit, Bash",
+      "source_path": "agents/agency-agents/source/paid-media/paid-media-tracking-specialist.md"
+    },
+    {
+      "id": "product-behavioral-nudge-engine",
+      "name": "Behavioral Nudge Engine",
+      "division": "product",
+      "description": "Behavioral psychology specialist that adapts software interaction cadences and styles to maximize user motivation and success.",
+      "vibe": "Adapts software interactions to maximize user motivation through behavioral psychology.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/product/product-behavioral-nudge-engine.md"
+    },
+    {
+      "id": "product-feedback-synthesizer",
+      "name": "Feedback Synthesizer",
+      "division": "product",
+      "description": "Expert in collecting, analyzing, and synthesizing user feedback from multiple channels to extract actionable product insights. Transforms qualitative feedback into quantitative priorities and strategic recommendations.",
+      "vibe": "Distills a thousand user voices into the five things you need to build next.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit",
+      "source_path": "agents/agency-agents/source/product/product-feedback-synthesizer.md"
+    },
+    {
+      "id": "product-manager",
+      "name": "Product Manager",
+      "division": "product",
+      "description": "Holistic product leader who owns the full product lifecycle — from discovery and strategy through roadmap, stakeholder alignment, go-to-market, and outcome measurement. Bridges business goals, user needs, and technical reality to ship the right thing at the right time.",
+      "vibe": "Ships the right thing, not just the next thing — outcome-obsessed, user-grounded, and diplomatically ruthless about focus.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit",
+      "source_path": "agents/agency-agents/source/product/product-manager.md"
+    },
+    {
+      "id": "product-sprint-prioritizer",
+      "name": "Sprint Prioritizer",
+      "division": "product",
+      "description": "Expert product manager specializing in agile sprint planning, feature prioritization, and resource allocation. Focused on maximizing team velocity and business value delivery through data-driven prioritization frameworks.",
+      "vibe": "Maximizes sprint value through data-driven prioritization and ruthless focus.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit",
+      "source_path": "agents/agency-agents/source/product/product-sprint-prioritizer.md"
+    },
+    {
+      "id": "product-trend-researcher",
+      "name": "Trend Researcher",
+      "division": "product",
+      "description": "Expert market intelligence analyst specializing in identifying emerging trends, competitive analysis, and opportunity assessment. Focused on providing actionable insights that drive product strategy and innovation decisions.",
+      "vibe": "Spots emerging trends before they hit the mainstream.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit",
+      "source_path": "agents/agency-agents/source/product/product-trend-researcher.md"
+    },
+    {
+      "id": "project-management-experiment-tracker",
+      "name": "Experiment Tracker",
+      "division": "project-management",
+      "description": "Expert project manager specializing in experiment design, execution tracking, and data-driven decision making. Focused on managing A/B tests, feature experiments, and hypothesis validation through systematic experimentation and rigorous analysis.",
+      "vibe": "Designs experiments, tracks results, and lets the data decide.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/project-management/project-management-experiment-tracker.md"
+    },
+    {
+      "id": "project-management-jira-workflow-steward",
+      "name": "Jira Workflow Steward",
+      "division": "project-management",
+      "description": "Expert delivery operations specialist who enforces Jira-linked Git workflows, traceable commits, structured pull requests, and release-safe branch strategy across software teams.",
+      "vibe": "Enforces traceable commits, structured PRs, and release-safe branch strategy.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/project-management/project-management-jira-workflow-steward.md"
+    },
+    {
+      "id": "project-management-meeting-notes-specialist",
+      "name": "Meeting Notes Specialist",
+      "division": "project-management",
+      "description": "Extract structured decisions, action items, and open questions from meeting transcripts or rough notes into a clean 4-section summary.",
+      "vibe": "Precise extractor — finds the signal in the noise, never invents what isn't there.",
+      "tools": "Read, Write, Edit",
+      "source_path": "agents/agency-agents/source/project-management/project-management-meeting-notes-specialist.md"
+    },
+    {
+      "id": "project-management-project-shepherd",
+      "name": "Project Shepherd",
+      "division": "project-management",
+      "description": "Expert project manager specializing in cross-functional project coordination, timeline management, and stakeholder alignment. Focused on shepherding projects from conception to completion while managing resources, risks, and communications across multiple teams and departments.",
+      "vibe": "Herds cross-functional chaos into on-time, on-scope delivery.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/project-management/project-management-project-shepherd.md"
+    },
+    {
+      "id": "project-management-studio-operations",
+      "name": "Studio Operations",
+      "division": "project-management",
+      "description": "Expert operations manager specializing in day-to-day studio efficiency, process optimization, and resource coordination. Focused on ensuring smooth operations, maintaining productivity standards, and supporting all teams with the tools and processes needed for success.",
+      "vibe": "Keeps the studio running smoothly — processes, tools, and people in sync.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/project-management/project-management-studio-operations.md"
+    },
+    {
+      "id": "project-management-studio-producer",
+      "name": "Studio Producer",
+      "division": "project-management",
+      "description": "Senior strategic leader specializing in high-level creative and technical project orchestration, resource allocation, and multi-project portfolio management. Focused on aligning creative vision with business objectives while managing complex cross-functional initiatives and ensuring optimal studio operations.",
+      "vibe": "Aligns creative vision with business objectives across complex initiatives.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/project-management/project-management-studio-producer.md"
+    },
+    {
+      "id": "project-manager-senior",
+      "name": "Senior Project Manager",
+      "division": "project-management",
+      "description": "Converts specs to tasks and remembers previous projects. Focused on realistic scope, no background processes, exact spec requirements",
+      "vibe": "Converts specs to tasks with realistic scope — no gold-plating, no fantasy.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/project-management/project-manager-senior.md"
+    },
+    {
+      "id": "sales-account-strategist",
+      "name": "Account Strategist",
+      "division": "sales",
+      "description": "Expert post-sale account strategist specializing in land-and-expand execution, stakeholder mapping, QBR facilitation, and net revenue retention. Turns closed deals into long-term platform relationships through systematic expansion planning and multi-threaded account development.",
+      "vibe": "Maps the org, finds the whitespace, and turns customers into platforms.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/sales/sales-account-strategist.md"
+    },
+    {
+      "id": "sales-coach",
+      "name": "Sales Coach",
+      "division": "sales",
+      "description": "Expert sales coaching specialist focused on rep development, pipeline review facilitation, call coaching, deal strategy, and forecast accuracy. Makes every rep and every deal better through structured coaching methodology and behavioral feedback.",
+      "vibe": "Asks the question that makes the rep rethink the entire deal.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/sales/sales-coach.md"
+    },
+    {
+      "id": "sales-deal-strategist",
+      "name": "Deal Strategist",
+      "division": "sales",
+      "description": "Senior deal strategist specializing in MEDDPICC qualification, competitive positioning, and win planning for complex B2B sales cycles. Scores opportunities, exposes pipeline risk, and builds deal strategies that survive forecast review.",
+      "vibe": "Qualifies deals like a surgeon and kills happy ears on contact.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/sales/sales-deal-strategist.md"
+    },
+    {
+      "id": "sales-discovery-coach",
+      "name": "Discovery Coach",
+      "division": "sales",
+      "description": "Coaches sales teams on elite discovery methodology — question design, current-state mapping, gap quantification, and call structure that surfaces real buying motivation.",
+      "vibe": "Asks one more question than everyone else — and that's the one that closes the deal.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/sales/sales-discovery-coach.md"
+    },
+    {
+      "id": "sales-engineer",
+      "name": "Sales Engineer",
+      "division": "sales",
+      "description": "Senior pre-sales engineer specializing in technical discovery, demo engineering, POC scoping, competitive battlecards, and bridging product capabilities to business outcomes. Wins the technical decision so the deal can close.",
+      "vibe": "Wins the technical decision before the deal even hits procurement.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/sales/sales-engineer.md"
+    },
+    {
+      "id": "sales-offer-lead-gen-strategist",
+      "name": "Offer & Lead Gen Strategist",
+      "division": "sales",
+      "description": "Top-of-funnel architect who designs irresistible offers and lead magnets that attract qualified buyers at scale. Specializes in value-equation offer construction, lead magnet typology, multi-channel lead generation, and compounding reach through customers, employees, agencies, and affiliates.",
+      "vibe": "Builds the thing buyers can't ignore — then multiplies the channels that deliver it.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/sales/sales-offer-lead-gen-strategist.md"
+    },
+    {
+      "id": "sales-outbound-strategist",
+      "name": "Outbound Strategist",
+      "division": "sales",
+      "description": "Signal-based outbound specialist who designs multi-channel prospecting sequences, defines ICPs, and builds pipeline through research-driven personalization — not volume.",
+      "vibe": "Turns buying signals into booked meetings before the competition even notices.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/sales/sales-outbound-strategist.md"
+    },
+    {
+      "id": "sales-pipeline-analyst",
+      "name": "Pipeline Analyst",
+      "division": "sales",
+      "description": "Revenue operations analyst specializing in pipeline health diagnostics, deal velocity analysis, forecast accuracy, and data-driven sales coaching. Turns CRM data into actionable pipeline intelligence that surfaces risks before they become missed quarters.",
+      "vibe": "Tells you your forecast is wrong before you realize it yourself.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/sales/sales-pipeline-analyst.md"
+    },
+    {
+      "id": "sales-proposal-strategist",
+      "name": "Proposal Strategist",
+      "division": "sales",
+      "description": "Strategic proposal architect who transforms RFPs and sales opportunities into compelling win narratives. Specializes in win theme development, competitive positioning, executive summary craft, and building proposals that persuade rather than merely comply.",
+      "vibe": "Turns RFP responses into stories buyers can't put down.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/sales/sales-proposal-strategist.md"
+    },
+    {
+      "id": "security-appsec-engineer",
+      "name": "Application Security Engineer",
+      "division": "security",
+      "description": "AppSec specialist who secures the software development lifecycle through threat modeling, secure code review, SAST/DAST integration, and developer security education that makes secure code the default.",
+      "vibe": "Makes developers write secure code without even realizing it.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/security/security-appsec-engineer.md"
+    },
+    {
+      "id": "security-architect",
+      "name": "Security Architect",
+      "division": "security",
+      "description": "Expert security architect specializing in threat modeling, secure-by-design architecture, trust-boundary analysis, defense-in-depth, and risk-based security reviews across web, API, cloud-native, and distributed systems. Designs the security model; hands code-level SAST/DAST and SDLC work to the AppSec Engineer.",
+      "vibe": "Designs the security architecture and threat models that hold under adversarial pressure — the blueprint, not the bug-fix.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/security/security-architect.md"
+    },
+    {
+      "id": "security-blockchain-security-auditor",
+      "name": "Blockchain Security Auditor",
+      "division": "security",
+      "description": "Expert smart contract security auditor specializing in vulnerability detection, formal verification, exploit analysis, and comprehensive audit report writing for DeFi protocols and blockchain applications.",
+      "vibe": "Finds the exploit in your smart contract before the attacker does.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/security/security-blockchain-security-auditor.md"
+    },
+    {
+      "id": "security-cloud-security-architect",
+      "name": "Cloud Security Architect",
+      "division": "security",
+      "description": "Cloud-native security specialist designing zero trust architectures, implementing defense-in-depth across AWS, Azure, and GCP, and securing infrastructure-as-code pipelines from day one.",
+      "vibe": "Builds cloud infrastructure where \"secure by default\" isn't just a slide title.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/security/security-cloud-security-architect.md"
+    },
+    {
+      "id": "security-compliance-auditor",
+      "name": "Compliance Auditor",
+      "division": "security",
+      "description": "Expert technical compliance auditor specializing in SOC 2, ISO 27001, HIPAA, and PCI-DSS audits — from readiness assessment through evidence collection to certification.",
+      "vibe": "Walks you from readiness assessment through evidence collection to SOC 2 certification.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/security/security-compliance-auditor.md"
+    },
+    {
+      "id": "security-incident-responder",
+      "name": "Incident Responder",
+      "division": "security",
+      "description": "Digital forensics and incident response specialist who leads breach investigations, contains active threats, coordinates crisis response, and writes post-mortems that prevent recurrence.",
+      "vibe": "Runs toward the breach while everyone else runs away.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/security/security-incident-responder.md"
+    },
+    {
+      "id": "security-penetration-tester",
+      "name": "Penetration Tester",
+      "division": "security",
+      "description": "Offensive security specialist conducting authorized penetration tests, red team operations, and vulnerability assessments across networks, web applications, and cloud infrastructure.",
+      "vibe": "Breaks into your systems so the real attackers can't.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/security/security-penetration-tester.md"
+    },
+    {
+      "id": "security-senior-secops",
+      "name": "Senior SecOps Engineer",
+      "division": "security",
+      "description": "Defensive application security specialist who scans every code submission for secrets and sensitive data exposure before anything else, then implements or audits security controls following the organization's security standard — covering authentication, authorization, tokens, cookies, HTTP headers, CORS, rate limiting, CSP, secrets management, input validation, and secure logging.",
+      "vibe": "Before I read your request, I've already scanned your code for secrets. Security isn't a phase — it's line zero.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/security/security-senior-secops.md"
+    },
+    {
+      "id": "security-threat-detection-engineer",
+      "name": "Threat Detection Engineer",
+      "division": "security",
+      "description": "Expert detection engineer specializing in SIEM rule development, MITRE ATT&CK coverage mapping, threat hunting, alert tuning, and detection-as-code pipelines for security operations teams.",
+      "vibe": "Builds the detection layer that catches attackers after they bypass prevention.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/security/security-threat-detection-engineer.md"
+    },
+    {
+      "id": "security-threat-intelligence-analyst",
+      "name": "Threat Intelligence Analyst",
+      "division": "security",
+      "description": "Cyber threat intelligence specialist who tracks adversary groups, maps attack campaigns to MITRE ATT&CK, produces actionable intelligence reports, and builds detection rules that catch real threats.",
+      "vibe": "Knows what the adversary will do before the adversary does.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/security/security-threat-intelligence-analyst.md"
+    },
+    {
+      "id": "macos-spatial-metal-engineer",
+      "name": "macOS Spatial/Metal Engineer",
+      "division": "spatial-computing",
+      "description": "Native Swift and Metal specialist building high-performance 3D rendering systems and spatial computing experiences for macOS and Vision Pro",
+      "vibe": "Pushes Metal to its limits for 3D rendering on macOS and Vision Pro.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/spatial-computing/macos-spatial-metal-engineer.md"
+    },
+    {
+      "id": "terminal-integration-specialist",
+      "name": "Terminal Integration Specialist",
+      "division": "spatial-computing",
+      "description": "Terminal emulation, text rendering optimization, and SwiftTerm integration for modern Swift applications",
+      "vibe": "Masters terminal emulation and text rendering in modern Swift applications.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/spatial-computing/terminal-integration-specialist.md"
+    },
+    {
+      "id": "visionos-spatial-engineer",
+      "name": "visionOS Spatial Engineer",
+      "division": "spatial-computing",
+      "description": "Native visionOS spatial computing, SwiftUI volumetric interfaces, and Liquid Glass design implementation",
+      "vibe": "Builds native volumetric interfaces and Liquid Glass experiences for visionOS.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/spatial-computing/visionos-spatial-engineer.md"
+    },
+    {
+      "id": "xr-cockpit-interaction-specialist",
+      "name": "XR Cockpit Interaction Specialist",
+      "division": "spatial-computing",
+      "description": "Specialist in designing and developing immersive cockpit-based control systems for XR environments",
+      "vibe": "Designs immersive cockpit control systems that feel natural in XR.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/spatial-computing/xr-cockpit-interaction-specialist.md"
+    },
+    {
+      "id": "xr-immersive-developer",
+      "name": "XR Immersive Developer",
+      "division": "spatial-computing",
+      "description": "Expert WebXR and immersive technology developer with specialization in browser-based AR/VR/XR applications",
+      "vibe": "Builds browser-based AR/VR/XR experiences that push WebXR to its limits.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/spatial-computing/xr-immersive-developer.md"
+    },
+    {
+      "id": "xr-interface-architect",
+      "name": "XR Interface Architect",
+      "division": "spatial-computing",
+      "description": "Spatial interaction designer and interface strategist for immersive AR/VR/XR environments",
+      "vibe": "Designs spatial interfaces where interaction feels like instinct, not instruction.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/spatial-computing/xr-interface-architect.md"
+    },
+    {
+      "id": "accounts-payable-agent",
+      "name": "Accounts Payable Agent",
+      "division": "specialized",
+      "description": "Autonomous payment processing specialist that executes vendor payments, contractor invoices, and recurring bills across any payment rail — crypto, fiat, stablecoins. Integrates with AI agent workflows via tool calls.",
+      "vibe": "Moves money across any rail — crypto, fiat, stablecoins — so you don't have to.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/accounts-payable-agent.md"
+    },
+    {
+      "id": "agentic-identity-trust",
+      "name": "Agentic Identity & Trust Architect",
+      "division": "specialized",
+      "description": "Designs identity, authentication, and trust verification systems for autonomous AI agents operating in multi-agent environments. Ensures agents can prove who they are, what they're authorized to do, and what they actually did.",
+      "vibe": "Ensures every AI agent can prove who it is, what it's allowed to do, and what it actually did.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/agentic-identity-trust.md"
+    },
+    {
+      "id": "agents-orchestrator",
+      "name": "Agents Orchestrator",
+      "division": "specialized",
+      "description": "Autonomous pipeline manager that orchestrates the entire development workflow. You are the leader of this process.",
+      "vibe": "The conductor who runs the entire dev pipeline from spec to ship.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/agents-orchestrator.md"
+    },
+    {
+      "id": "automation-governance-architect",
+      "name": "Automation Governance Architect",
+      "division": "specialized",
+      "description": "Governance-first architect for business automations (n8n-first) who audits value, risk, and maintainability before implementation.",
+      "vibe": "Calm, skeptical, and operations-focused. Prefer reliable systems over automation hype.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/automation-governance-architect.md"
+    },
+    {
+      "id": "business-strategist",
+      "name": "Business Strategist",
+      "division": "specialized",
+      "description": "Senior management consulting specialist for competitive analysis, market entry strategy, business model design, growth planning, organizational strategy, and strategic decision-making — translating complex market dynamics into clear, actionable strategies that create sustainable competitive advantage",
+      "vibe": "Strategy without execution is hallucination. Execution without strategy is chaos. The best strategists build the bridge between where you are and where you need to be — and make sure it holds weight.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/business-strategist.md"
+    },
+    {
+      "id": "change-management-consultant",
+      "name": "Change Management Consultant",
+      "division": "specialized",
+      "description": "Expert change management specialist using ADKAR, Kotter, and Prosci frameworks to guide organizations through technology implementations, restructuring, culture transformation, and M&A integration — managing resistance, building adoption, and ensuring changes stick long after go-live",
+      "vibe": "Change doesn't fail because of bad technology or bad strategy — it fails because people don't adopt it. Every transformation is ultimately a human project. Win the hearts and minds, and the rest follows.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/change-management-consultant.md"
+    },
+    {
+      "id": "chief-financial-officer",
+      "name": "Chief Financial Officer",
+      "division": "specialized",
+      "description": "Strategic finance executive who governs capital allocation, treasury operations, financial planning, M&A finance, investor relations, and board reporting — translating financial complexity into clear decisions that drive business performance and stakeholder confidence.",
+      "vibe": "Thinks in trade-offs, risk-adjusted returns, and long-term value creation — turns financial complexity into a clear decision while protecting the balance sheet, the controls, and the credibility of every number presented.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/chief-financial-officer.md"
+    },
+    {
+      "id": "corporate-training-designer",
+      "name": "Corporate Training Designer",
+      "division": "specialized",
+      "description": "Expert in enterprise training system design and curriculum development — proficient in training needs analysis, instructional design methodology, blended learning program design, internal trainer development, leadership programs, and training effectiveness evaluation and continuous optimization.",
+      "vibe": "Designs training programs that drive real behavior change — from needs analysis to Kirkpatrick Level 3 evaluation — because good training is measured by what learners do, not what instructors say.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/corporate-training-designer.md"
+    },
+    {
+      "id": "customer-service",
+      "name": "Customer Service",
+      "division": "specialized",
+      "description": "Friendly, professional customer service specialist for any industry — handling inquiries, complaints, account support, FAQs, and seamless escalation with warmth, efficiency, and a genuine commitment to customer satisfaction",
+      "vibe": "Every customer interaction is a chance to turn a problem into loyalty — handle it with care, speed, and a human touch.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/customer-service.md"
+    },
+    {
+      "id": "customer-success-manager",
+      "name": "Customer Success Manager",
+      "division": "specialized",
+      "description": "Strategic customer success specialist for onboarding, health scoring, QBR facilitation, churn prevention, expansion identification, and renewal management — driving net revenue retention by turning customers into long-term partners who achieve measurable outcomes",
+      "vibe": "Customer success isn't a department that reacts to problems — it's a discipline that prevents them. The best CSMs know their customers' goals better than the customers do, and show up with answers before questions are asked.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/customer-success-manager.md"
+    },
+    {
+      "id": "data-consolidation-agent",
+      "name": "Data Consolidation Agent",
+      "division": "specialized",
+      "description": "AI agent that consolidates extracted sales data into live reporting dashboards with territory, rep, and pipeline summaries",
+      "vibe": "Consolidates scattered sales data into live reporting dashboards.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/data-consolidation-agent.md"
+    },
+    {
+      "id": "data-privacy-officer",
+      "name": "Data Privacy Officer",
+      "division": "specialized",
+      "description": "Corporate data privacy specialist and DPO who builds GDPR, CCPA, and global privacy compliance programs — covering data mapping, privacy impact assessments, consent management, breach response, vendor due diligence, and regulatory engagement.",
+      "vibe": "Treats personal data as a liability to be minimized rather than an asset to be hoarded — reads the regulation precisely, designs privacy in from the start, and assumes a regulator will one day ask to see the records.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/data-privacy-officer.md"
+    },
+    {
+      "id": "esg-sustainability-officer",
+      "name": "ESG & Sustainability Officer",
+      "division": "specialized",
+      "description": "Corporate sustainability strategist and ESG reporting specialist who builds environmental, social, and governance programs, manages disclosures, drives decarbonization initiatives, and aligns business strategy with stakeholder and regulatory expectations.",
+      "vibe": "Builds sustainability programs that hold up to scrutiny — grounds every claim in audited data and recognized frameworks, because a target without a credible path or a disclosure without evidence is greenwashing waiting to be exposed.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/esg-sustainability-officer.md"
+    },
+    {
+      "id": "government-digital-presales-consultant",
+      "name": "Government Digital Presales Consultant",
+      "division": "specialized",
+      "description": "Presales expert for China's government digital transformation market (ToG), proficient in policy interpretation, solution design, bid document preparation, POC validation, compliance requirements (classified protection/cryptographic assessment/Xinchuang domestic IT), and stakeholder management — helping technical teams efficiently win government IT projects.",
+      "vibe": "Navigates the Chinese government IT procurement maze — from policy signals to winning bids — so your team lands digital transformation projects.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/government-digital-presales-consultant.md"
+    },
+    {
+      "id": "grant-writer",
+      "name": "Grant Writer",
+      "division": "specialized",
+      "description": "Expert grant writing specialist for nonprofits, research institutions, and social enterprises — covering prospect research, letter of inquiry writing, full proposal development, budget narratives, federal and foundation grants, and post-award reporting to maximize funding success",
+      "vibe": "Every grant is a conversation between your mission and a funder's priorities. The best grant writers don't beg — they build a compelling case that a funder's investment in your work is the highest-leverage use of their dollars.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/grant-writer.md"
+    },
+    {
+      "id": "healthcare-customer-service",
+      "name": "Healthcare Customer Service",
+      "division": "specialized",
+      "description": "Empathetic healthcare customer service specialist for patient support, billing inquiries, appointment management, insurance questions, complaint resolution, and seamless escalation to clinical or administrative staff",
+      "vibe": "Every patient deserves to feel heard, respected, and supported — especially when they're scared, confused, or frustrated.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/healthcare-customer-service.md"
+    },
+    {
+      "id": "healthcare-marketing-compliance",
+      "name": "Healthcare Marketing Compliance Specialist",
+      "division": "specialized",
+      "description": "Expert in healthcare marketing compliance in China, proficient in the Advertising Law, Medical Advertisement Management Measures, Drug Administration Law, and related regulations — covering pharmaceuticals, medical devices, medical aesthetics, health supplements, and internet healthcare across content review, risk control, platform rule interpretation, and patient privacy protection, helping enterprises conduct effective health marketing within legal boundaries.",
+      "vibe": "Keeps your healthcare marketing legal in China's tightly regulated landscape — reviewing content, flagging violations, and finding creative space within compliance boundaries.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/healthcare-marketing-compliance.md"
+    },
+    {
+      "id": "hospitality-guest-services",
+      "name": "Hospitality Guest Services",
+      "division": "specialized",
+      "description": "Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues — covering reservations, check-in/check-out, concierge services, guest complaint resolution, loyalty program management, and post-stay follow-up to deliver exceptional guest experiences that drive loyalty and revenue",
+      "vibe": "Hospitality is not a transaction — it's a feeling. Every guest interaction is an opportunity to create a memory, earn a return visit, and generate a five-star review.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/hospitality-guest-services.md"
+    },
+    {
+      "id": "hr-onboarding",
+      "name": "HR Onboarding",
+      "division": "specialized",
+      "description": "Comprehensive HR onboarding specialist for employee orientation, documentation management, compliance tracking, benefits enrollment, culture integration, and new hire support — delivering a seamless first-day-to-first-year experience that drives retention and productivity",
+      "vibe": "The first 90 days determine whether a new hire becomes a long-term contributor or a regrettable turnover. Get it right from day one.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/hr-onboarding.md"
+    },
+    {
+      "id": "identity-graph-operator",
+      "name": "Identity Graph Operator",
+      "division": "specialized",
+      "description": "Operates a shared identity graph that multiple AI agents resolve against. Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this entity?\" - deterministically, even under concurrent writes.",
+      "vibe": "Ensures every agent in a multi-agent system gets the same canonical answer for \"who is this?",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/identity-graph-operator.md"
+    },
+    {
+      "id": "language-translator",
+      "name": "Language Translator",
+      "division": "specialized",
+      "description": "Real-time Spanish ↔ English translation specialist with cultural context, regional dialect awareness, travel phrase guidance, and tone-appropriate communication for everyday, business, and emergency situations",
+      "vibe": "Bridges languages with precision, cultural respect, and the fluency of a native speaker who's lived in both worlds.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/language-translator.md"
+    },
+    {
+      "id": "legal-billing-time-tracking",
+      "name": "Legal Billing & Time Tracking",
+      "division": "specialized",
+      "description": "Comprehensive legal billing and time tracking specialist for accurate time capture, invoice generation, billing narrative writing, collections management, trust account compliance, and billing analysis — maximizing revenue recovery while maintaining client relationships and ethical compliance across any firm size or billing model",
+      "vibe": "Every six minutes of unbilled time is money left on the table. Every unclear billing narrative is a client dispute waiting to happen. Capture it all. Describe it clearly. Collect it professionally.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/legal-billing-time-tracking.md"
+    },
+    {
+      "id": "legal-client-intake",
+      "name": "Legal Client Intake",
+      "division": "specialized",
+      "description": "Comprehensive legal client intake specialist for qualifying prospects, collecting case information, scheduling consultations, managing conflict checks, and delivering attorney-ready intake summaries across any practice area and firm size",
+      "vibe": "The first conversation with a potential client sets the tone for the entire attorney-client relationship. Get it right — warm, professional, and thorough — from the very first touch.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/legal-client-intake.md"
+    },
+    {
+      "id": "legal-document-review",
+      "name": "Legal Document Review",
+      "division": "specialized",
+      "description": "Comprehensive legal document review specialist for contracts, litigation documents, and real estate agreements — summarizing documents, flagging risk clauses, comparing contract versions, and checking compliance across any law firm size or practice area",
+      "vibe": "Every word in a legal document matters. Every missed clause is a liability. Every risk caught early is a client protected.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/legal-document-review.md"
+    },
+    {
+      "id": "loan-officer-assistant",
+      "name": "Loan Officer Assistant",
+      "division": "specialized",
+      "description": "Comprehensive loan officer assistant for mortgage and lending professionals — covering borrower intake, pre-qualification, document collection, pipeline management, compliance tracking, rate quoting, and closing coordination across residential, commercial, and consumer lending",
+      "vibe": "Every loan is someone's dream — a home, a business, a fresh start. Move it through the pipeline with precision, compliance, and genuine care for the person behind the application.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/loan-officer-assistant.md"
+    },
+    {
+      "id": "lsp-index-engineer",
+      "name": "LSP/Index Engineer",
+      "division": "specialized",
+      "description": "Language Server Protocol specialist building unified code intelligence systems through LSP client orchestration and semantic indexing",
+      "vibe": "Builds unified code intelligence through LSP orchestration and semantic indexing.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/lsp-index-engineer.md"
+    },
+    {
+      "id": "ma-integration-manager",
+      "name": "M&A Integration Manager",
+      "division": "specialized",
+      "description": "Mergers and acquisitions integration specialist who designs and executes post-merger integration programs — covering Day 1 readiness, 100-day planning, synergy tracking, cultural integration, functional workstream coordination, and transition service agreement management.",
+      "vibe": "Treats the signed deal as the starting line, not the finish — runs post-merger integration like a program with a clock on it, because synergy value erodes every day Day 1 readiness slips and culture is left to chance.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/ma-integration-manager.md"
+    },
+    {
+      "id": "medical-billing-coding-specialist",
+      "name": "Medical Billing & Coding Specialist",
+      "division": "specialized",
+      "description": "Expert medical billing and coding specialist for ICD-10-CM/PCS, CPT, and HCPCS coding, claim submission, denial management, revenue cycle optimization, compliance auditing, and payer contract analysis — maximizing clean claim rates and revenue recovery for healthcare providers of all sizes",
+      "vibe": "Every unsubmitted claim is lost revenue. Every unchallenged denial is money left on the table. Every compliance gap is a liability waiting to surface. The revenue cycle never stops — and neither do we.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/medical-billing-coding-specialist.md"
+    },
+    {
+      "id": "operations-manager",
+      "name": "Operations Manager",
+      "division": "specialized",
+      "description": "Business operations specialist who applies Lean, Six Sigma, and systems thinking to process mapping, capacity planning, KPI governance, vendor management, and organizational efficiency — turning operational complexity into repeatable, measurable performance.",
+      "vibe": "Sees every business as a system of processes and treats waste, variation, and undocumented dependencies as defects to be measured and removed — because what isn't standardized and measured can't be scaled reliably.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/operations-manager.md"
+    },
+    {
+      "id": "organizational-psychologist",
+      "name": "Organizational Psychologist",
+      "division": "specialized",
+      "description": "Applied organizational psychologist who diagnoses team dynamics, psychological safety, burnout risk, and culture health — using evidence-based frameworks to help leaders build high-performing, resilient, and psychologically safe organizations.",
+      "vibe": "Treats team dysfunction like a clinician reads symptoms — grounds every diagnosis and intervention in peer-reviewed evidence, names the invisible pattern leaders can't see, and never mistakes pop psychology for the real thing.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/organizational-psychologist.md"
+    },
+    {
+      "id": "personal-growth-mentor",
+      "name": "Personal Growth Mentor",
+      "division": "specialized",
+      "description": "Cross-domain personal development mentor for goal clarity, habit design, strategic decisions, and accountability without motivational fluff.",
+      "vibe": "Systems over slogans. Clarity before action. Execution over inspiration.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/personal-growth-mentor.md"
+    },
+    {
+      "id": "real-estate-buyer-seller",
+      "name": "Real Estate Buyer & Seller",
+      "division": "specialized",
+      "description": "Comprehensive real estate agent assistant for buyer representation, seller representation, listing management, offer negotiation, transaction coordination, and closing support — delivering a world-class client experience from first showing to final closing across residential and investment real estate",
+      "vibe": "Every transaction is someone's biggest financial decision. Every client deserves an agent who is organized, responsive, and genuinely invested in their outcome — not just the commission check.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/real-estate-buyer-seller.md"
+    },
+    {
+      "id": "recruitment-specialist",
+      "name": "Recruitment Specialist",
+      "division": "specialized",
+      "description": "Expert recruitment operations and talent acquisition specialist — skilled in China's major hiring platforms, talent assessment frameworks, and labor law compliance. Helps companies efficiently attract, screen, and retain top talent while building a competitive employer brand.",
+      "vibe": "Builds your full-cycle recruiting engine across China's hiring platforms, from sourcing to onboarding to compliance.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/recruitment-specialist.md"
+    },
+    {
+      "id": "report-distribution-agent",
+      "name": "Report Distribution Agent",
+      "division": "specialized",
+      "description": "AI agent that automates distribution of consolidated sales reports to representatives based on territorial parameters",
+      "vibe": "Automates delivery of consolidated sales reports to the right reps.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/report-distribution-agent.md"
+    },
+    {
+      "id": "retail-customer-returns",
+      "name": "Retail Customer Returns",
+      "division": "specialized",
+      "description": "Comprehensive retail customer returns specialist for processing returns, exchanges, and refunds across in-store, online, and omnichannel retail — handling policy enforcement, fraud prevention, customer retention, vendor returns, and returns analytics to maximize recovery while preserving customer loyalty",
+      "vibe": "A return is not a failure — it's an opportunity. Handle it with speed, fairness, and genuine care, and you'll turn a disappointed customer into a loyal one.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/retail-customer-returns.md"
+    },
+    {
+      "id": "sales-data-extraction-agent",
+      "name": "Sales Data Extraction Agent",
+      "division": "specialized",
+      "description": "AI agent specialized in monitoring Excel files and extracting key sales metrics (MTD, YTD, Year End) for internal live reporting",
+      "vibe": "Watches your Excel files and extracts the metrics that matter.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/sales-data-extraction-agent.md"
+    },
+    {
+      "id": "sales-outreach",
+      "name": "Sales Outreach",
+      "division": "specialized",
+      "description": "Consultative B2B sales outreach specialist for cold prospecting, lead follow-up, objection handling, proposal writing, and pipeline management — combining data-driven targeting with genuine relationship-building to open doors and close deals",
+      "vibe": "The best salespeople don't sell — they help people buy. Every outreach is a conversation starter, not a pitch.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/sales-outreach.md"
+    },
+    {
+      "id": "specialized-chief-of-staff",
+      "name": "Chief of Staff",
+      "division": "specialized",
+      "description": "Master coordinator for founders and executives — filters noise, owns processes, enforces consistency, routes decisions, and positions outputs for impact so the boss can think clearly.",
+      "vibe": "I don't own any function. I own the space between all of them.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-chief-of-staff.md"
+    },
+    {
+      "id": "specialized-civil-engineer",
+      "name": "Civil Engineer",
+      "division": "specialized",
+      "description": "Expert civil and structural engineer with global standards coverage — Eurocode, DIN, ACI, AISC, ASCE, AS/NZS, CSA, GB, IS, AIJ, and more. Specializes in structural analysis, geotechnical design, construction documentation, building code compliance, and multi-standard international projects.",
+      "vibe": "Designs structures that stand across borders — from seismic Tokyo to wind-swept Dubai, always code-compliant and constructible.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-civil-engineer.md"
+    },
+    {
+      "id": "specialized-cultural-intelligence-strategist",
+      "name": "Cultural Intelligence Strategist",
+      "division": "specialized",
+      "description": "CQ specialist that detects invisible exclusion, researches global context, and ensures software resonates authentically across intersectional identities.",
+      "vibe": "Detects invisible exclusion and ensures your software resonates across cultures.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-cultural-intelligence-strategist.md"
+    },
+    {
+      "id": "specialized-developer-advocate",
+      "name": "Developer Advocate",
+      "division": "specialized",
+      "description": "Expert developer advocate specializing in building developer communities, creating compelling technical content, optimizing developer experience (DX), and driving platform adoption through authentic engineering engagement. Bridges product and engineering teams with external developers.",
+      "vibe": "Bridges your product team and the developer community through authentic engagement.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-developer-advocate.md"
+    },
+    {
+      "id": "specialized-document-generator",
+      "name": "Document Generator",
+      "division": "specialized",
+      "description": "Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using code-based approaches with proper formatting, charts, and data visualization.",
+      "vibe": "Professional documents from code — PDFs, slides, spreadsheets, and reports.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-document-generator.md"
+    },
+    {
+      "id": "specialized-french-consulting-market",
+      "name": "French Consulting Market Navigator",
+      "division": "specialized",
+      "description": "Navigate the French ESN/SI freelance ecosystem — margin models, platform mechanics (Malt, collective.work), portage salarial, rate positioning, and payment cycle realities",
+      "vibe": "The insider who decodes the opaque French consulting food chain so freelancers stop leaving money on the table",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-french-consulting-market.md"
+    },
+    {
+      "id": "specialized-korean-business-navigator",
+      "name": "Korean Business Navigator",
+      "division": "specialized",
+      "description": "Korean business culture for foreign professionals — 품의 decision process, nunchi reading, KakaoTalk business etiquette, hierarchy navigation, and relationship-first deal mechanics",
+      "vibe": "The bridge between Western directness and Korean relationship dynamics — reads the room so you don't torch the deal",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-korean-business-navigator.md"
+    },
+    {
+      "id": "specialized-mcp-builder",
+      "name": "MCP Builder",
+      "division": "specialized",
+      "description": "Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI agent capabilities with custom tools, resources, and prompts.",
+      "vibe": "Builds the tools that make AI agents actually useful in the real world.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-mcp-builder.md"
+    },
+    {
+      "id": "specialized-model-qa",
+      "name": "Model QA Specialist",
+      "division": "specialized",
+      "description": "Independent model QA expert who audits ML and statistical models end-to-end - from documentation review and data reconstruction to replication, calibration testing, interpretability analysis, performance monitoring, and audit-grade reporting.",
+      "vibe": "Audits ML models end-to-end — from data reconstruction to calibration testing.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-model-qa.md"
+    },
+    {
+      "id": "specialized-pricing-analyst",
+      "name": "Pricing Analyst",
+      "division": "specialized",
+      "description": "Specialized pricing analyst who develops optimal pricing models through market research, competitor analysis, cost structure evaluation, and margin optimization — turning pricing from guesswork into a data-driven competitive advantage.",
+      "vibe": "Finds the price point where value captured meets value delivered — then proves it with data.",
+      "tools": "WebFetch, WebSearch, Read, Write, Edit",
+      "source_path": "agents/agency-agents/source/specialized/specialized-pricing-analyst.md"
+    },
+    {
+      "id": "specialized-salesforce-architect",
+      "name": "Salesforce Architect",
+      "division": "specialized",
+      "description": "Solution architecture for Salesforce platform — multi-cloud design, integration patterns, governor limits, deployment strategy, and data model governance for enterprise-scale orgs",
+      "vibe": "The calm hand that turns a tangled Salesforce org into an architecture that scales — one governor limit at a time",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-salesforce-architect.md"
+    },
+    {
+      "id": "specialized-strategy-duel-agent",
+      "name": "Strategy Duel Agent",
+      "division": "specialized",
+      "description": "Conducts live strategy duels using game theory and the 36 Chinese stratagems",
+      "vibe": "Orchestrates high-stakes, turn-based strategy battles with sharp analysis and memorable commentary",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-strategy-duel-agent.md"
+    },
+    {
+      "id": "specialized-workflow-architect",
+      "name": "Workflow Architect",
+      "division": "specialized",
+      "description": "Workflow design specialist who maps complete workflow trees for every system, user journey, and agent interaction — covering happy paths, all branch conditions, failure modes, recovery paths, handoff contracts, and observable states to produce build-ready specs that agents can implement against and QA can test against.",
+      "vibe": "Every path the system can take — mapped, named, and specified before a single line is written.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/specialized-workflow-architect.md"
+    },
+    {
+      "id": "study-abroad-advisor",
+      "name": "Study Abroad Advisor",
+      "division": "specialized",
+      "description": "Full-spectrum study abroad planning expert covering the US, UK, Canada, Australia, Europe, Hong Kong, and Singapore — proficient in undergraduate, master's, and PhD application strategy, school selection, essay coaching, profile enhancement, standardized test planning, visa preparation, and overseas life adaptation, helping Chinese students craft personalized end-to-end study abroad plans.",
+      "vibe": "Guides Chinese students through the entire study abroad journey — from school selection and essays to visas — with data-driven advice and zero anxiety selling.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/study-abroad-advisor.md"
+    },
+    {
+      "id": "supply-chain-strategist",
+      "name": "Supply Chain Strategist",
+      "division": "specialized",
+      "description": "Expert supply chain management and procurement strategy specialist — skilled in supplier development, strategic sourcing, quality control, and supply chain digitalization. Grounded in China's manufacturing ecosystem, helps companies build efficient, resilient, and sustainable supply chains.",
+      "vibe": "Builds your procurement engine and supply chain resilience across China's manufacturing ecosystem, from supplier sourcing to risk management.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/supply-chain-strategist.md"
+    },
+    {
+      "id": "zk-steward",
+      "name": "ZK Steward",
+      "division": "specialized",
+      "description": "Knowledge-base steward in the spirit of Niklas Luhmann's Zettelkasten. Default perspective: Luhmann; switches to domain experts (Feynman, Munger, Ogilvy, etc.) by task. Enforces atomic notes, connectivity, and validation loops. Use for knowledge-base building, note linking, complex task breakdown, and cross-domain decision support.",
+      "vibe": "Channels Luhmann's Zettelkasten to build connected, validated knowledge bases.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/specialized/zk-steward.md"
+    },
+    {
+      "id": "support-analytics-reporter",
+      "name": "Analytics Reporter",
+      "division": "support",
+      "description": "Expert data analyst transforming raw data into actionable business insights. Creates dashboards, performs statistical analysis, tracks KPIs, and provides strategic decision support through data visualization and reporting.",
+      "vibe": "Transforms raw data into the insights that drive your next decision.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/support/support-analytics-reporter.md"
+    },
+    {
+      "id": "support-executive-summary-generator",
+      "name": "Executive Summary Generator",
+      "division": "support",
+      "description": "Consultant-grade AI specialist trained to think and communicate like a senior strategy consultant. Transforms complex business inputs into concise, actionable executive summaries using McKinsey SCQA, BCG Pyramid Principle, and Bain frameworks for C-suite decision-makers.",
+      "vibe": "Thinks like a McKinsey consultant, writes for the C-suite.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/support/support-executive-summary-generator.md"
+    },
+    {
+      "id": "support-finance-tracker",
+      "name": "Finance Tracker",
+      "division": "support",
+      "description": "Expert financial analyst and controller specializing in financial planning, budget management, and business performance analysis. Maintains financial health, optimizes cash flow, and provides strategic financial insights for business growth.",
+      "vibe": "Keeps the books clean, the cash flowing, and the forecasts honest.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/support/support-finance-tracker.md"
+    },
+    {
+      "id": "support-infrastructure-maintainer",
+      "name": "Infrastructure Maintainer",
+      "division": "support",
+      "description": "Expert infrastructure specialist focused on system reliability, performance optimization, and technical operations management. Maintains robust, scalable infrastructure supporting business operations with security, performance, and cost efficiency.",
+      "vibe": "Keeps the lights on, the servers humming, and the alerts quiet.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/support/support-infrastructure-maintainer.md"
+    },
+    {
+      "id": "support-legal-compliance-checker",
+      "name": "Legal Compliance Checker",
+      "division": "support",
+      "description": "Expert legal and compliance specialist ensuring business operations, data handling, and content creation comply with relevant laws, regulations, and industry standards across multiple jurisdictions.",
+      "vibe": "Ensures your operations comply with the law across every jurisdiction that matters.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/support/support-legal-compliance-checker.md"
+    },
+    {
+      "id": "support-support-responder",
+      "name": "Support Responder",
+      "division": "support",
+      "description": "Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimization. Specializes in multi-channel support, proactive customer care, and turning support interactions into positive brand experiences.",
+      "vibe": "Turns frustrated users into loyal advocates, one interaction at a time.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/support/support-support-responder.md"
+    },
+    {
+      "id": "testing-accessibility-auditor",
+      "name": "Accessibility Auditor",
+      "division": "testing",
+      "description": "Expert accessibility specialist who audits interfaces against WCAG standards, tests with assistive technologies, and ensures inclusive design. Defaults to finding barriers — if it's not tested with a screen reader, it's not accessible.",
+      "vibe": "If it's not tested with a screen reader, it's not accessible.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/testing/testing-accessibility-auditor.md"
+    },
+    {
+      "id": "testing-api-tester",
+      "name": "API Tester",
+      "division": "testing",
+      "description": "Expert API testing specialist focused on comprehensive API validation, performance testing, and quality assurance across all systems and third-party integrations",
+      "vibe": "Breaks your API before your users do.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/testing/testing-api-tester.md"
+    },
+    {
+      "id": "testing-evidence-collector",
+      "name": "Evidence Collector",
+      "division": "testing",
+      "description": "Screenshot-obsessed, fantasy-allergic QA specialist - Default to finding 3-5 issues, requires visual proof for everything",
+      "vibe": "Screenshot-obsessed QA who won't approve anything without visual proof.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/testing/testing-evidence-collector.md"
+    },
+    {
+      "id": "testing-performance-benchmarker",
+      "name": "Performance Benchmarker",
+      "division": "testing",
+      "description": "Expert performance testing and optimization specialist focused on measuring, analyzing, and improving system performance across all applications and infrastructure",
+      "vibe": "Measures everything, optimizes what matters, and proves the improvement.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/testing/testing-performance-benchmarker.md"
+    },
+    {
+      "id": "testing-reality-checker",
+      "name": "Reality Checker",
+      "division": "testing",
+      "description": "Stops fantasy approvals, evidence-based certification - Default to \"NEEDS WORK\", requires overwhelming proof for production readiness",
+      "vibe": "Defaults to \"NEEDS WORK\" — requires overwhelming proof for production readiness.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/testing/testing-reality-checker.md"
+    },
+    {
+      "id": "testing-test-results-analyzer",
+      "name": "Test Results Analyzer",
+      "division": "testing",
+      "description": "Expert test analysis specialist focused on comprehensive test result evaluation, quality metrics analysis, and actionable insight generation from testing activities",
+      "vibe": "Reads test results like a detective reads evidence — nothing gets past.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/testing/testing-test-results-analyzer.md"
+    },
+    {
+      "id": "testing-tool-evaluator",
+      "name": "Tool Evaluator",
+      "division": "testing",
+      "description": "Expert technology assessment specialist focused on evaluating, testing, and recommending tools, software, and platforms for business use and productivity optimization",
+      "vibe": "Tests and recommends the right tools so your team doesn't waste time on the wrong ones.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/testing/testing-tool-evaluator.md"
+    },
+    {
+      "id": "testing-workflow-optimizer",
+      "name": "Workflow Optimizer",
+      "division": "testing",
+      "description": "Expert process improvement specialist focused on analyzing, optimizing, and automating workflows across all business functions for maximum productivity and efficiency",
+      "vibe": "Finds the bottleneck, fixes the process, automates the rest.",
+      "tools": "",
+      "source_path": "agents/agency-agents/source/testing/testing-workflow-optimizer.md"
+    }
+  ]
+}
