@@ -17,7 +17,7 @@
 
 **Second Brain is a local-first personal memory layer for humans and agents.**
 
-It turns chats, Feishu docs, calendar events, diary drafts, links, and notes into a Markdown-native brain that agents can search, synthesize, lint, and maintain over time.
+It turns chats, Feishu docs, calendar events, diary drafts, links, and notes into a Markdown-native brain that agents can compile, manage, search, synthesize, lint, and maintain over time.
 
 The goal is not another knowledge base. The goal is a durable context layer that remembers what happened, what it means, what is still open, and what the agent should ask next.
 
@@ -36,18 +36,35 @@ Second Brain adds the missing maintenance layer:
 - current understanding is separated from evidence history
 - agents search first, then synthesize
 - lint turns missing context into useful follow-up questions
+- specialist output lenses turn the same memory into product, engineering, design, growth, sales, security, or testing deliverables
 
 ## How It Is Different
 
 | Dimension | Pure Knowledge Base | RAG over notes | Second Brain |
 |-|-|-|-|
 | Primary job | Store information | Retrieve chunks | Maintain personal context |
+| Input handling | Save notes | Chunk documents | Compile and manage memory from chats, docs, calendar, diary, links |
+| Search method | Manual browsing | Similarity retrieval | Structured search with resolver, schema, entity pages, source refs |
+| Output shape | Generic notes | Generic answer | Role-shaped deliverables through specialist agent lenses |
 | Human-readable middle layer | Yes | Usually no | Yes, Markdown pages |
 | Agent-readable structure | Weak | Retrieval-only | Resolver, schema, skills, evals |
 | Evidence model | Informal | Chunk provenance | Raw sources + Timeline |
 | Current understanding | Mixed into notes | Recomputed per query | Compiled Truth |
 | Proactive maintenance | Manual | Rare | `wiki_lint` + open questions |
 | Best use | Archiving | Search | Remembering yourself over time |
+
+## Core Strengths
+
+Second Brain works across the full context lifecycle:
+
+1. **Input: memory compilation and management**
+   Raw group chats, Feishu docs, calendar events, diary drafts, links, and notes are preserved as source evidence, then compiled into canonical people, project, concept, diary, and resource pages.
+
+2. **Search: structured retrieval before synthesis**
+   Agents use local search, resolver rules, schema conventions, source refs, Compiled Truth, and Timeline sections to find the right context before answering.
+
+3. **Output: role-shaped delivery**
+   When the answer needs professional craft, the Agency Agents layer applies the right specialist lens: Product Manager for PRDs, Feishu Integration Developer for Lark workflows, UX Researcher for user insight, Security Architect for risk review, Test Planner for QA, and so on.
 
 ## Core Idea
 

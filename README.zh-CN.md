@@ -17,7 +17,7 @@
 
 **Second Brain 是一个面向人类和 Agent 的本地优先个人记忆层。**
 
-它把群聊、飞书文档、日历日程、日记草稿、链接和普通笔记，沉淀成一个 Markdown-native 的个人大脑。Agent 可以围绕它完成 capture、ingest、search、think、lint 和日记草稿生成。
+它把群聊、飞书文档、日历日程、日记草稿、链接和普通笔记，沉淀成一个 Markdown-native 的个人大脑。Agent 可以围绕它完成记忆编译、记忆管理、search、think、lint 和日记草稿生成。
 
 它的目标不是再做一个知识库，而是做一个可长期维护的上下文层：记住发生了什么、这件事意味着什么、还有什么没搞清楚，以及 Agent 下一步应该问什么。
 
@@ -36,18 +36,35 @@ Second Brain 补上的是“维护层”：
 - 当前认知和证据时间线分开
 - Agent 先 search，再 think
 - lint 把缺失上下文变成可回答的问题
+- 专家输出层把同一份记忆转成产品、工程、设计、增长、销售、安全、测试等岗位视角的交付物
 
 ## 和纯知识库有什么不同
 
 | 维度 | 纯知识库 | 笔记上的 RAG | Second Brain |
 |-|-|-|-|
 | 核心任务 | 存信息 | 召回片段 | 维护个人上下文 |
+| 输入处理 | 保存笔记 | 文档切 chunk | 从群聊、文档、日历、日记、链接中编译并管理记忆 |
+| 查找方法 | 手动浏览 | 相似度召回 | Resolver、schema、实体页、source refs 组成结构化检索 |
+| 输出形态 | 普通笔记 | 通用回答 | 通过专家 Agent 层生成不同岗位风格的交付物 |
 | 人类可读中间层 | 有 | 通常没有 | 有，Markdown 页面 |
 | Agent 可读结构 | 弱 | 只偏检索 | Resolver、schema、skills、evals |
 | 证据模型 | 松散 | chunk provenance | raw sources + Timeline |
 | 当前认知 | 混在笔记里 | 每次查询重算 | Compiled Truth |
 | 主动维护 | 手动 | 很少 | `wiki_lint` + open questions |
 | 最适合 | 归档 | 搜索 | 长期记住“你” |
+
+## 核心亮点
+
+Second Brain 覆盖完整的上下文生命周期：
+
+1. **输入：记忆编译和管理**
+   群聊、飞书文档、日历日程、日记草稿、链接和笔记会先作为原始证据保留，再被编译进人物、项目、概念、日记、资源等 canonical 页面。
+
+2. **查找：先结构化检索，再综合**
+   Agent 不只做关键词或向量召回，而是结合本地搜索、resolver 规则、schema、source refs、Compiled Truth 和 Timeline 找到可追溯上下文。
+
+3. **输出：按岗位设定生成交付物**
+   当回答需要专业表达时，Agency Agents 层会提供合适的专家视角：Product Manager 写 PRD，Feishu Integration Developer 设计飞书工作流，UX Researcher 做用户洞察，Security Architect 做风险评审，Test Planner 做 QA 计划，等等。
 
 ## 核心设计
 
