@@ -173,6 +173,8 @@ scripts/second_brain.sh agents "security review"
 │   ├── RESOLVER.md              # 归档和 ownership 规则
 │   ├── schema.md                # 页面模板和证据规范
 │   ├── index.md                 # 人类和 Agent 的默认入口
+│   ├── dashboards/              # Obsidian-friendly 的人类审阅驾驶舱
+│   ├── templates/               # Obsidian-ready 页面模板
 │   ├── people/ concepts/ projects/ diary/
 │   └── sources/                 # 原始资料快照
 ├── skills/                      # ingest、query、enrich、lint、diary 等工作流
@@ -195,6 +197,7 @@ scripts/second_brain.sh agents "security review"
 - 结构 lint
 - 种子 eval case
 - Agency Agents 专家路由
+- Obsidian-ready dashboards、模板、graph 配色和 CSS snippet
 - `llms.txt` Agent 抓取入口
 
 ## 下一步
@@ -204,15 +207,17 @@ scripts/second_brain.sh agents "security review"
 - 更强的 `think` 综合
 - weekly lint report
 - 可选 SQLite FTS5 索引
-- Obsidian vault 体验优化
+- 可选 Dataview dashboard 自动化
 - 可选 MCP 层，让远程 Agent 调用
 
 ## 给人类用户
 
-可以把 `brain/` 当作 Obsidian vault 打开，用来查看 backlinks、图谱和手动补充上下文。
+可以把整个仓库作为 Obsidian vault 打开，用来查看 backlinks、图谱、模板和人类审阅 dashboard。
 
 建议先看：
 
+- `brain/dashboards/home.md`
+- `docs/OBSIDIAN.md`
 - `brain/index.md`
 - `brain/RESOLVER.md`
 - `brain/schema.md`

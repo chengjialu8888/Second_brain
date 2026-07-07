@@ -1,0 +1,26 @@
+.markdown-preview-view h2,
+.markdown-source-view.mod-cm6 .HyperMD-header-2 {
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 0.25rem;
+}
+
+.markdown-preview-view blockquote {
+  border-color: var(--interactive-accent);
+  background: var(--background-secondary);
+  padding: 0.75rem 1rem;
+}
+
+.markdown-preview-view table {
+  width: 100%;
+}
+
+.markdown-preview-view mark,
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+  border-radius: 3px;
+  padding: 0 0.1rem;
+}
+
+.markdown-preview-view .task-list-item {
+  margin: 0.35rem 0;
+}

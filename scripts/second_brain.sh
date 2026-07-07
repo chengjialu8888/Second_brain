@@ -16,6 +16,7 @@ Usage:
   scripts/second_brain.sh prompt
   scripts/second_brain.sh search "query"
   scripts/second_brain.sh agents ["query"]
+  scripts/second_brain.sh dashboard
   scripts/second_brain.sh lint
   scripts/second_brain.sh diary [YYYY-MM-DD|today]
   scripts/second_brain.sh links <file>
@@ -51,6 +52,18 @@ EOF
     ;;
   agents)
     python3 scripts/agency_agent_search.py "$@"
+    ;;
+  dashboard)
+    cat <<'EOF'
+Open these in Obsidian:
+  brain/dashboards/home.md
+  brain/dashboards/open-questions.md
+  brain/dashboards/review-queue.md
+  brain/dashboards/recent-changes.md
+
+Guide:
+  docs/OBSIDIAN.md
+EOF
     ;;
   lint)
     python3 scripts/wiki_lint.py

@@ -173,6 +173,8 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 │   ├── RESOLVER.md              # Filing and ownership rules
 │   ├── schema.md                # Page templates and evidence discipline
 │   ├── index.md                 # Default human/agent entrypoint
+│   ├── dashboards/              # Obsidian-friendly human review cockpit
+│   ├── templates/               # Obsidian-ready page templates
 │   ├── people/ concepts/ projects/ diary/
 │   └── sources/                 # Immutable source snapshots
 ├── skills/                      # Workflow docs: ingest, query, enrich, lint, diary
@@ -195,6 +197,7 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 - Structural lint
 - Seed eval cases
 - Agency Agents specialist routing
+- Obsidian-ready dashboards, templates, graph colors, and CSS snippet
 - Agent crawler map via `llms.txt`
 
 ## What Is Next
@@ -204,15 +207,17 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 - Richer `think` synthesis over search results
 - Weekly lint report
 - Optional SQLite FTS5 index
-- Optional Obsidian vault polish
+- Optional Dataview-backed dashboard automation
 - Optional MCP layer for remote agents
 
 ## For Humans
 
-Open `brain/` as an Obsidian vault if you want backlinks, graph view, and manual review.
+Open this repository as an Obsidian vault if you want backlinks, graph view, templates, and manual review dashboards.
 
 Recommended first places:
 
+- `brain/dashboards/home.md`
+- `docs/OBSIDIAN.md`
 - `brain/index.md`
 - `brain/RESOLVER.md`
 - `brain/schema.md`

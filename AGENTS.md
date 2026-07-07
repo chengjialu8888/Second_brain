@@ -20,6 +20,7 @@ Use this file when working on this repository.
 5. `brain/ideas/` is user-authored by default. Agents may suggest edits, but should not overwrite raw ideas silently.
 6. Any claim in Compiled Truth should have a source reference or be marked as a user-provided/inferred low-confidence note.
 7. Agency Agents under `agents/agency-agents/` are specialist lenses, not memory. They may shape outputs only after Second Brain evidence is read.
+8. Use `brain/dashboards/` as human-facing review surfaces. Do not put canonical facts only in dashboards; move confirmed facts into entity pages.
 
 ## Common Commands
 
@@ -28,6 +29,7 @@ scripts/second_brain.sh help
 scripts/second_brain.sh prompt
 scripts/second_brain.sh search "query"
 scripts/second_brain.sh agents "product strategy"
+scripts/second_brain.sh dashboard
 scripts/second_brain.sh lint
 scripts/second_brain.sh diary 2026-06-12
 python3 scripts/brain_search.py "query"
@@ -53,10 +55,20 @@ bash -n scripts/*.sh
 python3 -c "import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path('scripts').glob('*.py')]; print('python ast ok')"
 ```
 
+## Dashboard Maintenance
+
+After large ingests, diary generation, entity enrichment, or specialist-agent outputs:
+
+1. Update `brain/dashboards/recent-changes.md` with a dated summary.
+2. Add uncertain claims to `brain/dashboards/review-queue.md`.
+3. Add missing human context to `brain/dashboards/open-questions.md`.
+4. Keep dashboards short and link to canonical pages.
+
 ## More Detail
 
 - Human overview: `README.md`
 - Chinese overview: `README.zh-CN.md`
 - Architecture: `docs/ARCHITECTURE.md`
+- Obsidian setup: `docs/OBSIDIAN.md`
 - User journey: `docs/USER_JOURNEY.md`
 - Agent guide: `docs/AGENT_GUIDE.md`

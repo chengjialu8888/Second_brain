@@ -46,6 +46,8 @@ def main() -> int:
         for path in ROOT.rglob("*.md"):
             if ".raw" in path.parts:
                 continue
+            if len(path.parts) > 1 and path.parts[1] == "templates":
+                continue
             text = path.read_text(encoding="utf-8")
             rel = path.relative_to(Path("."))
 

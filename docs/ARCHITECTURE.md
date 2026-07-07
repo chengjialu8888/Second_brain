@@ -30,6 +30,7 @@ The architecture therefore has organs, not only components:
 | Timeline | Entity pages below `---` | Keep dated, append-only evidence | Chronology does not explain causality by itself |
 | Resolver | `brain/RESOLVER.md` | Route pages by ownership and future use | Ambiguous material still needs human judgment |
 | Schema | `brain/schema.md` | Give agents a stable page shape | Structure cannot decide what is worth remembering |
+| Human cockpit | `brain/dashboards/`, Obsidian templates and snippets | Show what changed, what needs review, and what humans should answer next | A dashboard can guide attention without replacing judgment |
 | Skills | `skills/` and `SKILL.md` | Turn capture, ingest, query, enrichment, lint, and diary into repeatable workflows | Workflow correctness does not guarantee good judgment |
 | Search | `scripts/brain_search.py` | Retrieve candidate evidence before synthesis | Search results are evidence, not the answer |
 | Immune system | `scripts/wiki_lint.py` and lint workflow | Detect broken structure, stale drafts, and missing evidence | Lint can detect damage, not define the ideal brain |
@@ -77,6 +78,7 @@ Health numbers should be treated as dated slices:
 - stale Compiled Truth pages
 - unresolved open questions
 - lint warnings
+- human review queue size
 
 Every metric should carry a generation time and should be easy to regenerate from local files. No number should be treated as permanent truth.
 

@@ -13,7 +13,12 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - [brain/RESOLVER.md](brain/RESOLVER.md): Required filing and ownership rules before creating or moving pages.
 - [brain/schema.md](brain/schema.md): Entity page schema, Compiled Truth / Timeline convention, frontmatter rules.
 - [brain/index.md](brain/index.md): Default brain entrypoint.
+- [brain/dashboards/home.md](brain/dashboards/home.md): Obsidian-friendly human review cockpit.
+- [brain/dashboards/open-questions.md](brain/dashboards/open-questions.md): Missing context and unresolved questions.
+- [brain/dashboards/review-queue.md](brain/dashboards/review-queue.md): Agent-written claims and changes needing human confirmation.
+- [brain/dashboards/recent-changes.md](brain/dashboards/recent-changes.md): Dated change feed for the brain.
 - [skills/RESOLVER.md](skills/RESOLVER.md): Skill routing table.
+- [docs/OBSIDIAN.md](docs/OBSIDIAN.md): Obsidian setup, dashboards, templates, and human review loop.
 
 ## Workflows
 
@@ -31,6 +36,7 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - `scripts/second_brain.sh prompt`: agent startup prompt.
 - `scripts/second_brain.sh search "query"`: local Markdown search through the skill-style wrapper.
 - `scripts/second_brain.sh agents "query"`: search the installed Agency Agents roster for a specialist lens.
+- `scripts/second_brain.sh dashboard`: print Obsidian dashboard entrypoints.
 - `scripts/second_brain.sh lint`: structural lint through the skill-style wrapper.
 - `scripts/second_brain.sh diary YYYY-MM-DD`: Feishu calendar to diary draft through the skill-style wrapper.
 - `python3 scripts/brain_search.py "query"`: local Markdown search.

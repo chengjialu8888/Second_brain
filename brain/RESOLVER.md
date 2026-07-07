@@ -18,6 +18,8 @@ If a note is about a person, it belongs in `people/` even if it came from a meet
 | `projects/` | `entity-enrichment` | Things being actively built or planned with goals | Raw possibilities with no action |
 | `ideas/` | user-owned | User-originated raw ideas and possibilities | Agent-generated conclusions |
 | `diary/` | `calendar-diary-draft` | Daily entries and subjective reflection | Raw calendar dumps |
+| `dashboards/` | `brain-lint` / agents | Human review surfaces, open questions, recent changes, review queues | Canonical facts or raw sources |
+| `templates/` | humans / agents | Obsidian-ready page templates | Filled-in memory pages |
 | `resources/` | `chat-ingestion` | Links, papers, repos, documents as resources | Distilled concepts from those resources |
 | `sources/` | source skills | Immutable source snapshots | Curated entity pages |
 | `inbox/` | `capture` | Temporary captures and unclassified material | Long-term canonical entities |
@@ -37,3 +39,4 @@ If a note is about a person, it belongs in `people/` even if it came from a meet
 3. Every new entity page needs frontmatter, Compiled Truth, `---`, and Timeline.
 4. Add the page to `brain/index.md`.
 5. Append the change to `brain/log.md`.
+6. For substantial changes, update `brain/dashboards/recent-changes.md` and add human-review items when needed.

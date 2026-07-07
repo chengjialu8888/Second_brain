@@ -131,3 +131,26 @@ Recommended sections:
 - Diary Draft
 
 Diary pages generated from calendar are `draft` until the user adds subjective context.
+
+## Dashboard Page
+
+```yaml
+type: dashboard
+title:
+aliases: []
+updated:
+confidence: low | medium | high
+```
+
+Recommended sections:
+
+- At A Glance
+- Review Items
+- Agent Maintenance Rules
+- Timeline
+
+Dashboard pages are navigation surfaces for humans. They should summarize what to inspect next, not duplicate raw sources or canonical entity pages.
+
+## Templates
+
+Obsidian-ready templates live in `brain/templates/`. They are starter files, not memory pages, and are skipped by structural lint.
