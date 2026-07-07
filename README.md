@@ -40,18 +40,20 @@ Second Brain adds the missing maintenance layer:
 
 ## How It Is Different
 
-| Dimension | Pure Knowledge Base | RAG over notes | Second Brain |
-|-|-|-|-|
-| Primary job | Store information | Retrieve chunks | Maintain personal context |
-| Input handling | Save notes | Chunk documents | Compile and manage memory from chats, docs, calendar, diary, links |
-| Search method | Manual browsing | Similarity retrieval | Structured search with resolver, schema, entity pages, source refs |
-| Output shape | Generic notes | Generic answer | Role-shaped deliverables through specialist agent lenses |
-| Human-readable middle layer | Yes | Usually no | Yes, Markdown pages |
-| Agent-readable structure | Weak | Retrieval-only | Resolver, schema, skills, evals |
-| Evidence model | Informal | Chunk provenance | Raw sources + Timeline |
-| Current understanding | Mixed into notes | Recomputed per query | Compiled Truth |
-| Proactive maintenance | Manual | Rare | `wiki_lint` + open questions |
-| Best use | Archiving | Search | Remembering yourself over time |
+| Dimension | Pure Knowledge Base | Obsidian | RAG over notes | Second Brain |
+|-|-|-|-|-|
+| Primary job | Store information | Human PKM, backlinks, graph thinking | Retrieve chunks | Maintain personal context |
+| Input handling | Save notes | Fast manual capture and linking | Chunk documents | Compile and manage memory from chats, docs, calendar, diary, links |
+| Search method | Manual browsing | Local search, backlinks, graph, plugins | Similarity retrieval | Structured search with resolver, schema, entity pages, source refs |
+| Output shape | Generic notes | Human-authored notes and canvases | Generic answer | Role-shaped deliverables through specialist agent lenses |
+| Human-readable middle layer | Yes | Excellent Markdown vault and UI | Usually no | Yes, Markdown pages |
+| Agent-readable structure | Weak | Files are readable, but rules are optional | Retrieval-only | Resolver, schema, skills, evals |
+| Evidence model | Informal | Backlinks and manual citations | Chunk provenance | Raw sources + Timeline |
+| Current understanding | Mixed into notes | Maintained by human editing | Recomputed per query | Compiled Truth |
+| Proactive maintenance | Manual | Manual review or plugins | Rare | `wiki_lint` + open questions |
+| Best use | Archiving | Human sense-making and personal note exploration | Search | Remembering yourself over time with agent help |
+
+Obsidian is still a great interface for browsing the vault. Second Brain is the agent operating layer that makes the same Markdown memory governed, searchable, maintainable, and output-ready.
 
 ## Core Strengths
 

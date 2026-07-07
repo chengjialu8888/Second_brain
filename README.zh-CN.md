@@ -40,18 +40,20 @@ Second Brain 补上的是“维护层”：
 
 ## 和纯知识库有什么不同
 
-| 维度 | 纯知识库 | 笔记上的 RAG | Second Brain |
-|-|-|-|-|
-| 核心任务 | 存信息 | 召回片段 | 维护个人上下文 |
-| 输入处理 | 保存笔记 | 文档切 chunk | 从群聊、文档、日历、日记、链接中编译并管理记忆 |
-| 查找方法 | 手动浏览 | 相似度召回 | Resolver、schema、实体页、source refs 组成结构化检索 |
-| 输出形态 | 普通笔记 | 通用回答 | 通过专家 Agent 层生成不同岗位风格的交付物 |
-| 人类可读中间层 | 有 | 通常没有 | 有，Markdown 页面 |
-| Agent 可读结构 | 弱 | 只偏检索 | Resolver、schema、skills、evals |
-| 证据模型 | 松散 | chunk provenance | raw sources + Timeline |
-| 当前认知 | 混在笔记里 | 每次查询重算 | Compiled Truth |
-| 主动维护 | 手动 | 很少 | `wiki_lint` + open questions |
-| 最适合 | 归档 | 搜索 | 长期记住“你” |
+| 维度 | 纯知识库 | Obsidian | 笔记上的 RAG | Second Brain |
+|-|-|-|-|-|
+| 核心任务 | 存信息 | 人类 PKM、双链、图谱思考 | 召回片段 | 维护个人上下文 |
+| 输入处理 | 保存笔记 | 快速手动记录和链接 | 文档切 chunk | 从群聊、文档、日历、日记、链接中编译并管理记忆 |
+| 查找方法 | 手动浏览 | 本地搜索、backlinks、graph、插件 | 相似度召回 | Resolver、schema、实体页、source refs 组成结构化检索 |
+| 输出形态 | 普通笔记 | 人类自己写的笔记和 canvas | 通用回答 | 通过专家 Agent 层生成不同岗位风格的交付物 |
+| 人类可读中间层 | 有 | 很强，Markdown vault 和 UI 都成熟 | 通常没有 | 有，Markdown 页面 |
+| Agent 可读结构 | 弱 | 文件可读，但规则通常靠人约定 | 只偏检索 | Resolver、schema、skills、evals |
+| 证据模型 | 松散 | 双链和手动引用 | chunk provenance | raw sources + Timeline |
+| 当前认知 | 混在笔记里 | 主要靠人手动维护 | 每次查询重算 | Compiled Truth |
+| 主动维护 | 手动 | 手动 review 或插件辅助 | 很少 | `wiki_lint` + open questions |
+| 最适合 | 归档 | 人类 sense-making 和个人笔记探索 | 搜索 | 在 Agent 帮助下长期记住“你” |
+
+Obsidian 依然很适合作为 vault 的浏览和编辑界面。Second Brain 更像是叠在 Markdown vault 之上的 Agent 操作层，让同一份记忆可治理、可结构化查找、可维护，并且可以按岗位输出。
 
 ## 核心亮点
 
