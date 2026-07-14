@@ -35,6 +35,7 @@ Second Brain adds the missing maintenance layer:
 - entities get canonical pages
 - current understanding is separated from evidence history
 - agents search first, then synthesize
+- active workspaces make high-stakes synthesis auditable before final output
 - lint turns missing context into useful follow-up questions
 - specialist output lenses turn the same memory into product, engineering, design, growth, sales, security, or testing deliverables
 
@@ -45,6 +46,7 @@ Second Brain adds the missing maintenance layer:
 | Primary job | Store information | Human PKM, backlinks, graph thinking | Retrieve chunks | Maintain personal context |
 | Input handling | Save notes | Fast manual capture and linking | Chunk documents | Compile and manage memory from chats, docs, calendar, diary, links |
 | Search method | Manual browsing | Local search, backlinks, graph, plugins | Similarity retrieval | Structured search with resolver, schema, entity pages, source refs |
+| Current task reasoning | Ad hoc | Human-maintained working notes | Hidden in prompt/session | Active workspace with date window, coverage matrix, and claim audit |
 | Output shape | Generic notes | Human-authored notes and canvases | Generic answer | Role-shaped deliverables through specialist agent lenses |
 | Human-readable middle layer | Yes | Excellent Markdown vault and UI | Usually no | Yes, Markdown pages |
 | Agent-readable structure | Weak | Files are readable, but rules are optional | Retrieval-only | Resolver, schema, skills, evals |
@@ -65,7 +67,10 @@ Second Brain works across the full context lifecycle:
 2. **Search: structured retrieval before synthesis**
    Agents use local search, resolver rules, schema conventions, source refs, Compiled Truth, and Timeline sections to find the right context before answering.
 
-3. **Output: role-shaped delivery**
+3. **Think: active workspace for high-stakes synthesis**
+   For strategy reports, competitor analysis, roadmaps, and other date-bounded work, agents compose a small workspace that exposes the active evidence, assumptions, coverage gaps, and claim audit before writing.
+
+4. **Output: role-shaped delivery**
    When the answer needs professional craft, the Agency Agents layer applies the right specialist lens: Product Manager for PRDs, Feishu Integration Developer for Lark workflows, UX Researcher for user insight, Security Architect for risk review, Test Planner for QA, and so on.
 
 ## Core Idea
@@ -99,6 +104,12 @@ Use it like an agent skill from the terminal:
 # Search local memory
 scripts/second_brain.sh search "llm-wiki"
 
+# Compose an active workspace before high-stakes synthesis
+scripts/second_brain.sh workspace "Coze competitor strategy" --from 2026-07-01 --to 2026-07-14
+
+# Start a date-bounded strategy report workflow
+scripts/second_brain.sh strategy-report "Coze competitor strategy" --from 2026-07-01 --to 2026-07-14
+
 # Lint the brain structure
 scripts/second_brain.sh lint
 
@@ -131,7 +142,8 @@ If you are using Codex, Claude Code, Cursor, or another coding agent, start with
 Use this repository as the $second-brain skill.
 Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
 When output needs a specialist lens, also read skills/agency-agent-routing.md and use agents/agency-agents/ after searching Second Brain evidence.
-Then help me capture, ingest, search, think, lint, route specialist agents, or generate diary drafts without committing private source data.
+For accurate, comprehensive, date-bounded synthesis, create an active workspace before the final deliverable.
+Then help me capture, ingest, search, think, compose workspaces, lint, route specialist agents, or generate diary drafts without committing private source data.
 ```
 
 ## User Journey
@@ -146,7 +158,7 @@ Then help me capture, ingest, search, think, lint, route specialist agents, or g
   <img src="assets/product-flow.svg" alt="Second Brain product flow and core architecture" width="100%">
 </p>
 
-The architecture can also be read as an operational anatomy: `brain/` is the body, `brain/sources/` is the evidence layer, Compiled Truth and Timeline form the memory model, `skills/` are repeatable workflows, and `wiki_lint` is the immune system. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the filter/fissure model behind each part.
+The architecture can also be read as an operational anatomy: `brain/` is the body, `brain/sources/` is the evidence layer, Compiled Truth and Timeline form the memory model, `brain/workspace/` is the active task whiteboard, `skills/` are repeatable workflows, and `wiki_lint` is the immune system. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/WORKSPACE.md](docs/WORKSPACE.md) for the filter/fissure model and the J-space-inspired workspace layer.
 
 ## Specialist Agent Layer
 
@@ -174,6 +186,7 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 │   ├── schema.md                # Page templates and evidence discipline
 │   ├── index.md                 # Default human/agent entrypoint
 │   ├── dashboards/              # Obsidian-friendly human review cockpit
+│   ├── workspace/               # Task-scoped active workspace entry and private generated drafts
 │   ├── templates/               # Obsidian-ready page templates
 │   ├── people/ concepts/ projects/ diary/
 │   └── sources/                 # Immutable source snapshots
@@ -194,6 +207,8 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 - Feishu doc snapshot helper
 - Link extraction
 - Local search
+- Active workspace composer for date-bounded synthesis
+- Strategy report workflow with coverage matrix and claim audit
 - Structural lint
 - Seed eval cases
 - Agency Agents specialist routing

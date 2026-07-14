@@ -151,6 +151,40 @@ Recommended sections:
 
 Dashboard pages are navigation surfaces for humans. They should summarize what to inspect next, not duplicate raw sources or canonical entity pages.
 
+## Workspace Page
+
+```yaml
+type: workspace
+title:
+aliases: []
+updated:
+as_of:
+source_window:
+  start:
+  end:
+task:
+mode: active-workspace | strategy-report
+status: draft | reviewed | archived
+confidence: low | medium | high
+source_refs: []
+```
+
+Recommended sections:
+
+- Task Frame
+- Date Boundary
+- Capacity Budget
+- Candidate Evidence
+- Active Context
+- Coverage Matrix
+- Claim Audit
+- Specialist Lens Routing
+- Output Contract
+- Excluded / Out Of Window
+- Timeline
+
+Workspace pages are task-scoped reasoning surfaces. They make active context inspectable before final output, but they are not canonical facts. Move durable confirmed claims into entity pages.
+
 ## Templates
 
 Obsidian-ready templates live in `brain/templates/`. They are starter files, not memory pages, and are skipped by structural lint.

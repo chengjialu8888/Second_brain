@@ -24,3 +24,7 @@ brain/sources/web/*
 !brain/sources/feishu-docs/.gitkeep
 !brain/sources/web/.gitkeep
 !brain/sources/calendar/.gitkeep
+
+# Local/private active workspaces can include retrieved strategic context.
+brain/workspace/current.md
+brain/workspace/sessions/*.md

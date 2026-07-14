@@ -9,6 +9,7 @@ Second Brain is intentionally small at the storage layer and disciplined at the 
 3. **Agent-maintained**: agents follow resolver, schema, and skill contracts before writing.
 4. **Evidence-first**: raw sources stay preserved; summaries cite sources.
 5. **Search then think**: retrieval and synthesis are separate operations.
+6. **Workspace-bounded synthesis**: high-stakes outputs pass through a small active workspace before final writing.
 
 ## Layers
 
@@ -19,6 +20,8 @@ Second Brain is intentionally small at the storage layer and disciplined at the 
 ## Operational Anatomy
 
 Second Brain is best understood as a discontinuous agent experience with continuous memory. The agent session can end at any time; the filesystem carries continuity across sessions.
+
+The July 6, 2026 Anthropic Global Workspace / J-space research is useful as an analogy, not as a dependency. It suggests that flexible reasoning benefits from a small shared space whose contents are reportable, controllable, used in reasoning, broadcast to downstream capabilities, and capacity-limited. Second Brain implements that as an explicit `brain/workspace/` layer between retrieval and final output.
 
 The architecture therefore has organs, not only components:
 
@@ -31,6 +34,7 @@ The architecture therefore has organs, not only components:
 | Resolver | `brain/RESOLVER.md` | Route pages by ownership and future use | Ambiguous material still needs human judgment |
 | Schema | `brain/schema.md` | Give agents a stable page shape | Structure cannot decide what is worth remembering |
 | Human cockpit | `brain/dashboards/`, Obsidian templates and snippets | Show what changed, what needs review, and what humans should answer next | A dashboard can guide attention without replacing judgment |
+| Active workspace | `brain/workspace/`, `skills/active-workspace.md`, `scripts/workspace_compose.py` | Keep the current task's evidence, assumptions, date window, coverage matrix, and claim audit visible | A workspace can organize reasoning without proving the underlying sources are complete |
 | Skills | `skills/` and `SKILL.md` | Turn capture, ingest, query, enrichment, lint, and diary into repeatable workflows | Workflow correctness does not guarantee good judgment |
 | Search | `scripts/brain_search.py` | Retrieve candidate evidence before synthesis | Search results are evidence, not the answer |
 | Immune system | `scripts/wiki_lint.py` and lint workflow | Detect broken structure, stale drafts, and missing evidence | Lint can detect damage, not define the ideal brain |
@@ -49,6 +53,8 @@ external trace
   -> Compiled Truth update
   -> Timeline evidence
   -> search / think / lint
+  -> active workspace for high-stakes synthesis
+  -> specialist lens if useful
   -> follow-up questions
   -> human context
 ```
@@ -94,6 +100,37 @@ The system should explicitly preserve what it does not know:
 - questions that emerged from lint, search, or diary drafting
 
 This negative space is part of the architecture. A good personal brain does not only remember; it also marks the boundary where agent inference must stop.
+
+## Active Workspace Layer
+
+The active workspace is the current-task shared whiteboard.
+
+```text
+raw sources
+  -> canonical memory
+  -> retrieval candidates
+  -> active workspace
+  -> specialist lens
+  -> final deliverable
+```
+
+It is especially important for strategy reports, competitor analysis, roadmaps, investment-style judgment, and anything with a strict date boundary.
+
+The workspace should expose:
+
+- task frame
+- `as_of` and source window
+- candidate evidence
+- active pinned context
+- coverage matrix
+- claim audit
+- out-of-window evidence
+- open questions
+- output contract
+
+It should not expose hidden chain-of-thought. The point is to show the high-level active context that the final answer is allowed to use.
+
+Generated workspaces are ignored by git because they may contain private retrieved snippets. The reusable architecture lives in `docs/WORKSPACE.md`, `skills/active-workspace.md`, `skills/strategy-report.md`, and `brain/templates/workspace.md`.
 
 ## Page Model
 

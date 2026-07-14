@@ -1,6 +1,6 @@
 # Second Brain
 
-Second Brain is a local-first personal memory layer for humans and agents. It stores memory as Markdown, preserves raw sources as evidence, and gives agents workflows to capture, ingest, search, think, lint, enrich entities, and generate diary drafts from Feishu calendar.
+Second Brain is a local-first personal memory layer for humans and agents. It stores memory as Markdown, preserves raw sources as evidence, and gives agents workflows to capture, ingest, search, think, compose active workspaces, lint, enrich entities, generate date-bounded strategy report drafts, and generate diary drafts from Feishu calendar.
 
 Repository: https://github.com/chengjialu8888/Second_brain
 
@@ -17,12 +17,16 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - [brain/dashboards/open-questions.md](brain/dashboards/open-questions.md): Missing context and unresolved questions.
 - [brain/dashboards/review-queue.md](brain/dashboards/review-queue.md): Agent-written claims and changes needing human confirmation.
 - [brain/dashboards/recent-changes.md](brain/dashboards/recent-changes.md): Dated change feed for the brain.
+- [brain/workspace/README.md](brain/workspace/README.md): J-space-inspired active workspace entry for task-scoped synthesis.
 - [skills/RESOLVER.md](skills/RESOLVER.md): Skill routing table.
 - [docs/OBSIDIAN.md](docs/OBSIDIAN.md): Obsidian setup, dashboards, templates, and human review loop.
+- [docs/WORKSPACE.md](docs/WORKSPACE.md): Active workspace architecture and date-bounded report discipline.
 
 ## Workflows
 
 - [skills/brain-query.md](skills/brain-query.md): Search first, then synthesize with sources and gaps.
+- [skills/active-workspace.md](skills/active-workspace.md): Compose a task-scoped, date-aware whiteboard before synthesis.
+- [skills/strategy-report.md](skills/strategy-report.md): Produce accurate, comprehensive, date-bounded strategic reports.
 - [skills/agency-agent-routing.md](skills/agency-agent-routing.md): Select installed Agency Agents as specialist lenses after Second Brain evidence is read.
 - [skills/chat-ingestion.md](skills/chat-ingestion.md): Preserve chat exports and extract durable entities.
 - [skills/feishu-doc-ingestion.md](skills/feishu-doc-ingestion.md): Fetch Feishu docs/wiki and extract durable concepts.
@@ -35,6 +39,8 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - `scripts/second_brain.sh help`: skill-style command surface.
 - `scripts/second_brain.sh prompt`: agent startup prompt.
 - `scripts/second_brain.sh search "query"`: local Markdown search through the skill-style wrapper.
+- `scripts/second_brain.sh workspace "query" --from YYYY-MM-DD --to YYYY-MM-DD`: compose an active workspace draft.
+- `scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD`: compose a strategy-report workspace with coverage matrix and claim audit.
 - `scripts/second_brain.sh agents "query"`: search the installed Agency Agents roster for a specialist lens.
 - `scripts/second_brain.sh dashboard`: print Obsidian dashboard entrypoints.
 - `scripts/second_brain.sh lint`: structural lint through the skill-style wrapper.
@@ -44,6 +50,7 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - `scripts/calendar_diary_draft.sh YYYY-MM-DD`: Feishu calendar to diary draft.
 - `scripts/extract_links.sh FILE`: extract URLs.
 - `scripts/fetch_feishu_doc.sh URL`: snapshot Feishu doc/wiki.
+- `python3 scripts/workspace_compose.py "query"`: active workspace generator used by the CLI wrapper.
 
 ## Specialist Agent Layer
 
@@ -62,3 +69,4 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - Agents must read `brain/RESOLVER.md` before creating or moving pages.
 - Calendar-generated diary pages remain `status: draft` until the user adds subjective context.
 - Agency Agents may shape deliverables only after local Second Brain evidence has been searched/read.
+- High-stakes or date-bounded synthesis should pass through an active workspace before final output.

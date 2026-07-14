@@ -32,6 +32,24 @@ When answering a personal, project, or memory question:
 5. State what the brain does not know yet.
 6. Suggest page updates only when useful.
 
+## Active Workspace Protocol
+
+Use an active workspace before final output when the task is high-stakes, date-bounded, or requires broad coverage.
+
+```bash
+scripts/second_brain.sh workspace "query" --from YYYY-MM-DD --to YYYY-MM-DD
+scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD
+```
+
+Then:
+
+1. Read the generated workspace.
+2. Read the most relevant source pages, not only snippets.
+3. Pin a small number of active claims.
+4. Mark claims as sourced, inferred, stale, out-of-window, or unresolved.
+5. Use specialist agents only after the workspace makes evidence visible.
+6. Keep generated workspace files private unless the user explicitly asks to publish them.
+
 ## Specialist Agent Protocol
 
 When the output needs domain craft after memory has been searched:

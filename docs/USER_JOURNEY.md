@@ -36,8 +36,20 @@ The user asks:
 - "Why did I decide not to start with vector search?"
 - "Who has been mentioned repeatedly in this project?"
 - "What happened today, and what should I write in my diary?"
+- "Write a strategy report using only sources from this date window."
 
 The agent searches the brain, reads pages, and returns a synthesized answer with sources and gaps.
+
+For high-stakes synthesis, the agent creates an active workspace first:
+
+```text
+search candidates
+  -> brain/workspace/current.md
+  -> coverage matrix
+  -> claim audit
+  -> specialist lens
+  -> final report
+```
 
 ## 4. Improve
 
@@ -49,6 +61,7 @@ The agent searches the brain, reads pages, and returns a synthesized answer with
 - empty source refs
 - diary drafts awaiting subjective context
 - open questions worth asking
+- workspaces that surfaced stale or out-of-window evidence
 
 The brain improves because gaps become prompts for the user.
 

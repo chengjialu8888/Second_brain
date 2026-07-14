@@ -16,6 +16,7 @@ Recommended first page:
 - `brain/dashboards/open-questions.md`: missing context worth answering
 - `brain/dashboards/review-queue.md`: claims needing human confirmation
 - `brain/dashboards/recent-changes.md`: dated change feed
+- `brain/workspace/README.md`: task-scoped active workspace entry
 - `brain/templates/`: Obsidian template files for people, projects, concepts, diary entries, and source notes
 - `.obsidian/snippets/second-brain.css`: subtle reading polish for headings, tables, quotes, and task lists
 - `.obsidian/graph.json`: graph color groups for people, projects, concepts, dashboards, and sources
@@ -28,6 +29,8 @@ Recommended first page:
 4. Answer one useful item in `open-questions`.
 5. Move confirmed insight into the relevant canonical page.
 6. Keep raw evidence in `brain/sources/`.
+
+For strategy reports or other date-bounded synthesis, open `brain/workspace/current.md` after running the workspace command. Treat it as a temporary whiteboard, not as a permanent note.
 
 ## Agent Maintenance Rules
 

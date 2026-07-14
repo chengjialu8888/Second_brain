@@ -15,6 +15,8 @@ Usage:
   scripts/second_brain.sh help
   scripts/second_brain.sh prompt
   scripts/second_brain.sh search "query"
+  scripts/second_brain.sh workspace "query" [--from YYYY-MM-DD --to YYYY-MM-DD]
+  scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD
   scripts/second_brain.sh agents ["query"]
   scripts/second_brain.sh dashboard
   scripts/second_brain.sh lint
@@ -40,7 +42,8 @@ case "$cmd" in
 Use this repository as the $second-brain skill.
 Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
 When output needs a specialist lens, also read skills/agency-agent-routing.md and use agents/agency-agents/ after searching Second Brain evidence.
-Then help me capture, ingest, search, think, lint, route specialist agents, or generate diary drafts without committing private source data.
+For accurate, comprehensive, date-bounded synthesis, create an active workspace before the final deliverable.
+Then help me capture, ingest, search, think, compose workspaces, lint, route specialist agents, or generate diary drafts without committing private source data.
 EOF
     ;;
   search)
@@ -53,10 +56,25 @@ EOF
   agents)
     python3 scripts/agency_agent_search.py "$@"
     ;;
+  workspace)
+    if [[ $# -lt 1 ]]; then
+      echo "Usage: scripts/second_brain.sh workspace \"query\" [--from YYYY-MM-DD --to YYYY-MM-DD]" >&2
+      exit 2
+    fi
+    python3 scripts/workspace_compose.py "$@"
+    ;;
+  strategy-report)
+    if [[ $# -lt 1 ]]; then
+      echo "Usage: scripts/second_brain.sh strategy-report \"topic\" --from YYYY-MM-DD --to YYYY-MM-DD" >&2
+      exit 2
+    fi
+    python3 scripts/workspace_compose.py --mode strategy-report "$@"
+    ;;
   dashboard)
     cat <<'EOF'
 Open these in Obsidian:
   brain/dashboards/home.md
+  brain/workspace/README.md
   brain/dashboards/open-questions.md
   brain/dashboards/review-queue.md
   brain/dashboards/recent-changes.md

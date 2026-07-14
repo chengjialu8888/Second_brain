@@ -3,3 +3,4 @@
 {"intent":"今天的日程帮我生成日记草稿","expected_skill":"calendar-diary-draft"}
 {"intent":"Second Brain 和知识库有什么差别","expected_skill":"brain-query"}
 {"intent":"检查有没有断链和孤儿节点","expected_skill":"brain-lint"}
+{"intent":"帮我写一份 2026-07-01 到 2026-07-14 的竞品战略报告，要求准确全面","expected_skill":"strategy-report"}

@@ -20,7 +20,8 @@ Use this file when working on this repository.
 5. `brain/ideas/` is user-authored by default. Agents may suggest edits, but should not overwrite raw ideas silently.
 6. Any claim in Compiled Truth should have a source reference or be marked as a user-provided/inferred low-confidence note.
 7. Agency Agents under `agents/agency-agents/` are specialist lenses, not memory. They may shape outputs only after Second Brain evidence is read.
-8. Use `brain/dashboards/` as human-facing review surfaces. Do not put canonical facts only in dashboards; move confirmed facts into entity pages.
+8. Use `brain/workspace/` as a task-scoped active workspace for high-stakes or date-bounded synthesis. Do not treat workspace drafts as canonical memory.
+9. Use `brain/dashboards/` as human-facing review surfaces. Do not put canonical facts only in dashboards; move confirmed facts into entity pages.
 
 ## Common Commands
 
@@ -28,6 +29,8 @@ Use this file when working on this repository.
 scripts/second_brain.sh help
 scripts/second_brain.sh prompt
 scripts/second_brain.sh search "query"
+scripts/second_brain.sh workspace "query" --from 2026-06-01 --to 2026-06-12
+scripts/second_brain.sh strategy-report "topic" --from 2026-06-01 --to 2026-06-12
 scripts/second_brain.sh agents "product strategy"
 scripts/second_brain.sh dashboard
 scripts/second_brain.sh lint

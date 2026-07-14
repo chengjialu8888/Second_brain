@@ -19,6 +19,7 @@ If a note is about a person, it belongs in `people/` even if it came from a meet
 | `ideas/` | user-owned | User-originated raw ideas and possibilities | Agent-generated conclusions |
 | `diary/` | `calendar-diary-draft` | Daily entries and subjective reflection | Raw calendar dumps |
 | `dashboards/` | `brain-lint` / agents | Human review surfaces, open questions, recent changes, review queues | Canonical facts or raw sources |
+| `workspace/` | `active-workspace` / `strategy-report` | Task-scoped synthesis surfaces, date windows, evidence candidates, claim audits | Canonical facts, raw dumps, permanent source archives |
 | `templates/` | humans / agents | Obsidian-ready page templates | Filled-in memory pages |
 | `resources/` | `chat-ingestion` | Links, papers, repos, documents as resources | Distilled concepts from those resources |
 | `sources/` | source skills | Immutable source snapshots | Curated entity pages |
@@ -31,6 +32,7 @@ If a note is about a person, it belongs in `people/` even if it came from a meet
 - Person vs company/org: if the page is about a human, use `people/`; if it is about an organization, create a project/resource/concept page as appropriate for this MVP.
 - Source vs entity: raw imported material goes in `sources/`; extracted meaning goes in entity directories.
 - Diary vs source: `diary/` is the interpreted daily entry; raw agenda goes under `sources/calendar/`.
+- Workspace vs entity: `workspace/` is a temporary reasoning surface for the current task. Confirmed durable facts should move into people, projects, concepts, resources, or diary pages.
 
 ## Creation Protocol
 

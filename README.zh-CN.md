@@ -35,6 +35,7 @@ Second Brain 补上的是“维护层”：
 - 人物、项目、概念有 canonical 页面
 - 当前认知和证据时间线分开
 - Agent 先 search，再 think
+- active workspace 让高风险综合在最终输出前可审计
 - lint 把缺失上下文变成可回答的问题
 - 专家输出层把同一份记忆转成产品、工程、设计、增长、销售、安全、测试等岗位视角的交付物
 
@@ -45,6 +46,7 @@ Second Brain 补上的是“维护层”：
 | 核心任务 | 存信息 | 人类 PKM、双链、图谱思考 | 召回片段 | 维护个人上下文 |
 | 输入处理 | 保存笔记 | 快速手动记录和链接 | 文档切 chunk | 从群聊、文档、日历、日记、链接中编译并管理记忆 |
 | 查找方法 | 手动浏览 | 本地搜索、backlinks、graph、插件 | 相似度召回 | Resolver、schema、实体页、source refs 组成结构化检索 |
+| 当前任务推理 | 临时发挥 | 人类手动维护工作笔记 | 藏在 prompt / session 里 | active workspace 显式记录日期窗口、coverage matrix 和 claim audit |
 | 输出形态 | 普通笔记 | 人类自己写的笔记和 canvas | 通用回答 | 通过专家 Agent 层生成不同岗位风格的交付物 |
 | 人类可读中间层 | 有 | 很强，Markdown vault 和 UI 都成熟 | 通常没有 | 有，Markdown 页面 |
 | Agent 可读结构 | 弱 | 文件可读，但规则通常靠人约定 | 只偏检索 | Resolver、schema、skills、evals |
@@ -65,7 +67,10 @@ Second Brain 覆盖完整的上下文生命周期：
 2. **查找：先结构化检索，再综合**
    Agent 不只做关键词或向量召回，而是结合本地搜索、resolver 规则、schema、source refs、Compiled Truth 和 Timeline 找到可追溯上下文。
 
-3. **输出：按岗位设定生成交付物**
+3. **思考：面向高风险综合的 active workspace**
+   当你要写战略报告、竞品分析、roadmap 或其他有日期限定的判断时，Agent 会先生成一个小型 workspace，把当前证据、假设、coverage gap 和 claim audit 摊开，再进入最终写作。
+
+4. **输出：按岗位设定生成交付物**
    当回答需要专业表达时，Agency Agents 层会提供合适的专家视角：Product Manager 写 PRD，Feishu Integration Developer 设计飞书工作流，UX Researcher 做用户洞察，Security Architect 做风险评审，Test Planner 做 QA 计划，等等。
 
 ## 核心设计
@@ -99,6 +104,12 @@ scripts/second_brain.sh help
 # 搜索本地记忆
 scripts/second_brain.sh search "llm-wiki"
 
+# 高风险综合前，先生成 active workspace
+scripts/second_brain.sh workspace "Coze competitor strategy" --from 2026-07-01 --to 2026-07-14
+
+# 启动有日期限定的战略报告工作流
+scripts/second_brain.sh strategy-report "Coze competitor strategy" --from 2026-07-01 --to 2026-07-14
+
 # 检查 brain 结构
 scripts/second_brain.sh lint
 
@@ -131,7 +142,8 @@ scripts/second_brain.sh diary today
 Use this repository as the $second-brain skill.
 Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
 When output needs a specialist lens, also read skills/agency-agent-routing.md and use agents/agency-agents/ after searching Second Brain evidence.
-Then help me capture, ingest, search, think, lint, route specialist agents, or generate diary drafts without committing private source data.
+For accurate, comprehensive, date-bounded synthesis, create an active workspace before the final deliverable.
+Then help me capture, ingest, search, think, compose workspaces, lint, route specialist agents, or generate diary drafts without committing private source data.
 ```
 
 ## 用户旅程
@@ -146,7 +158,7 @@ Then help me capture, ingest, search, think, lint, route specialist agents, or g
   <img src="assets/product-flow.svg" alt="Second Brain 产品流程与核心架构" width="100%">
 </p>
 
-这套架构也可以理解成一张“运行解剖图”：`brain/` 是身体，`brain/sources/` 是证据层，Compiled Truth 和 Timeline 组成记忆模型，`skills/` 是可重复工作流，`wiki_lint` 是免疫系统。每个部分都应该说明它的 filter 和 fissure：它如何过滤世界，以及它无法弥合什么。详见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)。
+这套架构也可以理解成一张“运行解剖图”：`brain/` 是身体，`brain/sources/` 是证据层，Compiled Truth 和 Timeline 组成记忆模型，`brain/workspace/` 是当前任务白板，`skills/` 是可重复工作流，`wiki_lint` 是免疫系统。每个部分都应该说明它的 filter 和 fissure：它如何过滤世界，以及它无法弥合什么。详见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) 和 [docs/WORKSPACE.md](docs/WORKSPACE.md)。
 
 ## 专家 Agent 层
 
@@ -174,6 +186,7 @@ scripts/second_brain.sh agents "security review"
 │   ├── schema.md                # 页面模板和证据规范
 │   ├── index.md                 # 人类和 Agent 的默认入口
 │   ├── dashboards/              # Obsidian-friendly 的人类审阅驾驶舱
+│   ├── workspace/               # 当前任务白板入口和本地私有草稿
 │   ├── templates/               # Obsidian-ready 页面模板
 │   ├── people/ concepts/ projects/ diary/
 │   └── sources/                 # 原始资料快照
@@ -194,6 +207,8 @@ scripts/second_brain.sh agents "security review"
 - 飞书文档快照脚本
 - 链接抽取
 - 本地搜索
+- 面向日期限定综合的 active workspace composer
+- 带 coverage matrix 和 claim audit 的战略报告工作流
 - 结构 lint
 - 种子 eval case
 - Agency Agents 专家路由

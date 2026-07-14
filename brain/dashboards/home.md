@@ -17,6 +17,7 @@ confidence: medium
 - Start with [[open-questions]] when you want to add subjective context or resolve ambiguity.
 - Start with [[review-queue]] when an agent has written claims that need human confirmation.
 - Start with [[recent-changes]] when you want to see what changed since the last session.
+- Start with [[../workspace/README]] when a strategy report or date-bounded synthesis needs a current-task whiteboard.
 - Use [[../index]] for the broad index of people, projects, concepts, resources, and workflows.
 
 ## Daily Review Loop
@@ -38,6 +39,7 @@ confidence: medium
 | Concepts | [[../concepts/README]] |
 | Diary | [[../diary/README]] |
 | Sources | [[../sources/README]] |
+| Active workspace | [[../workspace/README]] |
 
 ## Human Review Focus
 
@@ -45,9 +47,11 @@ confidence: medium
 - Which agent-written claims are not yet personally confirmed?
 - Which open questions would materially improve future answers?
 - Which source gaps make the brain sound more certain than it should?
+- Which active workspace claims are sourced, inferred, stale, or out-of-window?
 
 ---
 
 ## Timeline
 
 - **2026-07-07** | System - Created Obsidian-facing home dashboard.
+- **2026-07-14** | System - Linked the active workspace entry for date-bounded synthesis review.
