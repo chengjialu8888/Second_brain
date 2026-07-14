@@ -17,9 +17,19 @@
 
 **Second Brain is a local-first personal memory layer for humans and agents.**
 
-It turns chats, Feishu docs, calendar events, diary drafts, links, and notes into a Markdown-native brain that agents can compile, manage, search, synthesize, lint, and maintain over time.
+It turns chats, Feishu docs, calendar events, diary drafts, links, and notes into a Markdown-native brain that agents can compile, manage, search, synthesize, audit through active workspaces, and maintain over time.
 
 The goal is not another knowledge base. The goal is a durable context layer that remembers what happened, what it means, what is still open, and what the agent should ask next.
+
+## Latest Update: Strategy-Grade Workspace
+
+This version adds a J-space-inspired active workspace layer and a `strategy-report` skill for strategic work where accuracy, coverage, and date boundaries matter.
+
+- **Active workspace before final output**: high-stakes synthesis now passes through `brain/workspace/`, a small task whiteboard that exposes the active evidence, assumptions, gaps, and output contract.
+- **Date-bounded strategy reports**: `scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD` creates a report-ready workspace with `as_of`, source window, coverage matrix, and claim audit.
+- **Better factual discipline**: important claims are expected to carry source paths, dates, confidence, and caveats before they become recommendations.
+- **Memory first, specialist second**: product, finance, risk, growth, or engineering lenses can shape the deliverable only after Second Brain evidence is visible.
+- **Private by default**: generated workspace drafts are ignored by git because they may include sensitive retrieved context.
 
 ## Why It Exists
 

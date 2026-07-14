@@ -17,9 +17,19 @@
 
 **Second Brain 是一个面向人类和 Agent 的本地优先个人记忆层。**
 
-它把群聊、飞书文档、日历日程、日记草稿、链接和普通笔记，沉淀成一个 Markdown-native 的个人大脑。Agent 可以围绕它完成记忆编译、记忆管理、search、think、lint 和日记草稿生成。
+它把群聊、飞书文档、日历日程、日记草稿、链接和普通笔记，沉淀成一个 Markdown-native 的个人大脑。Agent 可以围绕它完成记忆编译、记忆管理、search、think、active workspace 审计、lint 和日记草稿生成。
 
 它的目标不是再做一个知识库，而是做一个可长期维护的上下文层：记住发生了什么、这件事意味着什么、还有什么没搞清楚，以及 Agent 下一步应该问什么。
+
+## 本次更新亮点：战略级 Workspace
+
+这个版本新增了受 J-space 启发的 active workspace 层，以及面向战略报告的 `strategy-report` skill，专门服务“准确、全面、有日期限定”的高风险输出。
+
+- **最终输出前先过 active workspace**：高风险综合会先进入 `brain/workspace/`，把当前任务的证据、假设、缺口和输出契约摊开。
+- **有日期限定的战略报告**：`scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD` 会生成带 `as_of`、source window、coverage matrix 和 claim audit 的报告工作区。
+- **更强的事实纪律**：重要判断需要先记录 source path、日期、置信度和 caveat，再进入建议和结论。
+- **先记忆，后专家视角**：产品、财务、风险、增长、工程等专家 lens 只能在 Second Brain 证据可见之后参与塑形。
+- **默认保护隐私**：生成的 workspace 草稿默认不进 git，因为里面可能包含私有检索上下文。
 
 ## 为什么需要它
 
