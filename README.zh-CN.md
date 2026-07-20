@@ -167,13 +167,13 @@ Then help me capture, ingest, search, think, compose workspaces, lint, route spe
 ## 用户旅程
 
 <p align="center">
-  <img src="assets/user-journey.svg" alt="Second Brain 从捕获到迭代的用户旅程" width="100%">
+  <img src="assets/user-journey.svg" alt="Second Brain 中英双语用户旅程：从捕获到主动回忆输出" width="100%">
 </p>
 
 ## 核心架构
 
 <p align="center">
-  <img src="assets/product-flow.svg" alt="Second Brain 产品流程与核心架构" width="100%">
+  <img src="assets/product-flow.svg" alt="Second Brain 中英双语 recall-first 核心架构" width="100%">
 </p>
 
 这套架构也可以理解成一张“运行解剖图”：`brain/` 是身体，`brain/sources/` 是证据层，Compiled Truth 和 Timeline 组成记忆模型，recall planning 选择合适的检索路线，evidence ledger 把召回事实压缩成可审计账本，`brain/workspace/` 是当前任务白板，`skills/` 是可重复工作流，`wiki_lint` 是免疫系统。每个部分都应该说明它的 filter 和 fissure：它如何过滤世界，以及它无法弥合什么。详见 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) 和 [docs/WORKSPACE.md](docs/WORKSPACE.md)。

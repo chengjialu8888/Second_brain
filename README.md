@@ -167,13 +167,13 @@ Then help me capture, ingest, search, think, compose workspaces, lint, route spe
 ## User Journey
 
 <p align="center">
-  <img src="assets/user-journey.svg" alt="Second Brain user journey from capture to improvement" width="100%">
+  <img src="assets/user-journey.svg" alt="Second Brain bilingual user journey from capture to recall-first output" width="100%">
 </p>
 
 ## Core Architecture
 
 <p align="center">
-  <img src="assets/product-flow.svg" alt="Second Brain product flow and core architecture" width="100%">
+  <img src="assets/product-flow.svg" alt="Second Brain bilingual recall-first core architecture" width="100%">
 </p>
 
 The architecture can also be read as an operational anatomy: `brain/` is the body, `brain/sources/` is the evidence layer, Compiled Truth and Timeline form the memory model, recall planning chooses the right retrieval route, the evidence ledger keeps recalled facts compact and auditable, `brain/workspace/` is the active task whiteboard, `skills/` are repeatable workflows, and `wiki_lint` is the immune system. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/WORKSPACE.md](docs/WORKSPACE.md) for the filter/fissure model and the J-space-inspired workspace layer.

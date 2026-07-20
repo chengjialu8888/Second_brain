@@ -1,106 +1,126 @@
-<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Second Brain product flow</title>
-  <desc id="desc">System architecture showing raw sources, capture and ingest rules, the Markdown brain, agent operations, and outputs.</desc>
+<svg width="1680" height="1080" viewBox="0 0 1680 1080" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Second Brain core architecture / 核心架构</title>
+  <desc id="desc">A bilingual architecture diagram showing sources, retain, canonical memory, recall controller, evidence ledger, active workspace, verify, and output.</desc>
   <defs>
     <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 8">
-      <path d="M0 0 L10 4 L0 8 z" fill="#0A0A0A"/>
+      <path d="M0 0 L10 4 L0 8 z" fill="#0F0F0F"/>
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="1600" height="920" fill="#FFFFFF"/>
-  <text x="70" y="78" fill="#0A0A0A" font-size="52" font-weight="800">Second Brain Product Flow</text>
-  <text x="72" y="110" fill="#333333" font-size="22" font-weight="600">A local-first memory layer that turns preserved evidence into agent-callable context</text>
+  <rect x="0" y="0" width="1680" height="1080" fill="#EFE9D9"/>
+  <rect x="70" y="48" width="222" height="46" fill="#F5C518" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="92" y="79" fill="#0F0F0F" font-size="22" font-weight="900">ARCHITECTURE</text>
+  <text x="316" y="80" fill="#0F0F0F" font-size="52" font-weight="900">Second Brain Core Architecture / 核心架构</text>
+  <text x="318" y="118" fill="#2A2A2A" font-size="22" font-weight="700">Sources stay local. Recall creates a compact evidence packet. / 资料留在本地，回忆生成压缩证据包。</text>
 
-  <rect x="76" y="156" width="300" height="562" fill="#0A0A0A"/>
-  <rect x="70" y="150" width="300" height="562" fill="#F5F5F5" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="96" y="200" fill="#0A0A0A" font-size="30" font-weight="800">Raw Sources</text>
-  <text x="96" y="230" fill="#333333" font-size="18">Preserved before interpretation</text>
+  <rect x="72" y="166" width="282" height="616" fill="#0F0F0F"/>
+  <rect x="60" y="154" width="282" height="616" fill="#E4DCC4" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="86" y="204" fill="#0F0F0F" font-size="28" font-weight="900">Sources</text>
+  <text x="86" y="234" fill="#0F0F0F" font-size="22" font-weight="900">原始资料</text>
+  <text x="86" y="260" fill="#2A2A2A" font-size="17" font-weight="700">Preserve first / 先保留</text>
+  <rect x="88" y="278" width="226" height="68" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="112" y="320" fill="#0F0F0F" font-size="22" font-weight="900">Feishu / 飞书</text>
+  <rect x="88" y="368" width="226" height="68" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="112" y="410" fill="#0F0F0F" font-size="22" font-weight="900">Chats / 群聊</text>
+  <rect x="88" y="458" width="226" height="68" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="112" y="500" fill="#0F0F0F" font-size="22" font-weight="900">Docs / 文档</text>
+  <rect x="88" y="548" width="226" height="68" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="112" y="590" fill="#0F0F0F" font-size="22" font-weight="900">Links + notes</text>
+  <rect x="88" y="638" width="226" height="68" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="112" y="680" fill="#0F0F0F" font-size="22" font-weight="900">PDF / web</text>
 
-  <rect x="98" y="270" width="244" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="122" y="312" fill="#0A0A0A" font-size="22" font-weight="800">Feishu calendar</text>
-  <rect x="98" y="360" width="244" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="122" y="402" fill="#0A0A0A" font-size="22" font-weight="800">Chat exports</text>
-  <rect x="98" y="450" width="244" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="122" y="492" fill="#0A0A0A" font-size="22" font-weight="800">Feishu docs/wiki</text>
-  <rect x="98" y="540" width="244" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="122" y="582" fill="#0A0A0A" font-size="22" font-weight="800">Links and notes</text>
+  <line x1="342" y1="462" x2="398" y2="462" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <rect x="436" y="156" width="318" height="562" fill="#0A0A0A"/>
-  <rect x="430" y="150" width="318" height="562" fill="#F2D4CF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="456" y="200" fill="#0A0A0A" font-size="30" font-weight="800">Capture + Ingest</text>
-  <text x="456" y="230" fill="#333333" font-size="18">Rules make memory writable</text>
+  <rect x="410" y="166" width="282" height="616" fill="#0F0F0F"/>
+  <rect x="398" y="154" width="282" height="616" fill="#1F8A4C" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="424" y="204" fill="#EFE9D9" font-size="30" font-weight="900">Retain / 留存</text>
+  <text x="424" y="235" fill="#EFE9D9" font-size="18" font-weight="700">Safe Markdown writes</text>
+  <rect x="426" y="278" width="226" height="76" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="450" y="311" fill="#0F0F0F" font-size="21" font-weight="900">snapshots</text>
+  <text x="450" y="337" fill="#0F0F0F" font-size="18" font-weight="700">原始快照</text>
+  <rect x="426" y="382" width="226" height="76" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="450" y="415" fill="#0F0F0F" font-size="21" font-weight="900">resolver routes</text>
+  <text x="450" y="441" fill="#0F0F0F" font-size="18" font-weight="700">归档路由</text>
+  <rect x="426" y="486" width="226" height="76" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="450" y="519" fill="#0F0F0F" font-size="21" font-weight="900">schema writes</text>
+  <text x="450" y="545" fill="#0F0F0F" font-size="18" font-weight="700">结构化写入</text>
+  <rect x="426" y="590" width="226" height="76" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="450" y="623" fill="#0F0F0F" font-size="21" font-weight="900">diary drafts</text>
+  <text x="450" y="649" fill="#0F0F0F" font-size="18" font-weight="700">日记草稿</text>
 
-  <rect x="460" y="270" width="258" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="484" y="304" fill="#0A0A0A" font-size="22" font-weight="800">brain/inbox</text>
-  <text x="484" y="330" fill="#333333" font-size="17">temporary landing zone</text>
-  <rect x="460" y="370" width="258" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="484" y="404" fill="#0A0A0A" font-size="22" font-weight="800">source snapshots</text>
-  <text x="484" y="430" fill="#333333" font-size="17">calendar, chats, docs</text>
-  <rect x="460" y="470" width="258" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="484" y="504" fill="#0A0A0A" font-size="22" font-weight="800">RESOLVER.md</text>
-  <text x="484" y="530" fill="#333333" font-size="17">where each fact belongs</text>
-  <rect x="460" y="570" width="258" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="484" y="604" fill="#0A0A0A" font-size="22" font-weight="800">schema + skills</text>
-  <text x="484" y="630" fill="#333333" font-size="17">how agents write safely</text>
+  <line x1="680" y1="462" x2="736" y2="462" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <rect x="816" y="156" width="356" height="562" fill="#0A0A0A"/>
-  <rect x="810" y="150" width="356" height="562" fill="#E5EDD6" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="836" y="200" fill="#0A0A0A" font-size="30" font-weight="800">Markdown Brain</text>
-  <text x="836" y="230" fill="#333333" font-size="18">Human-browsable, agent-maintained</text>
+  <rect x="748" y="166" width="320" height="616" fill="#0F0F0F"/>
+  <rect x="736" y="154" width="320" height="616" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="762" y="204" fill="#0F0F0F" font-size="28" font-weight="900">Memory Core</text>
+  <text x="762" y="234" fill="#0F0F0F" font-size="22" font-weight="900">长期记忆</text>
+  <text x="762" y="260" fill="#2A2A2A" font-size="17" font-weight="700">human + agent readable</text>
+  <rect x="766" y="278" width="260" height="76" fill="#E4DCC4" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="790" y="311" fill="#0F0F0F" font-size="21" font-weight="900">people / projects</text>
+  <text x="790" y="337" fill="#0F0F0F" font-size="18" font-weight="700">人物 / 项目</text>
+  <rect x="766" y="382" width="260" height="76" fill="#E4DCC4" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="790" y="415" fill="#0F0F0F" font-size="21" font-weight="900">concepts</text>
+  <text x="790" y="441" fill="#0F0F0F" font-size="18" font-weight="700">概念 / 资源</text>
+  <rect x="766" y="486" width="260" height="76" fill="#E4DCC4" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="790" y="519" fill="#0F0F0F" font-size="21" font-weight="900">Compiled Truth</text>
+  <text x="790" y="545" fill="#0F0F0F" font-size="18" font-weight="700">当前综合认知</text>
+  <rect x="766" y="590" width="260" height="76" fill="#E4DCC4" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="790" y="623" fill="#0F0F0F" font-size="21" font-weight="900">Timeline</text>
+  <text x="790" y="649" fill="#0F0F0F" font-size="18" font-weight="700">追加式证据时间线</text>
 
-  <rect x="840" y="270" width="296" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="864" y="304" fill="#0A0A0A" font-size="22" font-weight="800">people / concepts</text>
-  <text x="864" y="330" fill="#333333" font-size="17">canonical entity pages</text>
-  <rect x="840" y="370" width="296" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="864" y="404" fill="#0A0A0A" font-size="22" font-weight="800">projects / diary</text>
-  <text x="864" y="430" fill="#333333" font-size="17">work memory and daily drafts</text>
-  <rect x="840" y="470" width="296" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="864" y="504" fill="#0A0A0A" font-size="22" font-weight="800">Compiled Truth</text>
-  <text x="864" y="530" fill="#333333" font-size="17">current best understanding</text>
-  <rect x="840" y="570" width="296" height="74" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="864" y="604" fill="#0A0A0A" font-size="22" font-weight="800">Timeline</text>
-  <text x="864" y="630" fill="#333333" font-size="17">append-only evidence trail</text>
+  <line x1="1056" y1="462" x2="1114" y2="462" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <rect x="1236" y="156" width="294" height="562" fill="#0A0A0A"/>
-  <rect x="1230" y="150" width="294" height="562" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="1256" y="200" fill="#0A0A0A" font-size="30" font-weight="800">Agent Ops</text>
-  <text x="1256" y="230" fill="#333333" font-size="18">Use memory on demand</text>
+  <rect x="1126" y="166" width="492" height="616" fill="#0F0F0F"/>
+  <rect x="1114" y="154" width="492" height="616" fill="#F5C518" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="1142" y="204" fill="#0F0F0F" font-size="28" font-weight="900">Recall Controller</text>
+  <text x="1142" y="234" fill="#0F0F0F" font-size="22" font-weight="900">主动回忆控制器</text>
+  <text x="1142" y="260" fill="#2A2A2A" font-size="17" font-weight="700">Plan routes before retrieval</text>
 
-  <rect x="1260" y="270" width="234" height="64" fill="#F2D4CF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="1284" y="310" fill="#0A0A0A" font-size="22" font-weight="800">capture</text>
-  <rect x="1260" y="352" width="234" height="64" fill="#E5EDD6" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="1284" y="392" fill="#0A0A0A" font-size="22" font-weight="800">search</text>
-  <rect x="1260" y="434" width="234" height="64" fill="#F5F5F5" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="1284" y="474" fill="#0A0A0A" font-size="22" font-weight="800">think</text>
-  <rect x="1260" y="516" width="234" height="64" fill="#F2D4CF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="1284" y="556" fill="#0A0A0A" font-size="22" font-weight="800">lint</text>
-  <rect x="1260" y="598" width="234" height="64" fill="#E5EDD6" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="1284" y="638" fill="#0A0A0A" font-size="22" font-weight="800">diary draft</text>
+  <rect x="1142" y="278" width="204" height="64" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="1166" y="316" fill="#0F0F0F" font-size="21" font-weight="900">time / 时间</text>
+  <rect x="1374" y="278" width="204" height="64" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="1398" y="316" fill="#0F0F0F" font-size="21" font-weight="900">entity / 实体</text>
+  <rect x="1142" y="368" width="204" height="64" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="1166" y="406" fill="#0F0F0F" font-size="21" font-weight="900">state / 状态</text>
+  <rect x="1374" y="368" width="204" height="64" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="1398" y="406" fill="#0F0F0F" font-size="21" font-weight="900">number / 数值</text>
+  <rect x="1142" y="458" width="204" height="64" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="1166" y="496" fill="#0F0F0F" font-size="21" font-weight="900">conflict / 冲突</text>
+  <rect x="1374" y="458" width="204" height="64" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="1398" y="496" fill="#0F0F0F" font-size="21" font-weight="900">relation / 关系</text>
 
-  <line x1="370" y1="431" x2="430" y2="431" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
-  <line x1="748" y1="431" x2="810" y2="431" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
-  <line x1="1166" y1="431" x2="1230" y2="431" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
-  <polyline points="1377,712 1377,744 988,744 988,712" fill="none" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="1142" y="560" width="436" height="126" fill="#0F0F0F"/>
+  <text x="1170" y="598" fill="#EFE9D9" font-size="24" font-weight="900">Output: recall plan</text>
+  <text x="1170" y="632" fill="#EFE9D9" font-size="20" font-weight="700">find, route, verify</text>
+  <text x="1170" y="662" fill="#EFE9D9" font-size="20" font-weight="700">找什么、去哪找、如何校验</text>
 
-  <rect x="70" y="758" width="392" height="136" fill="#0A0A0A"/>
-  <text x="98" y="796" fill="#FFFFFF" font-size="25" font-weight="800">Core advantage</text>
-  <text x="98" y="828" fill="#FFFFFF" font-size="20">Not a pile of notes.</text>
-  <text x="98" y="854" fill="#FFFFFF" font-size="20">Governed context with</text>
-  <text x="98" y="880" fill="#FFFFFF" font-size="20">source-backed claims.</text>
+  <polyline points="1360,770 1360,824 314,824 314,858" fill="none" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <rect x="462" y="758" width="392" height="136" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="490" y="796" fill="#0A0A0A" font-size="25" font-weight="800">Search is retrieval</text>
-  <text x="490" y="828" fill="#333333" font-size="20">Find evidence first.</text>
-  <text x="490" y="854" fill="#333333" font-size="20">Do not invent context.</text>
+  <rect x="72" y="870" width="470" height="152" fill="#0F0F0F"/>
+  <rect x="60" y="858" width="470" height="152" fill="#F06CA8" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="88" y="904" fill="#0F0F0F" font-size="28" font-weight="900">Evidence Ledger / 证据账本</text>
+  <text x="88" y="938" fill="#0F0F0F" font-size="20" font-weight="800">event time, source, fact type</text>
+  <text x="88" y="968" fill="#0F0F0F" font-size="20" font-weight="800">事件时间、提及时间、来源、事实类型</text>
+  <text x="88" y="998" fill="#0F0F0F" font-size="20" font-weight="800">dedupe, normalize, mark status</text>
 
-  <rect x="854" y="758" width="392" height="136" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="882" y="796" fill="#0A0A0A" font-size="25" font-weight="800">Think is synthesis</text>
-  <text x="882" y="828" fill="#333333" font-size="20">Connect pages, cite claims.</text>
-  <text x="882" y="854" fill="#333333" font-size="20">Name what is missing.</text>
+  <line x1="530" y1="934" x2="586" y2="934" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <rect x="1246" y="758" width="278" height="136" fill="#F5F5F5" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="1274" y="796" fill="#0A0A0A" font-size="25" font-weight="800">Outputs</text>
-  <text x="1274" y="828" fill="#333333" font-size="20">Cited answers</text>
-  <text x="1274" y="854" fill="#333333" font-size="20">Diary drafts</text>
-  <text x="1274" y="880" fill="#333333" font-size="20">Open questions</text>
+  <rect x="598" y="870" width="470" height="152" fill="#0F0F0F"/>
+  <rect x="586" y="858" width="470" height="152" fill="#E4DCC4" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="614" y="904" fill="#0F0F0F" font-size="28" font-weight="900">Active Workspace</text>
+  <text x="614" y="938" fill="#0F0F0F" font-size="20" font-weight="800">claims, coverage, audit</text>
+  <text x="614" y="968" fill="#0F0F0F" font-size="20" font-weight="800">5-12 条判断、覆盖矩阵、判断审计</text>
+  <text x="614" y="998" fill="#0F0F0F" font-size="20" font-weight="800">compact prompt packet / 压缩上下文包</text>
+
+  <line x1="1056" y1="934" x2="1112" y2="934" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="1124" y="870" width="494" height="152" fill="#0F0F0F"/>
+  <rect x="1112" y="858" width="494" height="152" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="1140" y="904" fill="#0F0F0F" font-size="28" font-weight="900">Verify + Output / 校验与输出</text>
+  <text x="1140" y="938" fill="#0F0F0F" font-size="20" font-weight="800">strategy-report, lenses, citations</text>
+  <text x="1140" y="968" fill="#0F0F0F" font-size="20" font-weight="800">战略报告、专家视角、有引用的回答</text>
+  <text x="1140" y="998" fill="#0F0F0F" font-size="20" font-weight="800">handoff facts to memory / 事实回写记忆</text>
+
+  <rect x="60" y="800" width="1558" height="38" fill="#0F0F0F"/>
+  <text x="86" y="826" fill="#EFE9D9" font-size="20" font-weight="900">Prompt boundary / 上下文边界：raw sources stay in filesystem; ledger + workspace become the compact callable context.</text>
 </svg>

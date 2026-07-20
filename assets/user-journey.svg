@@ -1,103 +1,117 @@
-<svg width="1600" height="860" viewBox="0 0 1600 860" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Second Brain user journey</title>
-  <desc id="desc">A five step loop from captured sources to preserved evidence, structured memory, cited thinking, and continuous improvement.</desc>
+<svg width="1680" height="1040" viewBox="0 0 1680 1040" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Second Brain user journey / 用户旅程</title>
+  <desc id="desc">A bilingual six-step journey from capture to retain, recall planning, evidence ledger, active workspace, and role-shaped output.</desc>
   <defs>
     <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="strokeWidth" viewBox="0 0 10 8">
-      <path d="M0 0 L10 4 L0 8 z" fill="#0A0A0A"/>
+      <path d="M0 0 L10 4 L0 8 z" fill="#0F0F0F"/>
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="1600" height="860" fill="#FFFFFF"/>
-  <line x1="70" y1="126" x2="1548" y2="126" stroke="#0A0A0A" stroke-width="3"/>
-  <line x1="70" y1="752" x2="1548" y2="752" stroke="#0A0A0A" stroke-width="3"/>
-  <line x1="70" y1="126" x2="70" y2="752" stroke="#0A0A0A" stroke-width="3"/>
-  <line x1="1548" y1="126" x2="1548" y2="752" stroke="#0A0A0A" stroke-width="3"/>
+  <rect x="0" y="0" width="1680" height="1040" fill="#EFE9D9"/>
+  <line x1="64" y1="138" x2="1616" y2="138" stroke="#0F0F0F" stroke-width="4"/>
+  <line x1="64" y1="930" x2="1616" y2="930" stroke="#0F0F0F" stroke-width="4"/>
+  <line x1="64" y1="138" x2="64" y2="930" stroke="#0F0F0F" stroke-width="4"/>
+  <line x1="1616" y1="138" x2="1616" y2="930" stroke="#0F0F0F" stroke-width="4"/>
 
-  <text x="70" y="78" fill="#0A0A0A" font-size="50" font-weight="800">Second Brain User Journey</text>
-  <text x="72" y="108" fill="#333333" font-size="22" font-weight="600">From scattered context to maintained, callable memory</text>
+  <rect x="74" y="54" width="154" height="46" fill="#F5C518" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="92" y="84" fill="#0F0F0F" font-size="22" font-weight="800">JOURNEY</text>
+  <text x="252" y="82" fill="#0F0F0F" font-size="52" font-weight="900">Second Brain User Journey / 用户旅程</text>
+  <text x="254" y="118" fill="#2A2A2A" font-size="22" font-weight="700">Less context, better recall / 少塞上下文，多做主动回忆</text>
 
-  <g transform="translate(85 184)">
-    <rect x="6" y="6" width="250" height="404" fill="#0A0A0A"/>
-    <rect x="0" y="0" width="250" height="404" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-    <text x="24" y="102" fill="#0A0A0A" font-size="102" font-weight="900">01</text>
-    <text x="28" y="152" fill="#0A0A0A" font-size="34" font-weight="800">Capture</text>
-    <rect x="30" y="174" width="106" height="36" fill="#0A0A0A"/>
-    <text x="52" y="199" fill="#FFFFFF" font-size="18" font-weight="700">Human</text>
-    <text x="28" y="254" fill="#0A0A0A" font-size="22" font-weight="800">Drop in sources</text>
-    <text x="28" y="292" fill="#333333" font-size="20">Feishu calendar</text>
-    <text x="28" y="328" fill="#333333" font-size="20">Chat exports</text>
-    <text x="28" y="364" fill="#333333" font-size="20">Docs, links, notes</text>
+  <g transform="translate(98 188)">
+    <rect x="10" y="10" width="438" height="226" fill="#0F0F0F"/>
+    <rect x="0" y="0" width="438" height="226" fill="#E4DCC4" stroke="#0F0F0F" stroke-width="4"/>
+    <text x="24" y="52" fill="#0F0F0F" font-size="44" font-weight="900">01</text>
+    <text x="92" y="48" fill="#0F0F0F" font-size="30" font-weight="900">Capture / 采集</text>
+    <text x="92" y="82" fill="#2A2A2A" font-size="19" font-weight="700">Collect traces / 汇集碎片</text>
+    <line x1="24" y1="104" x2="414" y2="104" stroke="#0F0F0F" stroke-width="3"/>
+    <text x="28" y="140" fill="#0F0F0F" font-size="21" font-weight="800">Feishu calendar / 飞书日历</text>
+    <text x="28" y="172" fill="#0F0F0F" font-size="21" font-weight="800">Chats, docs, links / 群聊、文档、链接</text>
+    <text x="28" y="204" fill="#0F0F0F" font-size="21" font-weight="800">Notes and ideas / 笔记和想法</text>
   </g>
 
-  <line x1="345" y1="386" x2="375" y2="386" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="552" y1="301" x2="622" y2="301" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <g transform="translate(385 184)">
-    <rect x="6" y="6" width="250" height="404" fill="#0A0A0A"/>
-    <rect x="0" y="0" width="250" height="404" fill="#F2D4CF" stroke="#0A0A0A" stroke-width="3"/>
-    <text x="24" y="102" fill="#0A0A0A" font-size="102" font-weight="900">02</text>
-    <text x="28" y="152" fill="#0A0A0A" font-size="34" font-weight="800">Preserve</text>
-    <rect x="30" y="174" width="98" height="36" fill="#0A0A0A"/>
-    <text x="50" y="199" fill="#FFFFFF" font-size="18" font-weight="700">Agent</text>
-    <text x="28" y="254" fill="#0A0A0A" font-size="22" font-weight="800">Keep evidence raw</text>
-    <text x="28" y="292" fill="#333333" font-size="20">Source snapshot</text>
-    <text x="28" y="328" fill="#333333" font-size="20">Stable references</text>
-    <text x="28" y="364" fill="#333333" font-size="20">No silent overwrite</text>
+  <g transform="translate(636 188)">
+    <rect x="10" y="10" width="438" height="226" fill="#0F0F0F"/>
+    <rect x="0" y="0" width="438" height="226" fill="#1F8A4C" stroke="#0F0F0F" stroke-width="4"/>
+    <text x="24" y="52" fill="#EFE9D9" font-size="44" font-weight="900">02</text>
+    <text x="92" y="48" fill="#EFE9D9" font-size="30" font-weight="900">Retain / 留存编译</text>
+    <text x="92" y="82" fill="#EFE9D9" font-size="19" font-weight="700">Preserve then compile / 留存后编译</text>
+    <line x1="24" y1="104" x2="414" y2="104" stroke="#EFE9D9" stroke-width="3"/>
+    <text x="28" y="140" fill="#EFE9D9" font-size="21" font-weight="800">Snapshots / 原始快照</text>
+    <text x="28" y="172" fill="#EFE9D9" font-size="21" font-weight="800">Pages / 实体页</text>
+    <text x="28" y="204" fill="#EFE9D9" font-size="21" font-weight="800">Truth + Timeline / 认知 + 时间线</text>
   </g>
 
-  <line x1="645" y1="386" x2="675" y2="386" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1090" y1="301" x2="1160" y2="301" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <g transform="translate(685 184)">
-    <rect x="6" y="6" width="250" height="404" fill="#0A0A0A"/>
-    <rect x="0" y="0" width="250" height="404" fill="#E5EDD6" stroke="#0A0A0A" stroke-width="3"/>
-    <text x="24" y="102" fill="#0A0A0A" font-size="102" font-weight="900">03</text>
-    <text x="28" y="152" fill="#0A0A0A" font-size="34" font-weight="800">Structure</text>
-    <rect x="30" y="174" width="98" height="36" fill="#0A0A0A"/>
-    <text x="50" y="199" fill="#FFFFFF" font-size="18" font-weight="700">Agent</text>
-    <text x="28" y="254" fill="#0A0A0A" font-size="22" font-weight="800">Resolve into pages</text>
-    <text x="28" y="292" fill="#333333" font-size="20">Resolver routes</text>
-    <text x="28" y="328" fill="#333333" font-size="20">Schema writes</text>
-    <text x="28" y="364" fill="#333333" font-size="20">Entities and diary</text>
+  <g transform="translate(1174 188)">
+    <rect x="10" y="10" width="408" height="226" fill="#0F0F0F"/>
+    <rect x="0" y="0" width="408" height="226" fill="#F5C518" stroke="#0F0F0F" stroke-width="4"/>
+    <text x="24" y="52" fill="#0F0F0F" font-size="44" font-weight="900">03</text>
+    <text x="92" y="48" fill="#0F0F0F" font-size="30" font-weight="900">Recall Plan / 回忆计划</text>
+    <text x="92" y="82" fill="#2A2A2A" font-size="19" font-weight="700">Choose recall route / 选择路线</text>
+    <line x1="24" y1="104" x2="384" y2="104" stroke="#0F0F0F" stroke-width="3"/>
+    <text x="28" y="140" fill="#0F0F0F" font-size="21" font-weight="800">Time, entity, state / 时间、实体、状态</text>
+    <text x="28" y="172" fill="#0F0F0F" font-size="21" font-weight="800">Number, conflict / 数值、冲突点</text>
+    <text x="28" y="204" fill="#0F0F0F" font-size="21" font-weight="800">Relations / 关系链路</text>
   </g>
 
-  <line x1="945" y1="386" x2="975" y2="386" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
+  <polyline points="1378,426 1378,478 302,478 302,526" fill="none" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <g transform="translate(985 184)">
-    <rect x="6" y="6" width="250" height="404" fill="#0A0A0A"/>
-    <rect x="0" y="0" width="250" height="404" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
-    <text x="24" y="102" fill="#0A0A0A" font-size="102" font-weight="900">04</text>
-    <text x="28" y="152" fill="#0A0A0A" font-size="34" font-weight="800">Think</text>
-    <rect x="30" y="174" width="122" height="36" fill="#0A0A0A"/>
-    <text x="50" y="199" fill="#FFFFFF" font-size="18" font-weight="700">Human + AI</text>
-    <text x="28" y="254" fill="#0A0A0A" font-size="22" font-weight="800">Use with sources</text>
-    <text x="28" y="292" fill="#333333" font-size="20">Search evidence</text>
-    <text x="28" y="328" fill="#333333" font-size="20">Synthesize answer</text>
-    <text x="28" y="364" fill="#333333" font-size="20">Show missing gaps</text>
+  <g transform="translate(98 540)">
+    <rect x="10" y="10" width="438" height="246" fill="#0F0F0F"/>
+    <rect x="0" y="0" width="438" height="246" fill="#F06CA8" stroke="#0F0F0F" stroke-width="4"/>
+    <text x="24" y="52" fill="#0F0F0F" font-size="44" font-weight="900">04</text>
+    <text x="92" y="48" fill="#0F0F0F" font-size="30" font-weight="900">Ledger / 证据账本</text>
+    <text x="92" y="82" fill="#0F0F0F" font-size="19" font-weight="800">Organize facts first / 先整理证据</text>
+    <line x1="24" y1="104" x2="414" y2="104" stroke="#0F0F0F" stroke-width="3"/>
+    <text x="28" y="140" fill="#0F0F0F" font-size="21" font-weight="800">Dedupe + dates / 去重 + 日期</text>
+    <text x="28" y="172" fill="#0F0F0F" font-size="21" font-weight="800">Source + status / 来源 + 状态</text>
+    <text x="28" y="204" fill="#0F0F0F" font-size="21" font-weight="800">Current vs historical / 当前 vs 历史</text>
+    <text x="28" y="232" fill="#0F0F0F" font-size="19" font-weight="700">No raw prompt / 原始资料不进上下文</text>
   </g>
 
-  <line x1="1245" y1="386" x2="1275" y2="386" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="552" y1="663" x2="622" y2="663" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <g transform="translate(1285 184)">
-    <rect x="6" y="6" width="250" height="404" fill="#0A0A0A"/>
-    <rect x="0" y="0" width="250" height="404" fill="#F5F5F5" stroke="#0A0A0A" stroke-width="3"/>
-    <text x="24" y="102" fill="#0A0A0A" font-size="102" font-weight="900">05</text>
-    <text x="28" y="152" fill="#0A0A0A" font-size="34" font-weight="800">Improve</text>
-    <rect x="30" y="174" width="98" height="36" fill="#0A0A0A"/>
-    <text x="50" y="199" fill="#FFFFFF" font-size="18" font-weight="700">Agent</text>
-    <text x="28" y="254" fill="#0A0A0A" font-size="22" font-weight="800">Turn gaps into fuel</text>
-    <text x="28" y="292" fill="#333333" font-size="20">Lint stale claims</text>
-    <text x="28" y="328" fill="#333333" font-size="20">Ask follow-ups</text>
-    <text x="28" y="364" fill="#333333" font-size="20">Enrich memory</text>
+  <g transform="translate(636 540)">
+    <rect x="10" y="10" width="438" height="246" fill="#0F0F0F"/>
+    <rect x="0" y="0" width="438" height="246" fill="#E4DCC4" stroke="#0F0F0F" stroke-width="4"/>
+    <text x="24" y="52" fill="#0F0F0F" font-size="44" font-weight="900">05</text>
+    <text x="92" y="48" fill="#0F0F0F" font-size="30" font-weight="900">Workspace / 当前白板</text>
+    <text x="92" y="82" fill="#2A2A2A" font-size="19" font-weight="700">Small task context / 小型任务上下文</text>
+    <line x1="24" y1="104" x2="414" y2="104" stroke="#0F0F0F" stroke-width="3"/>
+    <text x="28" y="140" fill="#0F0F0F" font-size="21" font-weight="800">5-12 active claims / 5-12 条关键判断</text>
+    <text x="28" y="172" fill="#0F0F0F" font-size="21" font-weight="800">Coverage matrix / 覆盖矩阵</text>
+    <text x="28" y="204" fill="#0F0F0F" font-size="21" font-weight="800">Claim audit + gaps / 判断审计 + 缺口</text>
+    <text x="28" y="232" fill="#0F0F0F" font-size="19" font-weight="700">Compact prompt packet / 压缩上下文包</text>
   </g>
 
-  <polyline points="1410,588 1410,696 210,696 210,610" fill="none" stroke="#0A0A0A" stroke-width="4" marker-end="url(#arrow)"/>
-  <rect x="455" y="658" width="690" height="76" fill="#0A0A0A"/>
-  <text x="492" y="690" fill="#FFFFFF" font-size="24" font-weight="800">The loop is the product</text>
-  <text x="492" y="720" fill="#FFFFFF" font-size="20">Calendar knows what happened. You add what it meant.</text>
+  <line x1="1090" y1="663" x2="1160" y2="663" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
 
-  <rect x="70" y="752" width="490" height="66" fill="#F2D4CF" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="96" y="793" fill="#0A0A0A" font-size="24" font-weight="800">Evidence first</text>
-  <rect x="560" y="752" width="490" height="66" fill="#E5EDD6" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="586" y="793" fill="#0A0A0A" font-size="24" font-weight="800">Search before synthesis</text>
-  <rect x="1050" y="752" width="498" height="66" fill="#F5F5F5" stroke="#0A0A0A" stroke-width="3"/>
-  <text x="1076" y="793" fill="#0A0A0A" font-size="24" font-weight="800">Gaps become prompts</text>
+  <g transform="translate(1174 540)">
+    <rect x="10" y="10" width="408" height="246" fill="#0F0F0F"/>
+    <rect x="0" y="0" width="408" height="246" fill="#EFE9D9" stroke="#0F0F0F" stroke-width="4"/>
+    <text x="24" y="52" fill="#0F0F0F" font-size="44" font-weight="900">06</text>
+    <text x="92" y="48" fill="#0F0F0F" font-size="30" font-weight="900">Output / 输出回写</text>
+    <text x="92" y="82" fill="#2A2A2A" font-size="19" font-weight="700">Use + verify / 使用和校验</text>
+    <line x1="24" y1="104" x2="384" y2="104" stroke="#0F0F0F" stroke-width="3"/>
+    <text x="28" y="140" fill="#0F0F0F" font-size="21" font-weight="800">Strategy report / 战略报告</text>
+    <text x="28" y="172" fill="#0F0F0F" font-size="21" font-weight="800">Specialist lens / 岗位专家视角</text>
+    <text x="28" y="204" fill="#0F0F0F" font-size="21" font-weight="800">Verify + handoff / 校验 + 交接</text>
+    <text x="28" y="232" fill="#0F0F0F" font-size="19" font-weight="700">Facts back to pages / 事实回写页面</text>
+  </g>
+
+  <polyline points="1378,796 1378,872 316,872 316,802" fill="none" stroke="#0F0F0F" stroke-width="4" marker-end="url(#arrow)"/>
+  <rect x="562" y="830" width="552" height="76" fill="#0F0F0F"/>
+  <text x="596" y="862" fill="#EFE9D9" font-size="25" font-weight="900">Recall beats context stuffing</text>
+  <text x="596" y="892" fill="#EFE9D9" font-size="21" font-weight="700">闭环不是塞满上下文，而是把回忆做完整</text>
+
+  <rect x="98" y="950" width="460" height="54" fill="#1F8A4C" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="126" y="984" fill="#EFE9D9" font-size="23" font-weight="900">Evidence first / 证据优先</text>
+  <rect x="610" y="950" width="460" height="54" fill="#F5C518" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="638" y="984" fill="#0F0F0F" font-size="23" font-weight="900">Recall first / 先回忆</text>
+  <rect x="1122" y="950" width="460" height="54" fill="#F06CA8" stroke="#0F0F0F" stroke-width="4"/>
+  <text x="1150" y="984" fill="#0F0F0F" font-size="23" font-weight="900">Gaps to prompts / 缺口变问题</text>
 </svg>

@@ -14,7 +14,7 @@ Second Brain is intentionally small at the storage layer and disciplined at the 
 ## Layers
 
 <p align="center">
-  <img src="../assets/product-flow.svg" alt="Second Brain product flow and core architecture" width="100%">
+  <img src="../assets/product-flow.svg" alt="Second Brain bilingual recall-first core architecture" width="100%">
 </p>
 
 ## Operational Anatomy
