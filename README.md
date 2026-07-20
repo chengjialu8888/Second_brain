@@ -21,12 +21,15 @@ It turns chats, Feishu docs, calendar events, diary drafts, links, and notes int
 
 The goal is not another knowledge base. The goal is a durable context layer that remembers what happened, what it means, what is still open, and what the agent should ask next.
 
-## Latest Update: Strategy-Grade Workspace
+## Latest Update: Recall-First Strategy Workspace
 
-This version adds a J-space-inspired active workspace layer and a `strategy-report` skill for strategic work where accuracy, coverage, and date boundaries matter.
+This version adds a J-space-inspired active workspace layer and a `strategy-report` skill for strategic work where accuracy, coverage, and date boundaries matter. The next architecture iteration is inspired by Shadow-Weave's [Holographic Memory System](https://github.com/Shadow-Weave/HMS): move from "retrieve chunks into context" to "actively recall, organize evidence, then write."
 
 - **Active workspace before final output**: high-stakes synthesis now passes through `brain/workspace/`, a small task whiteboard that exposes the active evidence, assumptions, gaps, and output contract.
 - **Date-bounded strategy reports**: `scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD` creates a report-ready workspace with `as_of`, source window, coverage matrix, and claim audit.
+- **Recall-first architecture**: future recall should start with a plan, then search by time, entity, current state, numeric signal, contradiction, and relationship instead of relying on one similarity search.
+- **Evidence ledger before workspace**: retrieved material should be deduped, date-normalized, source-tagged, and marked as current, historical, planned, cancelled, or conflicting before it reaches the active workspace.
+- **Context overload relief**: raw sources stay outside the prompt; the model sees a compact ledger and 5-12 active claims instead of a long pile of snippets.
 - **Better factual discipline**: important claims are expected to carry source paths, dates, confidence, and caveats before they become recommendations.
 - **Memory first, specialist second**: product, finance, risk, growth, or engineering lenses can shape the deliverable only after Second Brain evidence is visible.
 - **Private by default**: generated workspace drafts are ignored by git because they may include sensitive retrieved context.
@@ -46,6 +49,7 @@ Second Brain adds the missing maintenance layer:
 - current understanding is separated from evidence history
 - agents search first, then synthesize
 - active workspaces make high-stakes synthesis auditable before final output
+- recall planning and evidence ledgers reduce context overload before writing
 - lint turns missing context into useful follow-up questions
 - specialist output lenses turn the same memory into product, engineering, design, growth, sales, security, or testing deliverables
 
@@ -56,6 +60,7 @@ Second Brain adds the missing maintenance layer:
 | Primary job | Store information | Human PKM, backlinks, graph thinking | Retrieve chunks | Maintain personal context |
 | Input handling | Save notes | Fast manual capture and linking | Chunk documents | Compile and manage memory from chats, docs, calendar, diary, links |
 | Search method | Manual browsing | Local search, backlinks, graph, plugins | Similarity retrieval | Structured search with resolver, schema, entity pages, source refs |
+| Context overload handling | Human judgment | Human curation, backlinks, canvases | Push more chunks into the prompt | Recall plan -> evidence ledger -> active workspace |
 | Current task reasoning | Ad hoc | Human-maintained working notes | Hidden in prompt/session | Active workspace with date window, coverage matrix, and claim audit |
 | Output shape | Generic notes | Human-authored notes and canvases | Generic answer | Role-shaped deliverables through specialist agent lenses |
 | Human-readable middle layer | Yes | Excellent Markdown vault and UI | Usually no | Yes, Markdown pages |
@@ -74,13 +79,16 @@ Second Brain works across the full context lifecycle:
 1. **Input: memory compilation and management**
    Raw group chats, Feishu docs, calendar events, diary drafts, links, and notes are preserved as source evidence, then compiled into canonical people, project, concept, diary, and resource pages.
 
-2. **Search: structured retrieval before synthesis**
-   Agents use local search, resolver rules, schema conventions, source refs, Compiled Truth, and Timeline sections to find the right context before answering.
+2. **Recall: structured retrieval before synthesis**
+   Agents should first decide what kind of memory is needed, then search by time, entity, state, number, conflict, and relationship. The goal is not more context; it is a smaller, better-organized evidence set.
 
-3. **Think: active workspace for high-stakes synthesis**
+3. **Organize: evidence ledger before workspace**
+   High-risk recall should produce a ledger with event time, mention time, source, fact type, compact evidence, numeric/date/update signals, and raw source refs. This prevents duplicate counting, stale-state confusion, and relative-date mistakes.
+
+4. **Think: active workspace for high-stakes synthesis**
    For strategy reports, competitor analysis, roadmaps, and other date-bounded work, agents compose a small workspace that exposes the active evidence, assumptions, coverage gaps, and claim audit before writing.
 
-4. **Output: role-shaped delivery**
+5. **Output: role-shaped delivery**
    When the answer needs professional craft, the Agency Agents layer applies the right specialist lens: Product Manager for PRDs, Feishu Integration Developer for Lark workflows, UX Researcher for user insight, Security Architect for risk review, Test Planner for QA, and so on.
 
 ## Core Idea
@@ -168,7 +176,7 @@ Then help me capture, ingest, search, think, compose workspaces, lint, route spe
   <img src="assets/product-flow.svg" alt="Second Brain product flow and core architecture" width="100%">
 </p>
 
-The architecture can also be read as an operational anatomy: `brain/` is the body, `brain/sources/` is the evidence layer, Compiled Truth and Timeline form the memory model, `brain/workspace/` is the active task whiteboard, `skills/` are repeatable workflows, and `wiki_lint` is the immune system. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/WORKSPACE.md](docs/WORKSPACE.md) for the filter/fissure model and the J-space-inspired workspace layer.
+The architecture can also be read as an operational anatomy: `brain/` is the body, `brain/sources/` is the evidence layer, Compiled Truth and Timeline form the memory model, recall planning chooses the right retrieval route, the evidence ledger keeps recalled facts compact and auditable, `brain/workspace/` is the active task whiteboard, `skills/` are repeatable workflows, and `wiki_lint` is the immune system. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/WORKSPACE.md](docs/WORKSPACE.md) for the filter/fissure model and the J-space-inspired workspace layer.
 
 ## Specialist Agent Layer
 
@@ -229,6 +237,7 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 
 - Better chat and Feishu doc ingestion
 - Entity alias and duplicate detection
+- `memory-recall` / `evidence-ledger` skill for recall plans, multi-route retrieval, dedupe, date normalization, and current-vs-historical state arbitration
 - Richer `think` synthesis over search results
 - Weekly lint report
 - Optional SQLite FTS5 index
