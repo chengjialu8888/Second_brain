@@ -12,7 +12,7 @@ source_refs: []
 output_url:
 evidence_mode: layered
 visual_output: optional
-visual_style: cobalt-glaze
+visual_style: beautiful-feishu-whiteboard/cobalt-glaze
 ---
 
 # {{title}}
@@ -26,7 +26,7 @@ visual_style: cobalt-glaze
 - 区分事实 / 观察、参与者判断、整理者推断、建议和待核实问题。
 - 有逐字稿或时间戳时，Q&A 按原顺序重组；除非明确标注，否则 Q&A 是结构化摘要，不冒充逐字引用。
 - 先给读者看结构，再展开细节。只有当图能解释流程、协作、信息流、资源配置、决策或反馈回路时才做图；每张图只讲一个主关系。
-- 默认使用 `Cobalt Glaze` 蓝白模板；如果场景不适合，可替换 `visual_style`，或标记为“不需要可视化”。
+- 图片和流程可视化默认使用 `$beautiful-feishu-whiteboard` 的蓝白 `Cobalt Glaze` 模板；如果场景不适合，可替换 `visual_style`，或标记为“不需要可视化”。
 - 不适用的模块可以删除，不要用空洞内容填充。
 
 ## 0. 输出概览
