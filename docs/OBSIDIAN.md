@@ -17,7 +17,7 @@ Recommended first page:
 - `brain/dashboards/review-queue.md`: claims needing human confirmation
 - `brain/dashboards/recent-changes.md`: dated change feed
 - `brain/workspace/README.md`: task-scoped active workspace entry
-- `brain/templates/`: Obsidian template files for people, projects, concepts, diary entries, and source notes
+- `brain/templates/`: Obsidian template files for people, projects, concepts, diary entries, source notes, and structured meeting summaries
 - `.obsidian/snippets/second-brain.css`: subtle reading polish for headings, tables, quotes, and task lists
 - `.obsidian/graph.json`: graph color groups for people, projects, concepts, dashboards, and sources
 
