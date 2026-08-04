@@ -21,14 +21,16 @@
 
 它的目标不是再做一个知识库，而是做一个可长期维护的上下文层：记住发生了什么、这件事意味着什么、还有什么没搞清楚，以及 Agent 下一步应该问什么。
 
-## 本次更新亮点：Recall-First 战略 Workspace
+## 本次更新亮点：分层回忆和战略 Workspace
 
-这个版本新增了受 J-space 启发的 active workspace 层，以及面向战略报告的 `strategy-report` skill，专门服务“准确、全面、有日期限定”的高风险输出。下一步架构迭代会吸收 Shadow-Weave [Holographic Memory System](https://github.com/Shadow-Weave/HMS) 的启发：从“把 chunk 塞进上下文”，转成“先主动回忆、组织证据，再写作”。
+这个版本新增了受 J-space 启发的 active workspace 层，以及面向战略报告的 `strategy-report` skill，专门服务“准确、全面、有日期限定”的高风险输出。下一步架构迭代会吸收 Shadow-Weave [Holographic Memory System](https://github.com/Shadow-Weave/HMS) 和 TencentDB Agent Memory 的 [L0-L3 记忆分层](https://github.com/TencentCloud/TencentDB-Agent-Memory)：从“把 chunk 塞进上下文”，转成“先主动回忆、组织证据、装配合适资产，再写作”。
 
 - **最终输出前先过 active workspace**：高风险综合会先进入 `brain/workspace/`，把当前任务的证据、假设、缺口和输出契约摊开。
 - **有日期限定的战略报告**：`scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD` 会生成带 `as_of`、source window、coverage matrix 和 claim audit 的报告工作区。
 - **Recall-first 架构**：未来 recall 会先生成检索计划，再按时间、实体、当前状态、数值信号、矛盾点和关系链路检索，而不是只靠一套相似度搜索。
+- **分层记忆模型**：现在显式使用 L0-L3 词汇：L0 原始证据、L1 原子事实、L2 场景块、L3 操作记忆，以及当前任务的 active workspace。
 - **Workspace 前先有 evidence ledger**：召回材料先去重、日期归一、标来源，并标注 current、historical、planned、cancelled、conflicting，再进入 active workspace。
+- **Asset loadout**：`brain/assets.yaml` 记录哪些 memory、skill、wiki、source-pack 或未来 codegraph 资产应该被某个 workflow 或 Agent 角色装配。
 - **缓解上下文过载**：原始资料默认不进 prompt；模型看到的是压缩后的 evidence ledger 和 5-12 条 active claims，而不是一长串 snippets。
 - **更强的事实纪律**：重要判断需要先记录 source path、日期、置信度和 caveat，再进入建议和结论。
 - **先记忆，后专家视角**：产品、财务、风险、增长、工程等专家 lens 只能在 Second Brain 证据可见之后参与塑形。
@@ -49,6 +51,8 @@ Second Brain 补上的是“维护层”：
 - 当前认知和证据时间线分开
 - Agent 先 search，再 think
 - active workspace 让高风险综合在最终输出前可审计
+- L0-L3 记忆分层让压缩后的回忆仍然可以回钻到原始证据
+- asset loadout 让每个 workflow 获得真正需要的 memory、skill、wiki 或 source-pack
 - recall planning 和 evidence ledger 在写作前缓解上下文过载
 - lint 把缺失上下文变成可回答的问题
 - 专家输出层把同一份记忆转成产品、工程、设计、增长、销售、安全、测试等岗位视角的交付物
@@ -59,10 +63,12 @@ Second Brain 补上的是“维护层”：
 |-|-|-|-|-|
 | 核心任务 | 存信息 | 人类 PKM、双链、图谱思考 | 召回片段 | 维护个人上下文 |
 | 输入处理 | 保存笔记 | 快速手动记录和链接 | 文档切 chunk | 从群聊、文档、日历、日记、链接中编译并管理记忆 |
+| 记忆形成 | 扁平页面 | 人类手动建立笔记网络 | 被 embedding 的 chunks | L0 原始证据 -> L1 原子记忆 -> L2 场景记忆 -> L3 操作记忆 |
 | 查找方法 | 手动浏览 | 本地搜索、backlinks、graph、插件 | 相似度召回 | Resolver、schema、实体页、source refs 组成结构化检索 |
 | 上下文过载处理 | 靠人判断 | 人类整理、双链、canvas | 把更多 chunk 塞进 prompt | recall plan -> evidence ledger -> active workspace |
 | 当前任务推理 | 临时发挥 | 人类手动维护工作笔记 | 藏在 prompt / session 里 | active workspace 显式记录日期窗口、coverage matrix 和 claim audit |
 | 输出形态 | 普通笔记 | 人类自己写的笔记和 canvas | 通用回答 | 通过专家 Agent 层生成不同岗位风格的交付物 |
+| Agent 装配 | 无 | 人类手动搭工作区 | 全局 retrieval 配置 | 按任务装配 memory、skill、wiki、source-pack |
 | 人类可读中间层 | 有 | 很强，Markdown vault 和 UI 都成熟 | 通常没有 | 有，Markdown 页面 |
 | Agent 可读结构 | 弱 | 文件可读，但规则通常靠人约定 | 只偏检索 | Resolver、schema、skills、evals |
 | 证据模型 | 松散 | 双链和手动引用 | chunk provenance | raw sources + Timeline |
@@ -85,10 +91,13 @@ Second Brain 覆盖完整的上下文生命周期：
 3. **组织：workspace 前先形成 evidence ledger**
    高风险 recall 应先产出证据账本，记录 event time、mention time、source、fact type、compact evidence、numeric/date/update signals 和 raw source refs，避免重复计数、旧状态冒充当前状态、相对日期没落到绝对日期等问题。
 
-4. **思考：面向高风险综合的 active workspace**
+4. **装配：按任务选择 asset loadout**
+   `brain/assets.yaml` 记录可复用的 memory、skill、wiki、source-pack 和未来 codegraph 资产。战略报告、PRD、代码 review、日记草稿和增长 memo 应该拿到不同上下文。
+
+5. **思考：面向高风险综合的 active workspace**
    当你要写战略报告、竞品分析、roadmap 或其他有日期限定的判断时，Agent 会先生成一个小型 workspace，把当前证据、假设、coverage gap 和 claim audit 摊开，再进入最终写作。
 
-5. **输出：按岗位设定生成交付物**
+6. **输出：按岗位设定生成交付物**
    当回答需要专业表达时，Agency Agents 层会提供合适的专家视角：Product Manager 写 PRD，Feishu Integration Developer 设计飞书工作流，UX Researcher 做用户洞察，Security Architect 做风险评审，Test Planner 做 QA 计划，等等。
 
 ## 核心设计
@@ -105,6 +114,14 @@ Timeline             追加式证据时间线，带日期和来源
 
 - “我们现在怎么看这个人/项目/概念？”
 - “这个判断来自哪一天、哪条证据？”
+
+在 recall 时，同一份记忆会按 L0-L3 组装：
+
+```text
+L0 原始证据 -> L1 原子记忆 -> L2 场景记忆 -> L3 操作记忆 -> active workspace
+```
+
+回钻和 asset loadout 规则见 [docs/MEMORY_LAYERS.md](docs/MEMORY_LAYERS.md)。
 
 ## 快速开始：像 Skill 一样使用
 
@@ -202,10 +219,11 @@ scripts/second_brain.sh agents "security review"
 ├── brain/
 │   ├── RESOLVER.md              # 归档和 ownership 规则
 │   ├── schema.md                # 页面模板和证据规范
+│   ├── assets.yaml              # 轻量 memory / skill / wiki / source-pack 装配注册表
 │   ├── index.md                 # 人类和 Agent 的默认入口
 │   ├── dashboards/              # Obsidian-friendly 的人类审阅驾驶舱
 │   ├── workspace/               # 当前任务白板入口和本地私有草稿
-│   ├── templates/               # Obsidian-ready 页面模板
+│   ├── templates/               # Obsidian-ready 页面模板，包含 memory atom / scene
 │   ├── people/ concepts/ projects/ diary/
 │   └── sources/                 # 原始资料快照
 ├── skills/                      # ingest、query、enrich、lint、diary 等工作流
@@ -227,6 +245,7 @@ scripts/second_brain.sh agents "security review"
 - 本地搜索
 - 面向日期限定综合的 active workspace composer
 - 带 coverage matrix 和 claim audit 的战略报告工作流
+- L0-L3 记忆分层文档、memory atom / scene 模板、轻量 asset registry
 - 结构 lint
 - 种子 eval case
 - Agency Agents 专家路由
@@ -238,6 +257,7 @@ scripts/second_brain.sh agents "security review"
 - 更好的群聊和飞书文档 ingest
 - 实体别名和重复实体检测
 - `memory-recall` / `evidence-ledger` skill：生成 recall plan、多路检索、去重、日期归一、当前状态和历史状态仲裁
+- L1/L2 memory 的 atom 和 scene 抽取脚本
 - 更强的 `think` 综合
 - weekly lint report
 - 可选 SQLite FTS5 索引

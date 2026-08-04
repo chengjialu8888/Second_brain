@@ -16,3 +16,5 @@ Read this before choosing a workflow.
 | Check broken links, missing fields, stale pages | `brain-lint.md` |
 
 When multiple skills match, prefer the most specific source skill first, then call enrichment/lint after source ingestion. Use Active Workspace before high-stakes synthesis with strict date boundaries. Use Agency Agent Routing only after the relevant Second Brain evidence has been searched/read and, when needed, placed into a workspace.
+
+For tasks that change recall behavior, evidence-ledger shape, atom/scene extraction, or asset loadout, read `../docs/MEMORY_LAYERS.md` before choosing the final workflow.

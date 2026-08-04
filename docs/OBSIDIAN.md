@@ -17,7 +17,9 @@ Recommended first page:
 - `brain/dashboards/review-queue.md`: claims needing human confirmation
 - `brain/dashboards/recent-changes.md`: dated change feed
 - `brain/workspace/README.md`: task-scoped active workspace entry
-- `brain/templates/`: Obsidian template files for people, projects, concepts, diary entries, source notes, and structured meeting summaries
+- `brain/assets.yaml`: lightweight asset-loadout registry for memory, skills, wiki surfaces, source packs, and future code graphs
+- `docs/MEMORY_LAYERS.md`: L0-L3 memory layering and drill-down rules
+- `brain/templates/`: Obsidian template files for people, projects, concepts, diary entries, source notes, memory atoms, memory scenes, and structured meeting summaries
 - `.obsidian/snippets/second-brain.css`: subtle reading polish for headings, tables, quotes, and task lists
 - `.obsidian/graph.json`: graph color groups for people, projects, concepts, dashboards, and sources
 
@@ -29,6 +31,7 @@ Recommended first page:
 4. Answer one useful item in `open-questions`.
 5. Move confirmed insight into the relevant canonical page.
 6. Keep raw evidence in `brain/sources/`.
+7. When a compact atom or scene is created, verify it links back to raw evidence.
 
 For strategy reports or other date-bounded synthesis, open `brain/workspace/current.md` after running the workspace command. Treat it as a temporary whiteboard, not as a permanent note.
 

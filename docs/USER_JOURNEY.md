@@ -24,9 +24,10 @@ The agent reads:
 
 - `brain/RESOLVER.md`
 - `brain/schema.md`
+- `docs/MEMORY_LAYERS.md`
 - the relevant skill under `skills/`
 
-Then it creates or updates canonical pages.
+Then it creates or updates canonical pages, and when useful, forms compact L1 atoms, L2 scenes, and `brain/assets.yaml` entries that can be recalled later.
 
 ## 3. Use
 
@@ -43,7 +44,9 @@ The agent searches the brain, reads pages, and returns a synthesized answer with
 For high-stakes synthesis, the agent creates an active workspace first:
 
 ```text
-search candidates
+asset loadout
+  -> search candidates
+  -> L1/L2 drill-down
   -> brain/workspace/current.md
   -> coverage matrix
   -> claim audit

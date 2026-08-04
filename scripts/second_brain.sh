@@ -29,6 +29,8 @@ Core files for agents:
   SKILL.md
   brain/RESOLVER.md
   brain/schema.md
+  docs/MEMORY_LAYERS.md
+  brain/assets.yaml
   skills/RESOLVER.md
 EOF
 }
@@ -40,7 +42,7 @@ case "$cmd" in
   prompt)
     cat <<'EOF'
 Use this repository as the $second-brain skill.
-Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
+Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, docs/MEMORY_LAYERS.md, brain/assets.yaml, and skills/RESOLVER.md.
 When output needs a specialist lens, also read skills/agency-agent-routing.md and use agents/agency-agents/ after searching Second Brain evidence.
 For accurate, comprehensive, date-bounded synthesis, create an active workspace before the final deliverable.
 Then help me capture, ingest, search, think, compose workspaces, lint, route specialist agents, or generate diary drafts without committing private source data.

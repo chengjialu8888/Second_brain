@@ -16,6 +16,7 @@ It should contain:
 
 - the task frame
 - the date boundary
+- the selected asset loadout, if any
 - candidate evidence
 - pinned active context
 - assumptions
@@ -44,14 +45,15 @@ scripts/second_brain.sh workspace "query" --title "Workspace title" --limit 12 -
 
 ## Required Order
 
-1. Read `brain/RESOLVER.md`, `brain/schema.md`, and this file.
+1. Read `brain/RESOLVER.md`, `brain/schema.md`, `docs/MEMORY_LAYERS.md`, and this file.
 2. Define the task and date window.
-3. Run the workspace command.
-4. Read the generated workspace and the most relevant source pages.
-5. Pin only the claims needed for the current task.
-6. Mark out-of-window, stale, inferred, or low-confidence items.
-7. If a specialist output lens is useful, follow `skills/agency-agent-routing.md`.
-8. Move durable confirmed facts into canonical pages later.
+3. Check `brain/assets.yaml` for relevant memory, skill, wiki, source-pack, or future codegraph assets.
+4. Run the workspace command.
+5. Read the generated workspace and the most relevant source pages.
+6. Pin only the claims needed for the current task.
+7. Mark out-of-window, stale, inferred, or low-confidence items.
+8. If a specialist output lens is useful, follow `skills/agency-agent-routing.md`.
+9. Move durable confirmed facts into canonical pages later.
 
 ## Capacity Rules
 
@@ -74,5 +76,6 @@ The final answer should state:
 
 - Do not treat search results as the workspace.
 - Do not treat workspace claims as canonical until they are moved into entity pages.
+- Do not treat asset-loadout metadata as evidence.
 - Do not use old sources in a date-bounded report without marking freshness risk.
 - Do not route to specialist agents before evidence is visible.

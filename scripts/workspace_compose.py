@@ -225,6 +225,14 @@ This workspace is inspired by the Global Workspace / J-space pattern: keep the a
 - Open questions target: 3-8
 - Specialist lenses target: 1-2 after evidence review
 
+## Asset Loadout
+
+Check `brain/assets.yaml` before final synthesis. Add only assets that materially help this task.
+
+| Asset | Type | Why included | Injection policy |
+|-|-|-|-|
+|  |  |  |  |
+
 ## Candidate Evidence
 
 | Evidence | Score | Window | Detected dates | Snippet |
@@ -249,9 +257,9 @@ Pin only the claims needed for this task.
 
 ## Claim Audit
 
-| Claim | Source | Event/published date | Captured date | Confidence | Caveat |
-|-|-|-|-|-|-|
-|  |  |  |  |  |  |
+| Claim | Atom / Scene | Source | Event/published date | Captured date | Confidence | Caveat |
+|-|-|-|-|-|-|-|
+|  |  |  |  |  |  |  |
 
 ## Specialist Lens Routing
 
@@ -267,6 +275,7 @@ scripts/second_brain.sh agents "risk review"
 
 - State `as_of` and the source window in the final deliverable.
 - Cite local source paths or URLs for important claims.
+- Preserve atom / scene refs when a compact memory layer backs a claim.
 - Separate facts, assumptions, recommendations, and open questions.
 - List important excluded or out-of-window evidence in the appendix.
 

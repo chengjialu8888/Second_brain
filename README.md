@@ -21,14 +21,16 @@ It turns chats, Feishu docs, calendar events, diary drafts, links, and notes int
 
 The goal is not another knowledge base. The goal is a durable context layer that remembers what happened, what it means, what is still open, and what the agent should ask next.
 
-## Latest Update: Recall-First Strategy Workspace
+## Latest Update: Layered Recall and Strategy Workspace
 
-This version adds a J-space-inspired active workspace layer and a `strategy-report` skill for strategic work where accuracy, coverage, and date boundaries matter. The next architecture iteration is inspired by Shadow-Weave's [Holographic Memory System](https://github.com/Shadow-Weave/HMS): move from "retrieve chunks into context" to "actively recall, organize evidence, then write."
+This version adds a J-space-inspired active workspace layer and a `strategy-report` skill for strategic work where accuracy, coverage, and date boundaries matter. The next architecture iteration is inspired by Shadow-Weave's [Holographic Memory System](https://github.com/Shadow-Weave/HMS) and TencentDB Agent Memory's [L0-L3 memory layering](https://github.com/TencentCloud/TencentDB-Agent-Memory): move from "retrieve chunks into context" to "actively recall, organize evidence, equip the right assets, then write."
 
 - **Active workspace before final output**: high-stakes synthesis now passes through `brain/workspace/`, a small task whiteboard that exposes the active evidence, assumptions, gaps, and output contract.
 - **Date-bounded strategy reports**: `scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD` creates a report-ready workspace with `as_of`, source window, coverage matrix, and claim audit.
 - **Recall-first architecture**: future recall should start with a plan, then search by time, entity, current state, numeric signal, contradiction, and relationship instead of relying on one similarity search.
+- **Layered memory model**: memory now has an explicit L0-L3 vocabulary: L0 raw sources, L1 atomic facts, L2 scene blocks, L3 operating memory, and active workspace for the current task.
 - **Evidence ledger before workspace**: retrieved material should be deduped, date-normalized, source-tagged, and marked as current, historical, planned, cancelled, or conflicting before it reaches the active workspace.
+- **Asset loadout**: `brain/assets.yaml` records which memory, skill, wiki, source-pack, or future codegraph assets should be equipped for a workflow or agent role.
 - **Context overload relief**: raw sources stay outside the prompt; the model sees a compact ledger and 5-12 active claims instead of a long pile of snippets.
 - **Better factual discipline**: important claims are expected to carry source paths, dates, confidence, and caveats before they become recommendations.
 - **Memory first, specialist second**: product, finance, risk, growth, or engineering lenses can shape the deliverable only after Second Brain evidence is visible.
@@ -49,6 +51,8 @@ Second Brain adds the missing maintenance layer:
 - current understanding is separated from evidence history
 - agents search first, then synthesize
 - active workspaces make high-stakes synthesis auditable before final output
+- L0-L3 memory layers make compact recall traceable back to raw evidence
+- asset loadouts give each workflow the memory, skill, wiki, or source-pack assets it actually needs
 - recall planning and evidence ledgers reduce context overload before writing
 - lint turns missing context into useful follow-up questions
 - specialist output lenses turn the same memory into product, engineering, design, growth, sales, security, or testing deliverables
@@ -59,10 +63,12 @@ Second Brain adds the missing maintenance layer:
 |-|-|-|-|-|
 | Primary job | Store information | Human PKM, backlinks, graph thinking | Retrieve chunks | Maintain personal context |
 | Input handling | Save notes | Fast manual capture and linking | Chunk documents | Compile and manage memory from chats, docs, calendar, diary, links |
+| Memory formation | Flat pages | Human-created note networks | Embedded chunks | L0 raw evidence -> L1 atoms -> L2 scenes -> L3 operating memory |
 | Search method | Manual browsing | Local search, backlinks, graph, plugins | Similarity retrieval | Structured search with resolver, schema, entity pages, source refs |
 | Context overload handling | Human judgment | Human curation, backlinks, canvases | Push more chunks into the prompt | Recall plan -> evidence ledger -> active workspace |
 | Current task reasoning | Ad hoc | Human-maintained working notes | Hidden in prompt/session | Active workspace with date window, coverage matrix, and claim audit |
 | Output shape | Generic notes | Human-authored notes and canvases | Generic answer | Role-shaped deliverables through specialist agent lenses |
+| Agent loadout | No | Manual workspace setup | Global retrieval config | Task-specific memory, skill, wiki, and source-pack assets |
 | Human-readable middle layer | Yes | Excellent Markdown vault and UI | Usually no | Yes, Markdown pages |
 | Agent-readable structure | Weak | Files are readable, but rules are optional | Retrieval-only | Resolver, schema, skills, evals |
 | Evidence model | Informal | Backlinks and manual citations | Chunk provenance | Raw sources + Timeline |
@@ -85,10 +91,13 @@ Second Brain works across the full context lifecycle:
 3. **Organize: evidence ledger before workspace**
    High-risk recall should produce a ledger with event time, mention time, source, fact type, compact evidence, numeric/date/update signals, and raw source refs. This prevents duplicate counting, stale-state confusion, and relative-date mistakes.
 
-4. **Think: active workspace for high-stakes synthesis**
+4. **Assemble: task-specific asset loadout**
+   `brain/assets.yaml` records reusable memory, skill, wiki, source-pack, and future codegraph assets. A strategy report, PRD, code review, diary draft, and growth memo should receive different context.
+
+5. **Think: active workspace for high-stakes synthesis**
    For strategy reports, competitor analysis, roadmaps, and other date-bounded work, agents compose a small workspace that exposes the active evidence, assumptions, coverage gaps, and claim audit before writing.
 
-5. **Output: role-shaped delivery**
+6. **Output: role-shaped delivery**
    When the answer needs professional craft, the Agency Agents layer applies the right specialist lens: Product Manager for PRDs, Feishu Integration Developer for Lark workflows, UX Researcher for user insight, Security Architect for risk review, Test Planner for QA, and so on.
 
 ## Core Idea
@@ -105,6 +114,14 @@ This lets the brain answer two different questions cleanly:
 
 - "What do we currently think about this person/project/concept?"
 - "What happened, when, and where did that claim come from?"
+
+At recall time, the same memory is assembled through L0-L3:
+
+```text
+L0 raw sources -> L1 atomic memory -> L2 scene memory -> L3 operating memory -> active workspace
+```
+
+See [docs/MEMORY_LAYERS.md](docs/MEMORY_LAYERS.md) for the drill-down and asset-loadout contract.
 
 ## Quick Start: Skill-style Entry
 
@@ -202,10 +219,11 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 ├── brain/
 │   ├── RESOLVER.md              # Filing and ownership rules
 │   ├── schema.md                # Page templates and evidence discipline
+│   ├── assets.yaml              # Lightweight memory / skill / wiki / source-pack loadout registry
 │   ├── index.md                 # Default human/agent entrypoint
 │   ├── dashboards/              # Obsidian-friendly human review cockpit
 │   ├── workspace/               # Task-scoped active workspace entry and private generated drafts
-│   ├── templates/               # Obsidian-ready page templates
+│   ├── templates/               # Obsidian-ready page templates, including memory atoms and scenes
 │   ├── people/ concepts/ projects/ diary/
 │   └── sources/                 # Immutable source snapshots
 ├── skills/                      # Workflow docs: ingest, query, enrich, lint, diary
@@ -227,6 +245,7 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 - Local search
 - Active workspace composer for date-bounded synthesis
 - Strategy report workflow with coverage matrix and claim audit
+- L0-L3 memory layer documentation, memory atom / scene templates, and lightweight asset registry
 - Structural lint
 - Seed eval cases
 - Agency Agents specialist routing
@@ -238,6 +257,7 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 - Better chat and Feishu doc ingestion
 - Entity alias and duplicate detection
 - `memory-recall` / `evidence-ledger` skill for recall plans, multi-route retrieval, dedupe, date normalization, and current-vs-historical state arbitration
+- Atom and scene extraction scripts for L1/L2 memory
 - Richer `think` synthesis over search results
 - Weekly lint report
 - Optional SQLite FTS5 index

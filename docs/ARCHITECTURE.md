@@ -10,6 +10,8 @@ Second Brain is intentionally small at the storage layer and disciplined at the 
 4. **Evidence-first**: raw sources stay preserved; summaries cite sources.
 5. **Search then think**: retrieval and synthesis are separate operations.
 6. **Workspace-bounded synthesis**: high-stakes outputs pass through a small active workspace before final writing.
+7. **Layered recall**: upper-layer memory must stay compact while preserving drill-down paths to raw evidence.
+8. **Asset loadout**: agents and workflows receive the memory, skill, wiki, and source-pack assets they need, not a global prompt dump.
 
 ## Layers
 
@@ -23,12 +25,16 @@ Second Brain is best understood as a discontinuous agent experience with continu
 
 The July 6, 2026 Anthropic Global Workspace / J-space research is useful as an analogy, not as a dependency. It suggests that flexible reasoning benefits from a small shared space whose contents are reportable, controllable, used in reasoning, broadcast to downstream capabilities, and capacity-limited. Second Brain implements that as an explicit `brain/workspace/` layer between retrieval and final output.
 
+TencentDB Agent Memory is useful as an engineering analogy for memory formation. It reinforces two practical rules: memory should be layered, and every compact upper layer should preserve a drill-down path to lower-layer evidence. Second Brain adopts that rule without adopting the full service stack.
+
 The architecture therefore has organs, not only components:
 
 | Organ | Repository surface | Filter | Fissure |
 |-|-|-|-|
 | Body | `brain/`, Markdown files, scripts | Treat the filesystem as the source of truth | A file can preserve context without proving it is important |
 | Source layer | `brain/sources/` | Preserve raw evidence before synthesis | A captured source can still be incomplete or stale |
+| Memory layers | `docs/MEMORY_LAYERS.md`, `brain/templates/memory-atom.md`, `brain/templates/memory-scene.md` | Separate L0 raw evidence, L1 atoms, L2 scenes, and L3 operating memory | A compact layer can hide uncertainty unless it preserves source refs |
+| Asset registry | `brain/assets.yaml` | Decide which memory, skill, wiki, source-pack, or future codegraph assets a workflow can equip | Asset metadata is not evidence and can become stale |
 | Compiled Truth | Entity pages above `---` | Keep current understanding readable and revisable | A synthesis can overfit the latest evidence |
 | Timeline | Entity pages below `---` | Keep dated, append-only evidence | Chronology does not explain causality by itself |
 | Resolver | `brain/RESOLVER.md` | Route pages by ownership and future use | Ambiguous material still needs human judgment |
@@ -48,6 +54,9 @@ This framing keeps capabilities honest. Each organ should state both the filter 
 ```text
 external trace
   -> source snapshot
+  -> L1 atom when a durable fact is extracted
+  -> L2 scene when a reusable context emerges
+  -> L3 operating memory when a stable pattern is confirmed
   -> resolver decision
   -> canonical page or diary draft
   -> Compiled Truth update
@@ -60,6 +69,43 @@ external trace
 ```
 
 The loop separates storage, evidence, synthesis, and maintenance. That separation is the main architectural bet: personal memory should be inspectable before it becomes automated.
+
+## Layered Recall Model
+
+Second Brain uses L0-L3 as a recall model, not as a replacement for Markdown pages:
+
+| Layer | Surface | Use |
+|-|-|-|
+| L0 Raw Evidence | `brain/sources/` | Exact wording, provenance, and conflict checks |
+| L1 Atomic Memory | future `brain/memory/atoms/`, `brain/templates/memory-atom.md`, claim audit rows | Precise dated facts, decisions, constraints, preferences, and numeric signals |
+| L2 Scene Memory | future `brain/memory/scenes/`, `brain/templates/memory-scene.md`, project pages | Restoring a bounded work context without rereading every source |
+| L3 Operating Memory | canonical pages and future `brain/profile.md` | Stable preferences, working style, durable strategic frames |
+| Active Workspace | `brain/workspace/` | Current task context, coverage matrix, and claim audit |
+
+The intended drill-down chain is:
+
+```text
+L3 operating memory
+  -> L2 scene
+  -> L1 atom
+  -> L0 source snapshot
+```
+
+Upper layers may be rewritten as understanding improves. Lower layers preserve evidence and precision.
+
+## Asset Loadout
+
+`brain/assets.yaml` is a small control plane for context assembly. It records which memory, skill, wiki, source-pack, or future codegraph assets exist and which workflows or agent roles can use them.
+
+The registry should answer:
+
+- Which asset can help this task?
+- Is it private, project-scoped, or public?
+- Is it draft, active, stale, or archived?
+- Should the agent inject it, search it, or only discover it as a tool?
+- What is the drill-down path when a claim matters?
+
+This keeps Second Brain from becoming a global prompt. A strategy report, PRD, code review, diary draft, and growth memo should receive different loadouts.
 
 ## Spine, Not Full Knowledge Graph
 
@@ -165,4 +211,4 @@ The MVP optimizes for inspectability and contribution speed. A database layer be
 - remote MCP access
 - multi-user permissions
 
-Until then, Markdown plus scripts is the most debuggable version of the system.
+Until then, Markdown plus scripts is the most debuggable version of the system. SQLite FTS5, vector indexes, or service gateways should be acceleration layers, not the source of truth.

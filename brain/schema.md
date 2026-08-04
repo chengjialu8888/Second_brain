@@ -35,6 +35,11 @@ confidence: low
 - **Timeline**: Everything below `---`. It is append-only evidence.
 - **Source refs**: Relative paths or URLs that back claims.
 - **Open Threads**: Unresolved questions, follow-ups, or missing context.
+- **L0 Raw Evidence**: Original source snapshots in `brain/sources/`.
+- **L1 Atomic Memory**: One compact source-backed fact, decision, constraint, preference, or numeric signal.
+- **L2 Scene Memory**: A compact scenario block that restores a project, decision thread, user-research theme, or recurring work context.
+- **L3 Operating Memory**: Stable user, team, preference, or strategic context that should be used sparingly.
+- **Asset Loadout**: `brain/assets.yaml` records which reusable assets are available to workflows and agent roles. It is not evidence.
 
 ## Person Page
 
@@ -184,6 +189,63 @@ Recommended sections:
 - Timeline
 
 Workspace pages are task-scoped reasoning surfaces. They make active context inspectable before final output, but they are not canonical facts. Move durable confirmed claims into entity pages.
+
+## Memory Atom Page
+
+```yaml
+type: memory_atom
+title:
+aliases: []
+atom_id:
+status: current | historical | planned | cancelled | conflicting
+event_date:
+captured_at:
+source_refs: []
+entities: []
+projects: []
+confidence: low | medium | high
+visibility: private | project | public
+```
+
+Recommended sections:
+
+- Claim
+- Evidence
+- Status
+- See Also
+- Timeline
+
+Each atom should carry one compact claim and enough source metadata to drill down to L0 evidence.
+
+## Memory Scene Page
+
+```yaml
+type: memory_scene
+title:
+aliases: []
+scene_id:
+status: active | stale | archived
+created:
+updated:
+source_refs: []
+atom_refs: []
+entities: []
+projects: []
+confidence: low | medium | high
+visibility: private | project | public
+```
+
+Recommended sections:
+
+- Scene Summary
+- Active Facts
+- Decisions / Constraints
+- Open Threads
+- Recall Guide
+- See Also
+- Timeline
+
+Scene pages are L2 recall surfaces. They should be short enough to index and skim, but rich enough to restore a work context without rereading every raw source.
 
 ## Templates
 

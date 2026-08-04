@@ -8,8 +8,9 @@ Use this file when working on this repository.
 2. Read `SKILL.md` for the workflow contract.
 3. Read `brain/RESOLVER.md` before creating or moving any brain page.
 4. Read `brain/schema.md` before changing page shape.
-5. Read `skills/RESOLVER.md` before choosing a task workflow.
-6. If the output needs specialist craft, read `skills/agency-agent-routing.md` after the relevant Second Brain evidence has been searched/read.
+5. Read `docs/MEMORY_LAYERS.md` before changing recall, evidence ledger, or asset-loadout behavior.
+6. Read `skills/RESOLVER.md` before choosing a task workflow.
+7. If the output needs specialist craft, read `skills/agency-agent-routing.md` after the relevant Second Brain evidence has been searched/read.
 
 ## Brain-first Rules
 
@@ -22,6 +23,8 @@ Use this file when working on this repository.
 7. Agency Agents under `agents/agency-agents/` are specialist lenses, not memory. They may shape outputs only after Second Brain evidence is read.
 8. Use `brain/workspace/` as a task-scoped active workspace for high-stakes or date-bounded synthesis. Do not treat workspace drafts as canonical memory.
 9. Use `brain/dashboards/` as human-facing review surfaces. Do not put canonical facts only in dashboards; move confirmed facts into entity pages.
+10. Use `docs/MEMORY_LAYERS.md` as the L0-L3 recall model: L0 raw sources, L1 atoms, L2 scenes, L3 operating memory, then active workspace.
+11. Use `brain/assets.yaml` as a lightweight asset-loadout registry. It records what can be equipped; it does not replace source refs or canonical pages.
 
 ## Common Commands
 
@@ -72,6 +75,7 @@ After large ingests, diary generation, entity enrichment, or specialist-agent ou
 - Human overview: `README.md`
 - Chinese overview: `README.zh-CN.md`
 - Architecture: `docs/ARCHITECTURE.md`
+- Memory layers: `docs/MEMORY_LAYERS.md`
 - Obsidian setup: `docs/OBSIDIAN.md`
 - User journey: `docs/USER_JOURNEY.md`
 - Agent guide: `docs/AGENT_GUIDE.md`

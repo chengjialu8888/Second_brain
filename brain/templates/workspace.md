@@ -29,6 +29,12 @@ confidence: low
 - Source window:
 - Excluded time periods:
 
+## Asset Loadout
+
+| Asset | Type | Why included | Injection policy |
+|-|-|-|-|
+|  |  |  |  |
+
 ## Active Context
 
 1.
@@ -56,9 +62,9 @@ confidence: low
 
 ## Claim Audit
 
-| Claim | Source | Date | Confidence | Needs review |
-|-|-|-|-|-|
-|  |  |  |  |  |
+| Claim | Atom / Scene | Source | Date | Confidence | Needs review |
+|-|-|-|-|-|-|
+|  |  |  |  |  |  |
 
 ## Open Questions
 

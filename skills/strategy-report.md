@@ -17,6 +17,8 @@ Every report must include:
 - `as_of`
 - source window
 - source-backed claims
+- selected asset loadout when useful
+- atom / scene refs when compact memory layers back a claim
 - coverage matrix
 - key assumptions
 - contradictions or missing evidence
@@ -30,6 +32,8 @@ scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-D
 ```
 
 This generates an active workspace draft first. The report should be written only after reviewing that workspace.
+
+Before writing, check `brain/assets.yaml` for relevant memory, skill, wiki, source-pack, or future codegraph assets. Use `docs/MEMORY_LAYERS.md` to decide whether to rely on L3 operating memory, L2 scenes, L1 atoms, or L0 raw sources.
 
 ## Coverage Matrix
 
@@ -51,7 +55,7 @@ Check these areas before writing:
 For every major claim, record:
 
 ```text
-claim -> source -> event/published date -> captured date -> confidence -> caveat
+claim -> atom/scene ref -> source -> event/published date -> captured date -> confidence -> caveat
 ```
 
 If a claim has no source, either remove it or mark it as an assumption.
@@ -89,3 +93,4 @@ Appendix: sources and excluded/out-of-window evidence
 - Do not blend 2025, 2026, and current data without explicit dates.
 - Do not hide contradictions.
 - Do not fill missing evidence with confident narrative.
+- Do not treat asset metadata as evidence.

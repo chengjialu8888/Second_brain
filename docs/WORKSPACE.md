@@ -14,6 +14,7 @@ Long-term memory and active reasoning have different jobs.
 ```text
 brain/sources/          raw evidence
 brain/* entity pages    durable memory
+brain/assets.yaml       asset loadout
 search results          candidates
 active workspace        current task context
 specialist agents       output craft
@@ -21,6 +22,17 @@ final deliverable       user-facing answer/report
 ```
 
 The active workspace prevents a common failure mode: retrieval returns many plausible snippets, then the final answer silently mixes old evidence, current assumptions, and unsupported judgment.
+
+It now sits after the memory-layer and asset-loadout decision:
+
+```text
+L0 sources
+  -> L1 atoms
+  -> L2 scenes
+  -> L3 operating memory
+  -> asset loadout
+  -> active workspace
+```
 
 ## J-space-Inspired Properties
 
@@ -68,11 +80,12 @@ If a source is useful but outside the window, keep it in `Excluded / Out Of Wind
 ```text
 1. Define topic, audience, and date window.
 2. Search local Second Brain evidence.
-3. Compose an active workspace with candidate evidence.
-4. Fill the coverage matrix.
-5. Audit major claims for source, date, and confidence.
-6. Route specialist lenses only after evidence is visible.
-7. Produce the report with citations, caveats, and gaps.
+3. Check `brain/assets.yaml` for the relevant memory, skill, wiki, or source-pack loadout.
+4. Compose an active workspace with candidate evidence.
+5. Fill the coverage matrix.
+6. Audit major claims for source, date, atom/scene refs, and confidence.
+7. Route specialist lenses only after evidence is visible.
+8. Produce the report with citations, caveats, and gaps.
 ```
 
 Use:

@@ -9,7 +9,8 @@ This repository is meant to be read by agents as well as humans.
 3. Read `SKILL.md`.
 4. Read `brain/RESOLVER.md` before any page creation.
 5. Read `brain/schema.md` before any page shape change.
-6. Read `skills/RESOLVER.md` before choosing a workflow.
+6. Read `docs/MEMORY_LAYERS.md` before changing recall or asset-loadout behavior.
+7. Read `skills/RESOLVER.md` before choosing a workflow.
 
 ## Search Protocol
 
@@ -21,6 +22,13 @@ python3 scripts/brain_search.py "query"
 
 Then read the top matching pages before answering.
 
+Use the L0-L3 model from `docs/MEMORY_LAYERS.md`:
+
+- L3 / Compiled Truth for stable context.
+- L2 scenes or scene-like pages for project context.
+- L1 atoms or claim audit rows for precise facts, dates, numbers, and conflicts.
+- L0 sources only when exact wording or provenance matters.
+
 ## Think Protocol
 
 When answering a personal, project, or memory question:
@@ -28,9 +36,10 @@ When answering a personal, project, or memory question:
 1. Search local brain.
 2. Read relevant pages.
 3. Follow one-hop wikilinks if needed.
-4. Separate conclusion from evidence.
-5. State what the brain does not know yet.
-6. Suggest page updates only when useful.
+4. Check `brain/assets.yaml` when the task needs a reusable memory, skill, wiki, or source pack.
+5. Separate conclusion from evidence.
+6. State what the brain does not know yet.
+7. Suggest page updates only when useful.
 
 ## Active Workspace Protocol
 
@@ -45,10 +54,11 @@ Then:
 
 1. Read the generated workspace.
 2. Read the most relevant source pages, not only snippets.
-3. Pin a small number of active claims.
-4. Mark claims as sourced, inferred, stale, out-of-window, or unresolved.
-5. Use specialist agents only after the workspace makes evidence visible.
-6. Keep generated workspace files private unless the user explicitly asks to publish them.
+3. Select the asset loadout from `brain/assets.yaml` when useful.
+4. Pin a small number of active claims.
+5. Mark claims as sourced, inferred, stale, out-of-window, or unresolved.
+6. Use specialist agents only after the workspace makes evidence visible.
+7. Keep generated workspace files private unless the user explicitly asks to publish them.
 
 ## Specialist Agent Protocol
 
@@ -70,7 +80,8 @@ Before writing:
 3. Use `brain/schema.md` for page structure.
 4. Preserve source refs.
 5. Append Timeline entries for new evidence.
-6. Run `python3 scripts/wiki_lint.py`.
+6. For memory atoms or scenes, preserve drill-down paths to L0 source refs.
+7. Run `python3 scripts/wiki_lint.py`.
 
 ## Privacy Protocol
 

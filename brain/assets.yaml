@@ -1,0 +1,88 @@
+# Lightweight memory asset registry.
+#
+# This file is a control surface, not canonical memory content.
+# Keep private assets out of public commits unless the user explicitly approves.
+
+version: 1
+updated: 2026-08-04
+
+defaults:
+  visibility: private
+  status: draft
+  injection_policy: on_demand
+
+asset_types:
+  - memory
+  - skill
+  - wiki
+  - codegraph
+  - source-pack
+
+assets:
+  - id: memory-second-brain-core
+    type: memory
+    title: Second Brain core memory model
+    path: docs/MEMORY_LAYERS.md
+    visibility: public
+    status: active
+    version: 1
+    owner: user
+    loadout:
+      workflows:
+        - brain-query
+        - active-workspace
+        - strategy-report
+      agents: []
+    recall_policy:
+      default_layer: L2
+      max_items: 8
+      inject: scene_index
+      drill_down: source_refs
+    notes: Public architecture asset that explains L0-L3 layering and asset loadout.
+
+  - id: skill-strategy-report
+    type: skill
+    title: Date-bounded strategy report workflow
+    path: skills/strategy-report.md
+    visibility: public
+    status: active
+    version: 1
+    owner: user
+    loadout:
+      workflows:
+        - strategy-report
+      agents:
+        - product-strategy
+        - market-research
+    recall_policy:
+      default_layer: active_workspace
+      max_items: 12
+      inject: compact_claims
+      drill_down: claim_audit
+    notes: Use after Second Brain evidence is searched and organized.
+
+  - id: skill-agency-agent-routing
+    type: skill
+    title: Specialist lens routing
+    path: skills/agency-agent-routing.md
+    visibility: public
+    status: active
+    version: 1
+    owner: user
+    loadout:
+      workflows:
+        - role-shaped-output
+      agents:
+        - product
+        - engineering
+        - design
+        - growth
+        - sales
+        - security
+        - testing
+    recall_policy:
+      default_layer: active_workspace
+      max_items: 6
+      inject: lens_summary
+      drill_down: source_refs
+    notes: Agency Agents shape output only after local memory evidence is visible.

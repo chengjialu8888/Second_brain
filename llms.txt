@@ -18,8 +18,10 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - [brain/dashboards/review-queue.md](brain/dashboards/review-queue.md): Agent-written claims and changes needing human confirmation.
 - [brain/dashboards/recent-changes.md](brain/dashboards/recent-changes.md): Dated change feed for the brain.
 - [brain/workspace/README.md](brain/workspace/README.md): J-space-inspired active workspace entry for task-scoped synthesis.
+- [brain/assets.yaml](brain/assets.yaml): Lightweight registry for memory, skill, wiki, source-pack, and future codegraph asset loadouts.
 - [skills/RESOLVER.md](skills/RESOLVER.md): Skill routing table.
 - [docs/OBSIDIAN.md](docs/OBSIDIAN.md): Obsidian setup, dashboards, templates, and human review loop.
+- [docs/MEMORY_LAYERS.md](docs/MEMORY_LAYERS.md): L0-L3 recall model, deterministic drill-down, and asset-loadout rules.
 - [docs/WORKSPACE.md](docs/WORKSPACE.md): Active workspace architecture and date-bounded report discipline.
 
 ## Workflows
@@ -67,6 +69,9 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - Raw sources live under `brain/sources/` and should be treated as evidence.
 - Canonical entity pages use Compiled Truth above `---` and Timeline below it.
 - Agents must read `brain/RESOLVER.md` before creating or moving pages.
+- Agents should read `docs/MEMORY_LAYERS.md` before changing recall, evidence ledger, or asset-loadout behavior.
+- `brain/assets.yaml` is an asset-loadout registry, not evidence.
+- Upper-layer L2/L3 memories must preserve drill-down paths to L1 atoms and L0 source refs.
 - Calendar-generated diary pages remain `status: draft` until the user adds subjective context.
 - Agency Agents may shape deliverables only after local Second Brain evidence has been searched/read.
 - High-stakes or date-bounded synthesis should pass through an active workspace before final output.
