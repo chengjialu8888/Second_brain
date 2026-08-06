@@ -38,6 +38,10 @@ raw sources -> canonical memory -> retrieval candidates -> active workspace -> s
 - `brain/workspace/current.md`
 - `brain/workspace/sessions/YYYY-MM-DD-topic.md`
 
+`skills/multi-agent-sandbox/scripts/sandbox.py` writes bounded scenario runs under:
+
+- `brain/workspace/simulations/<run-id>/`
+
 These files may contain private retrieved context, so they are ignored by git by default.
 
 ## Commands
@@ -45,6 +49,7 @@ These files may contain private retrieved context, so they are ignored by git by
 ```bash
 scripts/second_brain.sh workspace "query" --from 2026-07-01 --to 2026-07-14
 scripts/second_brain.sh strategy-report "Coze competitor strategy" --from 2026-07-01 --to 2026-07-14
+scripts/second_brain.sh sandbox init --title "Launch stress test" --question "How might stakeholders react?" --horizon "90 days" --wiki-query "project customer competitor"
 ```
 
 ---
@@ -52,3 +57,4 @@ scripts/second_brain.sh strategy-report "Coze competitor strategy" --from 2026-0
 ## Timeline
 
 - **2026-07-14** | System - Added a J-space-inspired active workspace layer for task-scoped synthesis.
+- **2026-08-06** | System - Added private, evidence-grounded multi-Agent sandbox workspaces with append-only synthetic events.

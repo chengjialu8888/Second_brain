@@ -168,7 +168,7 @@ source_window:
   start:
   end:
 task:
-mode: active-workspace | strategy-report
+mode: active-workspace | strategy-report | multi-agent-sandbox
 status: draft | reviewed | archived
 confidence: low | medium | high
 source_refs: []
@@ -189,6 +189,8 @@ Recommended sections:
 - Timeline
 
 Workspace pages are task-scoped reasoning surfaces. They make active context inspectable before final output, but they are not canonical facts. Move durable confirmed claims into entity pages.
+
+Multi-Agent Sandbox workspaces may use a run directory containing `scenario.md`, machine-readable state, an append-only event log, round checkpoints, and `report.md`. Simulated events and quotes are never evidence and must not be moved into canonical pages.
 
 ## Memory Atom Page
 

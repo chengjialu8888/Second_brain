@@ -18,7 +18,7 @@ The lesson we adopt is operational, not infrastructural: keep upper layers compa
 | L1 Atomic Memory | `brain/templates/memory-atom.md`, future `brain/memory/atoms/` | Store small dated facts, decisions, constraints, preferences, and numeric signals | Retrieve for precise claims, dates, status, and contradiction checks |
 | L2 Scene Memory | `brain/templates/memory-scene.md`, future `brain/memory/scenes/` | Restore a project, decision thread, user-research theme, or recurring work scenario | Inject as a short scene index, then drill down only when useful |
 | L3 Operating Memory | canonical pages, `brain/profile.md` when introduced | Keep stable preferences, working style, strategic frames, and durable context | Inject sparingly as stable background |
-| Active Workspace | `brain/workspace/` | Hold the current task's small active context, coverage matrix, and claim audit | Use for high-stakes or date-bounded synthesis |
+| Active Workspace | `brain/workspace/` | Hold the current task's small active context, coverage matrix, claim audit, or bounded scenario simulation | Use for high-stakes, date-bounded, or multi-Agent synthesis |
 
 Compiled Truth and Timeline remain the human-readable canonical page model. L0-L3 names are the agent recall model that sits beside it:
 
@@ -98,6 +98,8 @@ task
 ```
 
 The goal is not automatic memory everywhere. The goal is explicit, bounded context assembly.
+
+Simulation outputs under `brain/workspace/simulations/` are synthetic active-workspace state. They may cite L0-L3 evidence, but they never flow back into L0-L3 as facts. Only independently confirmed real-world information may enter canonical memory through the normal ingestion and enrichment workflow.
 
 ## Implementation Posture
 

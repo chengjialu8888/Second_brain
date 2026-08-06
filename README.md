@@ -21,12 +21,13 @@ It turns chats, Feishu docs, calendar events, diary drafts, links, and notes int
 
 The goal is not another knowledge base. The goal is a durable context layer that remembers what happened, what it means, what is still open, and what the agent should ask next.
 
-## Latest Update: Layered Recall and Strategy Workspace
+## Latest Update: Layered Recall, Strategy Workspace, and Wiki Sandbox
 
-This version adds a J-space-inspired active workspace layer and a `strategy-report` skill for strategic work where accuracy, coverage, and date boundaries matter. The next architecture iteration is inspired by Shadow-Weave's [Holographic Memory System](https://github.com/Shadow-Weave/HMS) and TencentDB Agent Memory's [L0-L3 memory layering](https://github.com/TencentCloud/TencentDB-Agent-Memory): move from "retrieve chunks into context" to "actively recall, organize evidence, equip the right assets, then write."
+This version adds a J-space-inspired active workspace layer, a `strategy-report` skill for date-bounded strategic work, and a `multi-agent-sandbox` skill that rehearses plausible futures from Wiki context. The next architecture iteration is inspired by Shadow-Weave's [Holographic Memory System](https://github.com/Shadow-Weave/HMS) and TencentDB Agent Memory's [L0-L3 memory layering](https://github.com/TencentCloud/TencentDB-Agent-Memory): move from "retrieve chunks into context" to "actively recall, organize evidence, equip the right assets, then write or simulate."
 
 - **Active workspace before final output**: high-stakes synthesis now passes through `brain/workspace/`, a small task whiteboard that exposes the active evidence, assumptions, gaps, and output contract.
 - **Date-bounded strategy reports**: `scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD` creates a report-ready workspace with `as_of`, source window, coverage matrix, and claim audit.
+- **Future rehearsal from Wiki context**: `multi-agent-sandbox` retrieves canonical people, project, concept, and resource pages, then equips stakeholder roles with evidence, assumptions, and unknowns to simulate what may happen next across bounded rounds and branches.
 - **Recall-first architecture**: future recall should start with a plan, then search by time, entity, current state, numeric signal, contradiction, and relationship instead of relying on one similarity search.
 - **Layered memory model**: memory now has an explicit L0-L3 vocabulary: L0 raw sources, L1 atomic facts, L2 scene blocks, L3 operating memory, and active workspace for the current task.
 - **Evidence ledger before workspace**: retrieved material should be deduped, date-normalized, source-tagged, and marked as current, historical, planned, cancelled, or conflicting before it reaches the active workspace.
@@ -100,6 +101,9 @@ Second Brain works across the full context lifecycle:
 6. **Output: role-shaped delivery**
    When the answer needs professional craft, the Agency Agents layer applies the right specialist lens: Product Manager for PRDs, Feishu Integration Developer for Lark workflows, UX Researcher for user insight, Security Architect for risk review, Test Planner for QA, and so on.
 
+7. **Simulate: use the Wiki as the initial world state**
+   `multi-agent-sandbox` extracts current state, relationships, constraints, past decisions, and open questions from the Wiki, then advances user, team, competitor, channel, or regulator roles through isolated scenario branches. Outputs are conditional rehearsals rather than calibrated forecasts and never become canonical memory.
+
 ## Core Idea
 
 Each canonical entity page has two layers:
@@ -145,6 +149,13 @@ scripts/second_brain.sh workspace "Coze competitor strategy" --from 2026-07-01 -
 # Start a date-bounded strategy report workflow
 scripts/second_brain.sh strategy-report "Coze competitor strategy" --from 2026-07-01 --to 2026-07-14
 
+# Rehearse the next 90 days from Wiki context
+scripts/second_brain.sh sandbox init \
+  --title "Product launch future rehearsal" \
+  --question "How might users, competitors, and channels react over 90 days?" \
+  --horizon "90 days" \
+  --wiki-query "product users competitors channels"
+
 # Lint the brain structure
 scripts/second_brain.sh lint
 
@@ -178,7 +189,8 @@ Use this repository as the $second-brain skill.
 Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
 When output needs a specialist lens, also read skills/agency-agent-routing.md and use agents/agency-agents/ after searching Second Brain evidence.
 For accurate, comprehensive, date-bounded synthesis, create an active workspace before the final deliverable.
-Then help me capture, ingest, search, think, compose workspaces, lint, route specialist agents, or generate diary drafts without committing private source data.
+For future rehearsal, use multi-agent-sandbox to search the Wiki first and keep simulated events out of canonical memory.
+Then help me capture, ingest, search, think, simulate, compose workspaces, lint, route specialist agents, or generate diary drafts without committing private source data.
 ```
 
 ## User Journey
@@ -226,7 +238,7 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 │   ├── templates/               # Obsidian-ready page templates, including memory atoms and scenes
 │   ├── people/ concepts/ projects/ diary/
 │   └── sources/                 # Immutable source snapshots
-├── skills/                      # Workflow docs: ingest, query, enrich, lint, diary
+├── skills/                      # Workflow docs: ingest, query, enrich, sandbox, lint, diary
 ├── agents/agency-agents/        # Optional specialist agent layer and roster
 ├── scripts/                     # Deterministic local utilities
 ├── evals/                       # Seed eval cases for routing, filing, query, lint
@@ -245,6 +257,7 @@ See [skills/agency-agent-routing.md](skills/agency-agent-routing.md) for the wor
 - Local search
 - Active workspace composer for date-bounded synthesis
 - Strategy report workflow with coverage matrix and claim audit
+- Wiki-grounded multi-agent future sandbox with isolated branches, event traces, checkpoints, and decision reports
 - L0-L3 memory layer documentation, memory atom / scene templates, and lightweight asset registry
 - Structural lint
 - Seed eval cases

@@ -34,6 +34,7 @@ scripts/second_brain.sh prompt
 scripts/second_brain.sh search "query"
 scripts/second_brain.sh workspace "query" --from 2026-06-01 --to 2026-06-12
 scripts/second_brain.sh strategy-report "topic" --from 2026-06-01 --to 2026-06-12
+scripts/second_brain.sh sandbox init --title "Scenario" --question "What may happen next?" --horizon "90 days" --wiki-query "project stakeholders signals"
 scripts/second_brain.sh agents "product strategy"
 scripts/second_brain.sh dashboard
 scripts/second_brain.sh lint
