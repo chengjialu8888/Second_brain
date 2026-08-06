@@ -21,12 +21,13 @@
 
 它的目标不是再做一个知识库，而是做一个可长期维护的上下文层：记住发生了什么、这件事意味着什么、还有什么没搞清楚，以及 Agent 下一步应该问什么。
 
-## 本次更新亮点：分层回忆和战略 Workspace
+## 本次更新亮点：分层回忆、战略 Workspace 和 Wiki 沙盘
 
-这个版本新增了受 J-space 启发的 active workspace 层，以及面向战略报告的 `strategy-report` skill，专门服务“准确、全面、有日期限定”的高风险输出。下一步架构迭代会吸收 Shadow-Weave [Holographic Memory System](https://github.com/Shadow-Weave/HMS) 和 TencentDB Agent Memory 的 [L0-L3 记忆分层](https://github.com/TencentCloud/TencentDB-Agent-Memory)：从“把 chunk 塞进上下文”，转成“先主动回忆、组织证据、装配合适资产，再写作”。
+这个版本新增了受 J-space 启发的 active workspace、面向战略报告的 `strategy-report`，以及从 Wiki 上下文出发推演未来的 `multi-agent-sandbox` skill。下一步架构迭代会吸收 Shadow-Weave [Holographic Memory System](https://github.com/Shadow-Weave/HMS) 和 TencentDB Agent Memory 的 [L0-L3 记忆分层](https://github.com/TencentCloud/TencentDB-Agent-Memory)：从“把 chunk 塞进上下文”，转成“先主动回忆、组织证据、装配合适资产，再写作或推演”。
 
 - **最终输出前先过 active workspace**：高风险综合会先进入 `brain/workspace/`，把当前任务的证据、假设、缺口和输出契约摊开。
 - **有日期限定的战略报告**：`scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD` 会生成带 `as_of`、source window、coverage matrix 和 claim audit 的报告工作区。
+- **基于 Wiki 上下文预测未来**：`multi-agent-sandbox` 会先检索人物、项目、概念和资源等 canonical 页面，再把证据、假设和未知量装进多个利益相关者角色，按轮次和分支推演“接下来可能发生什么”。
 - **Recall-first 架构**：未来 recall 会先生成检索计划，再按时间、实体、当前状态、数值信号、矛盾点和关系链路检索，而不是只靠一套相似度搜索。
 - **分层记忆模型**：现在显式使用 L0-L3 词汇：L0 原始证据、L1 原子事实、L2 场景块、L3 操作记忆，以及当前任务的 active workspace。
 - **Workspace 前先有 evidence ledger**：召回材料先去重、日期归一、标来源，并标注 current、historical、planned、cancelled、conflicting，再进入 active workspace。
@@ -100,6 +101,9 @@ Second Brain 覆盖完整的上下文生命周期：
 6. **输出：按岗位设定生成交付物**
    当回答需要专业表达时，Agency Agents 层会提供合适的专家视角：Product Manager 写 PRD，Feishu Integration Developer 设计飞书工作流，UX Researcher 做用户洞察，Security Architect 做风险评审，Test Planner 做 QA 计划，等等。
 
+7. **推演：让 Wiki 成为未来情景的初始世界**
+   `multi-agent-sandbox` 从 Wiki 中提取当前状态、关系、约束、历史决策和未决问题，构造用户、团队、竞品、渠道、监管等角色，在隔离分支中推进多轮互动。输出是带证据边界的条件性情景，不是真实概率预测，也不会写回 canonical memory。
+
 ## 核心设计
 
 每个 canonical 实体页分两层：
@@ -145,6 +149,13 @@ scripts/second_brain.sh workspace "Coze competitor strategy" --from 2026-07-01 -
 # 启动有日期限定的战略报告工作流
 scripts/second_brain.sh strategy-report "Coze competitor strategy" --from 2026-07-01 --to 2026-07-14
 
+# 根据 Wiki 上下文推演未来 90 天
+scripts/second_brain.sh sandbox init \
+  --title "产品发布未来推演" \
+  --question "未来 90 天用户、竞品和渠道可能如何反应？" \
+  --horizon "90 days" \
+  --wiki-query "产品 用户 竞品 渠道"
+
 # 检查 brain 结构
 scripts/second_brain.sh lint
 
@@ -178,7 +189,8 @@ Use this repository as the $second-brain skill.
 Read AGENTS.md, SKILL.md, brain/RESOLVER.md, brain/schema.md, and skills/RESOLVER.md.
 When output needs a specialist lens, also read skills/agency-agent-routing.md and use agents/agency-agents/ after searching Second Brain evidence.
 For accurate, comprehensive, date-bounded synthesis, create an active workspace before the final deliverable.
-Then help me capture, ingest, search, think, compose workspaces, lint, route specialist agents, or generate diary drafts without committing private source data.
+For future rehearsal, use multi-agent-sandbox to search the Wiki first and keep simulated events out of canonical memory.
+Then help me capture, ingest, search, think, simulate, compose workspaces, lint, route specialist agents, or generate diary drafts without committing private source data.
 ```
 
 ## 用户旅程
@@ -226,7 +238,7 @@ scripts/second_brain.sh agents "security review"
 │   ├── templates/               # Obsidian-ready 页面模板，包含 memory atom / scene
 │   ├── people/ concepts/ projects/ diary/
 │   └── sources/                 # 原始资料快照
-├── skills/                      # ingest、query、enrich、lint、diary 等工作流
+├── skills/                      # ingest、query、enrich、sandbox、lint、diary 等工作流
 ├── agents/agency-agents/        # 可选专家 Agent 层和 roster
 ├── scripts/                     # 可执行的小工具
 ├── evals/                       # routing / filing / query / lint 种子评测
@@ -245,6 +257,7 @@ scripts/second_brain.sh agents "security review"
 - 本地搜索
 - 面向日期限定综合的 active workspace composer
 - 带 coverage matrix 和 claim audit 的战略报告工作流
+- 基于 Wiki 上下文的多 Agent 未来沙盘、分支状态、事件 trace 和决策报告
 - L0-L3 记忆分层文档、memory atom / scene 模板、轻量 asset registry
 - 结构 lint
 - 种子 eval case

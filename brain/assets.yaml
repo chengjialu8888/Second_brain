@@ -4,7 +4,7 @@
 # Keep private assets out of public commits unless the user explicitly approves.
 
 version: 1
-updated: 2026-08-04
+updated: 2026-08-06
 
 defaults:
   visibility: private
@@ -86,3 +86,27 @@ assets:
       inject: lens_summary
       drill_down: source_refs
     notes: Agency Agents shape output only after local memory evidence is visible.
+
+  - id: skill-multi-agent-sandbox
+    type: skill
+    title: Evidence-grounded multi-Agent sandbox workflow
+    path: skills/multi-agent-sandbox/SKILL.md
+    visibility: public
+    status: active
+    version: 1
+    owner: user
+    loadout:
+      workflows:
+        - multi-agent-sandbox
+        - scenario-planning
+        - decision-stress-test
+      agents:
+        - orchestrator
+        - evidence-auditor
+        - scenario-observer
+    recall_policy:
+      default_layer: active_workspace
+      max_items: 12
+      inject: scoped_evidence_and_world_snapshot
+      drill_down: source_refs
+    notes: Simulated events remain private workspace artifacts and never become canonical evidence.

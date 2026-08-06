@@ -20,6 +20,7 @@ This skill turns a local Markdown folder into a personal memory layer for agents
 - High-stakes or date-bounded synthesis should use an active workspace before final output.
 - Daily diary drafts generated from calendar data remain drafts until the user adds subjective context.
 - Agency Agents are optional specialist lenses. Use them after Second Brain evidence search when a deliverable benefits from domain craft, never as a replacement for memory or sources.
+- Multi-Agent Sandbox events are synthetic workspace artifacts. Never promote them into canonical memory or use them as real evidence.
 
 ## First Files To Read
 
@@ -30,6 +31,7 @@ This skill turns a local Markdown folder into a personal memory layer for agents
 5. `skills/active-workspace.md` when a task needs date-bounded synthesis or claim audit.
 6. `skills/strategy-report.md` when producing strategic reports.
 7. `skills/agency-agent-routing.md` when a task needs product, engineering, design, growth, sales, security, testing, or other specialist framing.
+8. `skills/multi-agent-sandbox/SKILL.md` when a task needs a multi-round stakeholder simulation, counterfactual branch, war game, or decision stress test.
 
 ## Workflows
 
@@ -99,6 +101,16 @@ scripts/second_brain.sh agents "product strategy"
 
 Then read the selected file under `agents/agency-agents/source/` and apply it as an advisory lens grounded in Second Brain evidence.
 
+### Multi-Agent Sandbox
+
+Use for evidence-grounded future rehearsals and decision stress tests seeded from Wiki context:
+
+```bash
+scripts/second_brain.sh sandbox init --title "Launch stress test" --question "How might stakeholders react?" --horizon "90 days" --wiki-query "project customer competitor"
+```
+
+The command searches canonical Wiki pages for the seed context, then creates a private active workspace with scoped roles, append-only events, branch state, checkpoints, and a decision report. Treat every generated outcome as conditional simulation, not a forecast or source fact.
+
 ### Calendar Diary Draft
 
 Use:
@@ -130,3 +142,4 @@ Fix only safe structural issues automatically. Ask before semantic rewrites.
 - Do not silently rewrite user-authored ideas.
 - Do not treat `brain/assets.yaml` as evidence; it is an equipment map, not memory content.
 - Do not inject raw L0 sources when an L1 atom, L2 scene, or active workspace can carry the needed context.
+- Do not feed a sandbox's synthetic actors, quotes, or events back into Compiled Truth, Timeline, atoms, scenes, or source snapshots.

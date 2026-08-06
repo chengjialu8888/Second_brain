@@ -29,6 +29,7 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - [skills/brain-query.md](skills/brain-query.md): Search first, then synthesize with sources and gaps.
 - [skills/active-workspace.md](skills/active-workspace.md): Compose a task-scoped, date-aware whiteboard before synthesis.
 - [skills/strategy-report.md](skills/strategy-report.md): Produce accurate, comprehensive, date-bounded strategic reports.
+- [skills/multi-agent-sandbox/SKILL.md](skills/multi-agent-sandbox/SKILL.md): Read Wiki context, then run evidence-grounded, traceable multi-Agent simulations of plausible future scenarios.
 - [skills/agency-agent-routing.md](skills/agency-agent-routing.md): Select installed Agency Agents as specialist lenses after Second Brain evidence is read.
 - [skills/chat-ingestion.md](skills/chat-ingestion.md): Preserve chat exports and extract durable entities.
 - [skills/feishu-doc-ingestion.md](skills/feishu-doc-ingestion.md): Fetch Feishu docs/wiki and extract durable concepts.
@@ -43,6 +44,7 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - `scripts/second_brain.sh search "query"`: local Markdown search through the skill-style wrapper.
 - `scripts/second_brain.sh workspace "query" --from YYYY-MM-DD --to YYYY-MM-DD`: compose an active workspace draft.
 - `scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD`: compose a strategy-report workspace with coverage matrix and claim audit.
+- `scripts/second_brain.sh sandbox <init|record|checkpoint|validate|summarize|finalize> ...`: manage and close a private multi-Agent simulation workspace.
 - `scripts/second_brain.sh agents "query"`: search the installed Agency Agents roster for a specialist lens.
 - `scripts/second_brain.sh dashboard`: print Obsidian dashboard entrypoints.
 - `scripts/second_brain.sh lint`: structural lint through the skill-style wrapper.
@@ -75,3 +77,4 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - Calendar-generated diary pages remain `status: draft` until the user adds subjective context.
 - Agency Agents may shape deliverables only after local Second Brain evidence has been searched/read.
 - High-stakes or date-bounded synthesis should pass through an active workspace before final output.
+- Multi-Agent simulation events are conditional synthetic artifacts and must remain outside canonical memory.
