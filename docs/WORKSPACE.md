@@ -1,5 +1,10 @@
 # Active Workspace
 
+The [Open Knowledge iteration](OPEN_KNOWLEDGE.md) adds explicit date-basis
+selection, content-bound verification, compact discovery, and a metric
+calculation ledger. The composer now uses structured metadata for date checks;
+missing dates remain unknown rather than being inferred from filenames.
+
 Second Brain now includes a task-scoped active workspace layer inspired by Anthropic's July 6, 2026 Global Workspace / J-space research:
 
 - Anthropic research post: https://www.anthropic.com/research/global-workspace

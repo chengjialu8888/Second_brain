@@ -52,10 +52,22 @@ Check these areas before writing:
 
 ## Claim Audit
 
+Declare `--date-basis`: `event` for retrospective events, `published` for a
+publication survey, or `known-by` to require events in the window and publication
+on/before `--as-of`. The latter still needs archived sources when current pages
+have changed. Unknown metadata never establishes an in-window fact.
+
+Bind each claim to stable source IDs and locators. Keep event, publication,
+capture, verification, and validity dates distinct. Recheck a source when a
+review no longer matches the page fingerprint or when freshness has expired.
+For computed numbers, record input source IDs, population, units, formula,
+period, result and receipt in the workspace's Metric Calculations ledger.
+Arithmetic checks do not establish methodological comparability.
+
 For every major claim, record:
 
 ```text
-claim -> atom/scene ref -> source -> event/published date -> captured date -> confidence -> caveat
+claim ID -> atom/scene -> source ID + locator -> event date -> publication -> capture -> current review -> validity/caveat
 ```
 
 If a claim has no source, either remove it or mark it as an assumption.

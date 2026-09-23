@@ -2,6 +2,23 @@
 
 Second Brain is intentionally small at the storage layer and disciplined at the workflow layer.
 
+## Open Knowledge Boundary
+
+The [OKF-inspired iteration](OPEN_KNOWLEDGE.md) makes evidence metadata usable
+across recall and exchange: compact catalogs, explicit report date semantics,
+content-bound verification, and selected public OKF v0.2 exports. The diagram
+in that guide shows this addition to the existing L0-L3 architecture.
+
+The internal vault retains its resolver, Compiled Truth, Timeline, and domain
+status fields. An export adapter produces an independent bundle with standard
+Markdown links and directory indexes. Imported knowledge remains candidate
+evidence until reviewed; export does not turn a draft into confirmed knowledge.
+
+Search defaults to summaries and excludes raw sources unless requested. It
+still scans local text; automatic semantic routing and measured token savings
+are future work. The report composer now reads explicit date metadata rather
+than treating filename or snippet dates as established event time.
+
 ## Design Principles
 
 1. **File-system first**: Markdown files are the source of truth.

@@ -28,6 +28,8 @@ confidence: low
 - As of:
 - Source window:
 - Excluded time periods:
+- Date basis: event | published | known-by
+- Later-published evidence allowed:
 
 ## Asset Loadout
 
@@ -62,9 +64,21 @@ confidence: low
 
 ## Claim Audit
 
-| Claim | Atom / Scene | Source | Date | Confidence | Needs review |
-|-|-|-|-|-|-|
-|  |  |  |  |  |  |
+| Claim ID | Atom / Scene | Source ID + locator | Event date | Published at | Captured at | Verification / version | Validity / caveat |
+|-|-|-|-|-|-|-|-|
+|  |  |  |  |  |  |  |  |
+
+## Retrieval Coverage
+
+- Topics checked:
+- Full-text fallback queries:
+- Missing dates and unchecked branches:
+
+## Metric Calculations
+
+| Metric | Input sources | Formula / script | Units and population | Period | Result / receipt | Review |
+|-|-|-|-|-|-|-|
+|  |  |  |  |  |  |  |
 
 ## Open Questions
 

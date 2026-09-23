@@ -41,6 +41,45 @@ confidence: low
 - **L3 Operating Memory**: Stable user, team, preference, or strategic context that should be used sparingly.
 - **Asset Loadout**: `brain/assets.yaml` records which reusable assets are available to workflows and agent roles. It is not evidence.
 
+## Open Knowledge Extensions
+
+These fields are additive. Keep existing pages and operational `status` values intact.
+See [Open Knowledge contracts](../docs/OPEN_KNOWLEDGE.md) for export mapping and date semantics.
+
+```yaml
+description: One sentence for discovery
+tags: []
+knowledge_status: draft # draft | stable | deprecated; separate from project status
+visibility: private # explicit public required for export
+sources:
+  - id: source-release-001
+    resource: https://example.com/release
+    locator: Availability section
+event_date: '2026-08-20'
+published_at: '2026-08-21T09:00:00+08:00'
+captured_at: '2026-08-22T10:00:00+08:00'
+valid_from: '2026-08-20'
+valid_to:
+generated:
+  by: second-brain/example-agent
+  at: '2026-08-22T10:00:00+08:00'
+verified: []
+stale_after: '2026-09-20T00:00:00+08:00'
+```
+
+Only populate known dates. `event_date` and `published_at` must describe the
+page's bounded subject, not an arbitrary event mentioned in a multi-event page.
+Keep claim-specific dates and source IDs in atoms or Claim Audit rows.
+`source_refs` remains supported; `sources` adds structured attribution.
+Do not manufacture source IDs in prose without corresponding `sources` entries.
+
+After verification, an event in `verified` contains `by`, timezone-aware `at`,
+and the local extension `content_sha256` obtained from `okf fingerprint`.
+The fingerprint covers all metadata except `verified`, and the body. Changed
+content makes old reviews `needs-review`; unbound imported reviews do too.
+Never infer human review from `confidence: high`. `valid_from` / `valid_to`
+are reviewed by the agent; current scripts do not enforce interval validity.
+
 ## Person Page
 
 ```yaml

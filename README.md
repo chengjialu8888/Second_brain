@@ -21,6 +21,30 @@ It turns chats, Feishu docs, calendar events, diary drafts, links, and notes int
 
 The goal is not another knowledge base. The goal is a durable context layer that remembers what happened, what it means, what is still open, and what the agent should ask next.
 
+## Open Knowledge Update
+
+Inspired by [Google's Open Knowledge Format](https://github.com/GoogleCloudPlatform/open-knowledge-format), Second Brain now connects portable knowledge with its evidence and recall workflows:
+
+- **Discover before expanding**: `catalog` lists topic summaries; search returns compact descriptions and verification/freshness signals. Full-text fallback remains available.
+- **Explicit report dates**: choose event-time, publication-time, or known-by-cutoff analysis. Unknown dates stay unknown; file and capture dates cannot silently qualify evidence.
+- **Reviews tied to content**: a changed claim or source metadata invalidates its prior review fingerprint. Generation, verification, and freshness are separate signals.
+- **Portable knowledge packs**: export explicitly selected public pages into an OKF v0.2 directory with indexes and structural validation. Internal project status is preserved separately from document lifecycle.
+- **Auditable numbers**: the strategy workspace includes an input/formula/period/result ledger. Calculation execution and attestation remain future work.
+
+This is an additive exchange boundary over Markdown and L0-L3 memory. It does not require a vector database. Read the [architecture and limitations](docs/OPEN_KNOWLEDGE.md), including the updated flow diagram. Automatic claim extraction, canonical import, and measured token savings are not yet implemented.
+
+```bash
+scripts/second_brain.sh catalog --query "strategy"
+scripts/second_brain.sh strategy-report "market change" \
+  --from 2026-08-01 --to 2026-08-31 --as-of 2026-08-31 --date-basis known-by
+scripts/second_brain.sh okf export --root examples/okf-demo \
+  --page concepts/context-budget.md --page concepts/review-cycle.md \
+  --output /tmp/second-brain-okf-demo
+scripts/second_brain.sh okf validate /tmp/second-brain-okf-demo
+```
+
+The example is synthetic; use a new output directory on each export. Setup is below.
+
 ## Latest Update: Layered Recall and Strategy Workspace
 
 This version adds a J-space-inspired active workspace layer and a `strategy-report` skill for strategic work where accuracy, coverage, and date boundaries matter. The next architecture iteration is inspired by Shadow-Weave's [Holographic Memory System](https://github.com/Shadow-Weave/HMS) and TencentDB Agent Memory's [L0-L3 memory layering](https://github.com/TencentCloud/TencentDB-Agent-Memory): move from "retrieve chunks into context" to "actively recall, organize evidence, equip the right assets, then write."
@@ -128,6 +152,11 @@ See [docs/MEMORY_LAYERS.md](docs/MEMORY_LAYERS.md) for the drill-down and asset-
 ```bash
 git clone https://github.com/chengjialu8888/Second_brain.git
 cd Second_brain
+
+# Python 3.10+; YAML metadata parsing uses PyYAML.
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
 
 # See the skill-style command surface
 scripts/second_brain.sh help

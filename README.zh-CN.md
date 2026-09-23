@@ -21,6 +21,30 @@
 
 它的目标不是再做一个知识库，而是做一个可长期维护的上下文层：记住发生了什么、这件事意味着什么、还有什么没搞清楚，以及 Agent 下一步应该问什么。
 
+## Open Knowledge 更新
+
+参考 [Google Open Knowledge Format](https://github.com/GoogleCloudPlatform/open-knowledge-format)，这次把知识交换、证据管理和渐进检索接入已有工作流：
+
+- **先发现，再展开**：`catalog` 按主题列出摘要；搜索默认返回简短描述和验证／时效状态，保留全文检索补漏。
+- **明确报告日期口径**：可按事件时间、发布时间，或“截至当时已公开”筛选。缺日期就标未知，文件名和采集日期不会自动成为事件依据。
+- **验证绑定具体内容**：结论或来源元数据变化后，旧核验指纹失效。生成、核验与新鲜度分别记录。
+- **可交换的知识包**：显式选择公开页面，导出带目录索引的 OKF v0.2 文件夹并检查结构。项目状态与文档生命周期分别保留。
+- **可审阅的数字计算**：战略工作区增加输入、公式、口径、期间和结果账本；自动执行与计算认证仍是后续能力。
+
+这次是在 Markdown 和 L0–L3 记忆上增加交换边界，不依赖向量库。[架构与限制说明](docs/OPEN_KNOWLEDGE.md)包含更新后的流程图。自动事实抽取、导入正式记忆，以及经过实测的 token 节省尚未实现。
+
+```bash
+scripts/second_brain.sh catalog --query "strategy"
+scripts/second_brain.sh strategy-report "市场变化" \
+  --from 2026-08-01 --to 2026-08-31 --as-of 2026-08-31 --date-basis known-by
+scripts/second_brain.sh okf export --root examples/okf-demo \
+  --page concepts/context-budget.md --page concepts/review-cycle.md \
+  --output /tmp/second-brain-okf-demo
+scripts/second_brain.sh okf validate /tmp/second-brain-okf-demo
+```
+
+示例为虚构演示，每次导出使用新目录。环境安装见下方快速开始。
+
 ## 本次更新亮点：分层回忆和战略 Workspace
 
 这个版本新增了受 J-space 启发的 active workspace 层，以及面向战略报告的 `strategy-report` skill，专门服务“准确、全面、有日期限定”的高风险输出。下一步架构迭代会吸收 Shadow-Weave [Holographic Memory System](https://github.com/Shadow-Weave/HMS) 和 TencentDB Agent Memory 的 [L0-L3 记忆分层](https://github.com/TencentCloud/TencentDB-Agent-Memory)：从“把 chunk 塞进上下文”，转成“先主动回忆、组织证据、装配合适资产，再写作”。
@@ -128,6 +152,11 @@ L0 原始证据 -> L1 原子记忆 -> L2 场景记忆 -> L3 操作记忆 -> acti
 ```bash
 git clone https://github.com/chengjialu8888/Second_brain.git
 cd Second_brain
+
+# Python 3.10+；使用 PyYAML 解析结构化元数据。
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
 
 # 查看 skill-style 命令入口
 scripts/second_brain.sh help

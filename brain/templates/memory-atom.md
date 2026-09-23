@@ -1,11 +1,19 @@
 ---
 type: memory_atom
 title:
+description:
 aliases: []
 atom_id:
 status: current
 event_date:
+published_at:
 captured_at:
+knowledge_status: draft
+sources: []
+verified: []
+stale_after:
+valid_from:
+valid_to:
 source_refs: []
 entities: []
 projects: []
@@ -23,9 +31,9 @@ visibility: private
 
 ## Evidence
 
-| Source | Event date | Captured at | Quote or compact evidence |
-|-|-|-|-|
-|  |  |  |  |
+| Source ID + locator | Event date | Published at | Captured at | Quote or compact evidence |
+|-|-|-|-|-|
+|  |  |  |  |  |
 
 ## Status
 

@@ -5,15 +5,16 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
 
+from knowledge import freshness, pages, read_page, summary, verification, window_status
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BRAIN = ROOT / "brain"
-ISO_DATE_RE = re.compile(r"\b(20\d{2})[-/](\d{1,2})[-/](\d{1,2})\b")
-COMPACT_DATE_RE = re.compile(r"\b(20\d{2})(\d{2})(\d{2})\b")
 
 
 @dataclass
@@ -23,6 +24,10 @@ class SearchHit:
     snippets: list[str]
     dates: list[str]
     window_status: str
+    trust: str = "unverified"
+    freshness: str = "unknown"
+    date_basis: str = "event"
+    lifecycle: str = "unknown"
 
 
 def split_terms(query: str) -> list[str]:
@@ -40,61 +45,15 @@ def parse_iso_date(value: str | None) -> dt.date | None:
     return dt.date.fromisoformat(value)
 
 
-def extract_dates(text: str) -> list[str]:
-    found: set[str] = set()
-    for match in ISO_DATE_RE.finditer(text):
-        year, month, day = match.groups()
-        try:
-            found.add(dt.date(int(year), int(month), int(day)).isoformat())
-        except ValueError:
-            pass
-    for match in COMPACT_DATE_RE.finditer(text):
-        year, month, day = match.groups()
-        try:
-            found.add(dt.date(int(year), int(month), int(day)).isoformat())
-        except ValueError:
-            pass
-    return sorted(found)
-
-
-def classify_window(dates: list[str], start: dt.date | None, end: dt.date | None) -> str:
-    if not dates:
-        return "unknown"
-    parsed = [dt.date.fromisoformat(value) for value in dates]
-    if not start and not end:
-        return "unbounded"
-    inside = [
-        value
-        for value in parsed
-        if (start is None or value >= start) and (end is None or value <= end)
-    ]
-    if len(inside) == len(parsed):
-        return "inside"
-    if inside:
-        return "mixed"
-    return "outside"
-
-
-def iter_markdown(root: Path) -> list[Path]:
-    paths: list[Path] = []
-    for path in root.rglob("*.md"):
-        if ".raw" in path.parts:
-            continue
-        if "templates" in path.parts:
-            continue
-        if "workspace" in path.parts:
-            continue
-        paths.append(path)
-    return paths
-
-
-def search(query: str, limit: int, start: dt.date | None, end: dt.date | None) -> list[SearchHit]:
+def search(query: str, limit: int, start: dt.date | None, end: dt.date | None,
+           basis: str = "event", as_of: dt.date | None = None,
+           include_sources: bool = False) -> list[SearchHit]:
     terms = split_terms(query)
     hits: list[SearchHit] = []
     if not terms:
         return hits
 
-    for path in iter_markdown(BRAIN):
+    for path in pages(BRAIN, include_sources):
         try:
             text = path.read_text(encoding="utf-8")
         except UnicodeDecodeError:
@@ -102,33 +61,41 @@ def search(query: str, limit: int, start: dt.date | None, end: dt.date | None) -
         score = score_text(text, terms)
         if score <= 0:
             continue
-        snippets: list[str] = []
-        for line in text.splitlines():
-            if any(term.lower() in line.lower() for term in terms):
-                snippets.append(line.strip())
-            if len(snippets) >= 3:
-                break
-        date_text = f"{path} " + "\n".join(snippets[:5])
-        dates = extract_dates(date_text)
+        try:
+            meta, body = read_page(path)
+            snippets = list(summary(path, meta, body))
+            trust = verification(meta, body)
+        except ValueError:
+            meta, trust = {}, "needs-review"
+            snippets = ["Invalid metadata; inspect page before use."]
+        dates = [f"{key}={meta[key]}" for key in ("event_date", "published_at", "captured_at") if meta.get(key)]
         hits.append(
             SearchHit(
                 score=score,
                 path=path.relative_to(ROOT),
                 snippets=snippets,
                 dates=dates,
-                window_status=classify_window(dates, start, end),
+                window_status=window_status(meta, start, end, basis, as_of),
+                trust=trust,
+                freshness=freshness(meta),
+                date_basis=basis,
+                lifecycle=str(meta.get("knowledge_status") or "unknown"),
             )
         )
 
-    hits.sort(key=lambda item: (-item.score, str(item.path)))
-    return hits[:limit]
+    # Outside evidence must not crowd out eligible candidates before truncation.
+    priority = {"inside": 0, "unbounded": 0, "unknown": 1, "outside": 2, "after-cutoff": 2}
+    hits.sort(key=lambda item: (priority[item.window_status], -item.score, str(item.path)))
+    candidates = [h for h in hits if h.window_status not in {"outside", "after-cutoff"}]
+    excluded = [h for h in hits if h.window_status in {"outside", "after-cutoff"}]
+    return candidates[:limit] + excluded[:limit]
 
 
 def yaml_list_field(name: str, values: list[str], indent: int = 2) -> str:
     pad = " " * indent
     if not values:
         return f"{name}: []"
-    items = "\n".join(f"{pad}- {value}" for value in values)
+    items = "\n".join(f"{pad}- {json.dumps(value, ensure_ascii=False)}" for value in values)
     return f"{name}:\n{items}"
 
 
@@ -165,16 +132,16 @@ def render(args: argparse.Namespace, hits: list[SearchHit]) -> str:
     for hit in hits:
         date_label = ", ".join(hit.dates) if hit.dates else "unknown"
         snippet = " / ".join(hit.snippets).replace("|", "\\|")
-        row = f"| `{hit.path}` | {hit.score} | {hit.window_status} | {date_label} | {snippet} |"
-        if hit.window_status == "outside":
+        row = f"| `{hit.path}` | {hit.score} | {hit.window_status} | {date_label} | {hit.trust} / {hit.freshness} / {hit.lifecycle} | {snippet} |"
+        if hit.window_status in {"outside", "after-cutoff"}:
             excluded_rows.append(row)
         else:
             evidence_rows.append(row)
 
     if not evidence_rows:
-        evidence_rows.append("|  |  |  |  | No matching in-window evidence found yet. |")
+        evidence_rows.append("|  |  |  |  |  | No candidate evidence found yet. |")
     if not excluded_rows:
-        excluded_rows.append("|  |  |  |  | No out-of-window evidence detected by the simple date scan. |")
+        excluded_rows.append("|  |  |  |  |  | No dated exclusions found; unknown dates still need review. |")
 
     coverage = "\n".join(
         f"| {area} | missing |  | {question} |" for area, question in coverage_rows(args.mode)
@@ -182,14 +149,14 @@ def render(args: argparse.Namespace, hits: list[SearchHit]) -> str:
 
     return f"""---
 type: workspace
-title: "{title}"
+title: {json.dumps(title, ensure_ascii=False)}
 aliases: []
 updated: {today}
 as_of: {as_of}
 source_window:
   start: {args.start or "unknown"}
   end: {args.end or as_of}
-task: "{args.query}"
+task: {json.dumps(args.query, ensure_ascii=False)}
 mode: {args.mode}
 status: draft
 confidence: low
@@ -217,6 +184,9 @@ This workspace is inspired by the Global Workspace / J-space pattern: keep the a
 - As of: {as_of}
 - Source window start: {args.start or "unknown"}
 - Source window end: {args.end or as_of}
+- Date basis: {args.date_basis}; known-by requires an event in the window and publication on/before as_of.
+- Unknown dates stay unknown. Filename, capture, and edit dates do not establish event time.
+- Freshness is evaluated now, independently of the historical report window.
 - Freshness rule: primary claims should come from inside the source window or be explicitly marked as background context.
 
 ## Capacity Budget
@@ -235,13 +205,14 @@ Check `brain/assets.yaml` before final synthesis. Add only assets that materiall
 
 ## Candidate Evidence
 
-| Evidence | Score | Window | Detected dates | Snippet |
-|-|-:|-|-|-|
+| Evidence | Score | Window | Explicit dates | Verification / Freshness / Lifecycle | Summary |
+|-|-:|-|-|-|-|
 {chr(10).join(evidence_rows)}
 
 ## Active Context
 
 Pin only the claims needed for this task.
+Open each selected page and its sources first. Unknown, stale, deprecated, or needs-review candidates are not approved current facts.
 
 1.
 2.
@@ -257,7 +228,19 @@ Pin only the claims needed for this task.
 
 ## Claim Audit
 
-| Claim | Atom / Scene | Source | Event/published date | Captured date | Confidence | Caveat |
+| Claim ID | Atom / Scene | Source ID + locator | Event date | Published at | Captured at | Verification / version | Validity / caveat |
+|-|-|-|-|-|-|-|-|
+|  |  |  |  |  |  |  |  |
+
+## Retrieval Coverage
+
+- Topic directories checked:
+- Full-text fallback queries:
+- Missing dates, contradictions, and omitted branches:
+
+## Metric Calculations
+
+| Metric | Input sources | Formula / script | Units and population | Period | Result / receipt | Review |
 |-|-|-|-|-|-|-|
 |  |  |  |  |  |  |  |
 
@@ -281,8 +264,8 @@ scripts/second_brain.sh agents "risk review"
 
 ## Excluded / Out Of Window
 
-| Evidence | Score | Window | Detected dates | Snippet |
-|-|-:|-|-|-|
+| Evidence | Score | Window | Explicit dates | Verification / Freshness / Lifecycle | Summary |
+|-|-:|-|-|-|-|
 {chr(10).join(excluded_rows)}
 
 ---
@@ -301,13 +284,23 @@ def main() -> int:
     parser.add_argument("--from", dest="start")
     parser.add_argument("--to", dest="end")
     parser.add_argument("--limit", type=int, default=12)
+    parser.add_argument("--date-basis", choices=["event", "published", "known-by"], default="event")
+    parser.add_argument("--include-sources", action="store_true")
     parser.add_argument("--mode", choices=["active-workspace", "strategy-report"], default="active-workspace")
     parser.add_argument("--output", default="brain/workspace/current.md")
     args = parser.parse_args()
 
-    start = parse_iso_date(args.start)
-    end = parse_iso_date(args.end)
-    hits = search(args.query, args.limit, start, end)
+    try:
+        as_of = parse_iso_date(args.as_of) or dt.date.today()
+        start = parse_iso_date(args.start)
+        end = parse_iso_date(args.end) or as_of
+    except ValueError:
+        parser.error("Dates must be valid YYYY-MM-DD values")
+    if args.limit < 1 or (start and start > end) or end > as_of:
+        parser.error("Require limit > 0 and from <= to <= as-of")
+    if args.mode == "strategy-report" and not (args.start and args.end):
+        parser.error("Strategy reports require both --from and --to")
+    hits = search(args.query, args.limit, start, end, args.date_basis, as_of, args.include_sources)
 
     output = Path(args.output)
     if not output.is_absolute():

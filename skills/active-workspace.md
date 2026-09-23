@@ -46,12 +46,12 @@ scripts/second_brain.sh workspace "query" --title "Workspace title" --limit 12 -
 ## Required Order
 
 1. Read `brain/RESOLVER.md`, `brain/schema.md`, `docs/MEMORY_LAYERS.md`, and this file.
-2. Define the task and date window.
+2. Define the task, date window, and `--date-basis event|published|known-by` using `docs/OPEN_KNOWLEDGE.md`. Record whether later-published evidence may be used.
 3. Check `brain/assets.yaml` for relevant memory, skill, wiki, source-pack, or future codegraph assets.
 4. Run the workspace command.
 5. Read the generated workspace and the most relevant source pages.
 6. Pin only the claims needed for the current task.
-7. Mark out-of-window, stale, inferred, or low-confidence items.
+7. Mark out-of-window, unknown-date, stale, inferred, or low-confidence items. Reviews must match the current content fingerprint. Missing or invalidated reviews are not confirmations.
 8. If a specialist output lens is useful, follow `skills/agency-agent-routing.md`.
 9. Move durable confirmed facts into canonical pages later.
 
@@ -61,6 +61,8 @@ scripts/second_brain.sh workspace "query" --title "Workspace title" --limit 12 -
 - Prefer 3-8 open questions.
 - Keep one task per workspace.
 - If the workspace grows too large, split by decision or report section.
+- Use catalog and summary discovery before page expansion; record full-text fallback queries and uncovered topics.
+- Record key numbers in Metric Calculations with input refs, method, units, period, and a reproducible result. This ledger does not execute or attest calculations.
 
 ## Final Answer Discipline
 

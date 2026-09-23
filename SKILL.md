@@ -33,6 +33,14 @@ This skill turns a local Markdown folder into a personal memory layer for agents
 
 ## Workflows
 
+### Open Knowledge
+
+Read `docs/OPEN_KNOWLEDGE.md` for compact discovery, explicit report time semantics,
+content-bound verification, and selected OKF v0.2 exports. Use
+`scripts/second_brain.sh catalog --query "topic"` before opening pages, retaining
+full-text fallback. Follow `skills/knowledge-exchange.md` for export. Missing
+metadata stays unknown; private sources and workspace drafts are not bundles.
+
 ### Capture
 
 Use for quick thoughts, pasted snippets, files, or URLs.

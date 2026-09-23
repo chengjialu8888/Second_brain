@@ -47,6 +47,10 @@ scripts/fetch_feishu_doc.sh "https://..."
 
 ## Before Publishing
 
+For evidence metadata, recall, or OKF exchange changes, also read
+`docs/OPEN_KNOWLEDGE.md` and run `python3 -m unittest discover -s tests`.
+Install `requirements.txt` in the active Python environment first.
+
 Run:
 
 ```bash

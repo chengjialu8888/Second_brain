@@ -6,6 +6,9 @@ Repository: https://github.com/chengjialu8888/Second_brain
 
 ## Core entry points
 
+- [docs/OPEN_KNOWLEDGE.md](docs/OPEN_KNOWLEDGE.md): OKF v0.2 export boundary, progressive discovery, evidence verification, and report date semantics.
+- [skills/knowledge-exchange.md](skills/knowledge-exchange.md): Catalog and explicitly selected public knowledge export workflow.
+
 - [README.md](README.md): Human-facing overview, value proposition, quick start, journey, architecture, roadmap.
 - [README.zh-CN.md](README.zh-CN.md): Chinese overview with the same quick start, journey, architecture, and positioning.
 - [AGENTS.md](AGENTS.md): Operating protocol for Codex, Claude Code, Cursor, and other coding agents.
@@ -37,6 +40,11 @@ Repository: https://github.com/chengjialu8888/Second_brain
 - [skills/calendar-diary-draft.md](skills/calendar-diary-draft.md): Generate diary drafts from Feishu calendar.
 
 ## Scripts
+
+- `scripts/second_brain.sh catalog --query "topic"`: grouped metadata discovery.
+- `scripts/second_brain.sh okf export --page concepts/example.md --output /tmp/new-bundle`: export explicitly public pages to a new directory.
+- `scripts/second_brain.sh okf validate /tmp/new-bundle`: check OKF core structure, not factual correctness.
+- `scripts/second_brain.sh okf fingerprint brain/concepts/example.md`: content fingerprint for a source verification event.
 
 - `scripts/second_brain.sh help`: skill-style command surface.
 - `scripts/second_brain.sh prompt`: agent startup prompt.

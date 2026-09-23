@@ -101,6 +101,22 @@ The goal is not automatic memory everywhere. The goal is explicit, bounded conte
 
 ## Implementation Posture
 
+### Open Knowledge Recall Contract
+
+See [OPEN_KNOWLEDGE.md](OPEN_KNOWLEDGE.md) for implemented discovery and exchange.
+Start with `catalog`, then summary search; open selected pages and drill down
+to source refs. Keep full-text fallback and a record of unchecked topic branches.
+`description` is a discovery hint, not a substitute for reading evidence.
+
+Before promoting candidates into active context, inspect explicit event and
+publication dates, freshness, and reviews bound to current content. Unknown
+dates and unverified claims stay visible as gaps. Historical reports declare
+`event`, `published`, or `known-by` semantics; capture dates are not event dates.
+
+OKF bundles are exchange artifacts outside L0-L3. Their imported content must
+pass the normal source/enrichment workflow before becoming canonical memory.
+The asset registry may point to a reviewed bundle, but does not certify it.
+
 Do not add a database until Markdown search becomes the bottleneck. The near-term upgrades are:
 
 1. Use templates for atoms and scenes.

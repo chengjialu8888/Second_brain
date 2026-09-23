@@ -8,6 +8,7 @@ Read this before choosing a workflow.
 | Ingest chat export | `chat-ingestion.md` |
 | Ingest Feishu doc or wiki | `feishu-doc-ingestion.md` |
 | Ask a question about memory | `brain-query.md` |
+| Browse a topic catalog or export selected OKF knowledge | `knowledge-exchange.md` |
 | Compose a task-scoped whiteboard before synthesis | `active-workspace.md` |
 | Write an accurate, comprehensive, date-bounded strategy report | `strategy-report.md` after `active-workspace.md` |
 | Produce a source-backed deliverable needing product, engineering, design, growth, sales, security, testing, finance, or other specialist framing | `agency-agent-routing.md` after `brain-query.md` |

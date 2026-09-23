@@ -1,12 +1,17 @@
 ---
 type: memory_scene
 title:
+description:
 aliases: []
 scene_id:
 status: active
 created:
 updated:
 source_refs: []
+sources: []
+knowledge_status: draft
+verified: []
+stale_after:
 atom_refs: []
 entities: []
 projects: []

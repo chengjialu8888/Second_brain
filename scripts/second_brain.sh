@@ -15,6 +15,8 @@ Usage:
   scripts/second_brain.sh help
   scripts/second_brain.sh prompt
   scripts/second_brain.sh search "query"
+  scripts/second_brain.sh catalog [--query "topic"]
+  scripts/second_brain.sh okf <export|validate|fingerprint> [options]
   scripts/second_brain.sh workspace "query" [--from YYYY-MM-DD --to YYYY-MM-DD]
   scripts/second_brain.sh strategy-report "topic" --from YYYY-MM-DD --to YYYY-MM-DD
   scripts/second_brain.sh agents ["query"]
@@ -53,7 +55,13 @@ EOF
       echo "Usage: scripts/second_brain.sh search \"query\"" >&2
       exit 2
     fi
-    python3 scripts/brain_search.py "$*"
+    python3 scripts/brain_search.py "$@"
+    ;;
+  catalog)
+    python3 scripts/knowledge_bundle.py catalog "$@"
+    ;;
+  okf)
+    python3 scripts/knowledge_bundle.py "$@"
     ;;
   agents)
     python3 scripts/agency_agent_search.py "$@"
